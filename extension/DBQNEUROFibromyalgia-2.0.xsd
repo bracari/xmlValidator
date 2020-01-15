@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fb="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Fibromyalgia/2.0" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Fibromyalgia/2.0" version="2.0" elementFormDefault="qualified">
+	<xs:complexType name="FibromyalgiaFormType">
+		<xs:sequence>
+			<xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_DIAGNOSIS">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="Fibromyalgia">
+			  <xs:annotation>
+			    <xs:documentation>Fibromyalgia</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_FIBRO_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_FIBRO_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_OTHER">
+			  <xs:annotation>
+			    <xs:documentation>Other, specify:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_OTHER_1">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_OTHER_1_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_OTHER_1_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_OTHER_2">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_OTHER_2_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_OTHER_2_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_NEURO_FIBROMYALGIA_ADDITIONAL">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_NEURO_FIBROMYALGIA_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_NEURO_FIBROMYALGIA_TX">
+			  <xs:annotation> 
+			    <xs:documentation>c. Is the Veteran currently undergoing treatment for this condition?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_NEURO_FIBROMYALGIA_TX_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaContinuousMedication">
+			  <xs:annotation> 
+			    <xs:documentation>b. Is continuous medication required for control of fibromyalgia symptoms?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_NEURO_FIBROMYALGIA_MEDS_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaFrequencyRefractoryTherapy">
+			  <xs:annotation> 
+			    <xs:documentation>d. Are the Veteran's fibromyalgia symptoms refractory to therapy?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_NEURO_FIBROMYALGIA_SYMPTOMS_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran currently have any findings, signs or symptoms attributable to fibromyalgia?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsWidespreadMusculoskeletalPain">
+			  <xs:annotation>
+			    <xs:documentation>Widespread musculoskeletal pain</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsStiffness">
+			  <xs:annotation>
+			    <xs:documentation>Stiffness</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_MUSCLE">
+			  <xs:annotation>
+			    <xs:documentation>Muscle weakness</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_MUSCLE_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsFatigue">
+			  <xs:annotation>
+			    <xs:documentation>Fatigue</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsSleepDisturbances">
+			  <xs:annotation>
+			    <xs:documentation>Sleep disturbances</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsParesthesias">
+			  <xs:annotation>
+			    <xs:documentation>Paresthesias</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsHeadache">
+			  <xs:annotation>
+			    <xs:documentation>Headache</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsDepression">
+			  <xs:annotation>
+			    <xs:documentation>Depression</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsAnxiety">
+			  <xs:annotation>
+			    <xs:documentation>Anxiety</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsIrritableBowelSymptoms">
+			  <xs:annotation>
+			    <xs:documentation>Irritable bowel symptoms</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsRaynaudsLikeSymptoms">
+			  <xs:annotation>
+			    <xs:documentation>Raynaud's-like symptoms</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_MUSCLE_OTHER">
+			  <xs:annotation>
+			    <xs:documentation>Other</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_MUSCLE_OTHER_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_FREQ_NO">
+			  <xs:annotation>
+			    <xs:documentation>No symptoms</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaFrequencyEpisodic">
+			  <xs:annotation>
+			    <xs:documentation>Episodic with exacerbations</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_FREQ_PRESENT">
+			  <xs:annotation>
+			    <xs:documentation>Present more than one-third of the time</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaFrequencyConstant">
+			  <xs:annotation>
+			    <xs:documentation>Constant or nearly constant</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaFrequencyStressOverexertion">
+			  <xs:annotation>
+			    <xs:documentation>Often precipitated by environmental or emotional stress or overexertion</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_FREQ_OFTEN_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_FREQ_OTHER">
+			  <xs:annotation>
+			    <xs:documentation>Other, describe:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_FREQ_OTHER_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_CERVICAL">
+			  <xs:annotation>
+			    <xs:documentation>Low cervical region: at anterior aspect of the interspaces between transverse processes of C5-C7</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_CERVICAL_SA">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate side:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Right"/>
+			            <xs:enumeration value="Left"/>
+			            <xs:enumeration value="Both"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_RIB">
+			  <xs:annotation>
+			    <xs:documentation>Second rib: at second costochondral junction</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_RIB_SA">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate side:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Right"/>
+			            <xs:enumeration value="Left"/>
+			            <xs:enumeration value="Both"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_OCCIPUT">
+			  <xs:annotation>
+			    <xs:documentation>Occiput: at suboccipital muscle insertion</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_OCCIPUT_SA">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate side:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Right"/>
+			            <xs:enumeration value="Left"/>
+			            <xs:enumeration value="Both"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_TRAP">
+			  <xs:annotation>
+			    <xs:documentation>Trapezius muscle: midpoint of upper border</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_TRAP_SA">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate side:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Right"/>
+			            <xs:enumeration value="Left"/>
+			            <xs:enumeration value="Both"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_SUPRA">
+			  <xs:annotation>
+			    <xs:documentation>Supraspinatus muscle: above medial border of the scapular spine</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_SUPRA_SA">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate side:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Right"/>
+			            <xs:enumeration value="Left"/>
+			            <xs:enumeration value="Both"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_LAT">
+			  <xs:annotation>
+			    <xs:documentation>Lateral epicondyle: 2 cm distal to lateral epicondyle</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_LAT_SA">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate side:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Right"/>
+			            <xs:enumeration value="Left"/>
+			            <xs:enumeration value="Both"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_GLUTEAL">
+			  <xs:annotation>
+			    <xs:documentation>Gluteal: at upper outer quadrant of buttocks</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_GLUTEAL_SA">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate side:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Right"/>
+			            <xs:enumeration value="Left"/>
+			            <xs:enumeration value="Both"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_TROCH">
+			  <xs:annotation>
+			    <xs:documentation>Greater trochanter: posterior to greater trochanteric prominence</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_TROCH_SA">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate side:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Right"/>
+			            <xs:enumeration value="Left"/>
+			            <xs:enumeration value="Both"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_KNEE">
+			  <xs:annotation>
+			    <xs:documentation>Knee: medial joint line</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_KNEE_SA">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate side:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Right"/>
+			            <xs:enumeration value="Left"/>
+			            <xs:enumeration value="Both"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_OTHER">
+			  <xs:annotation>
+			    <xs:documentation>Other</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_OPP_OTHER_PERT">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_OPP_OTHER_PERT_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_DT_SIGN">
+			  <xs:annotation> 
+			    <xs:documentation>Are there any significant diagnostic test findings and/or results?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_DT_SIGN_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FI">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran's fibromyalgia impact his or her ability to work?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FI_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_REMARKS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_OTHER_DESC">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_FINDINGS_TENDER_BILAT">
+			  <xs:annotation>
+			    <xs:documentation>All bilaterally</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FibromyalgiaSymptomsTenderpoints">
+			  <xs:annotation> 
+			    <xs:documentation>c. Does the Veteran have tender points (trigger points) for pain present?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+			  <xs:annotation> 
+			    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination Request?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_InPersonExamination_CBx">
+			  <xs:annotation>
+			    <xs:documentation>In-person examination</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_RecordsReviewed_CBx">
+			  <xs:annotation>
+			    <xs:documentation>Records reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_CBx">
+			  <xs:annotation>
+			    <xs:documentation>Other, please specify:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_MB">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Comments__MB">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_3">
+			  <xs:annotation>
+			    <xs:documentation>Examination via approved video telehealth</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_4">
+			  <xs:annotation>
+			    <xs:documentation>In-person examination</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+			  <xs:annotation>
+			    <xs:documentation>Not requested</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+			  <xs:annotation>
+			    <xs:documentation>No records were reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA e-folder (VBMS or Virtual VA)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+			  <xs:annotation>
+			    <xs:documentation>CPRS</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+			  <xs:annotation>
+			    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_OPP_SCARS_RG">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_OPP_SCARS_Size_RG">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_OPP_SCARS_Location_edit">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_OPP_SCARS_Length_edit">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_OPP_SCARS_Width_edit">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_NEURO_FIBROMYALGIA_OPP_Comments_memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fb:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="FibromyalgiaForm" type="fb:FibromyalgiaFormType"/>
+	<xs:complexType name="Metadata">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

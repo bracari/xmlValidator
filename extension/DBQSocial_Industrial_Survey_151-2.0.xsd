@@ -1,0 +1,1419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:sis="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SocialIndustrialSurvey/2.0"
+           targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SocialIndustrialSurvey/2.0"
+           version="2.0"
+           elementFormDefault="qualified">
+    <xs:complexType name="SocialIndustrialSurveyFormType">
+        <xs:sequence>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired">
+                <xs:annotation>
+                    <xs:documentation>Is veteran retired:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_Date">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_cause">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">            <xs:element name="Selected" nillable="true">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="Eligible by age or duration of work"/>
+                                            <xs:enumeration value="Medical (physical problem)"/>
+                                            <xs:enumeration value="Medical (psychiatric problem)"/>
+                                            <xs:enumeration value="Other"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_cause_Other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Unemployed_RG">
+                <xs:annotation>
+                    <xs:documentation>Is veteran unemployed but not retired:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Unemployed_Duration">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Less than 1 year"/>
+                                    <xs:enumeration value="1 to 2 years"/>
+                                    <xs:enumeration value="2 to 5 years"/>
+                                    <xs:enumeration value="5 to 10 years"/>
+                                    <xs:enumeration value="10 to 20 years"/>
+                                    <xs:enumeration value="More than 20 years"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Unemployed_Effect_Mental_Disorder_Other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_cause_Medical">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_cause_Psych">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Describe_Other_Hx">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Time_Lost_Cause">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Time_Lost">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="Less than 1 week"/>
+                                    <xs:enumeration value="1 week"/>
+                                    <xs:enumeration value="2 weeks"/>
+                                    <xs:enumeration value="3 weeks"/>
+                                    <xs:enumeration value="4 weeks"/>
+                                    <xs:enumeration value="5 weeks"/>
+                                    <xs:enumeration value="6 weeks"/>
+                                    <xs:enumeration value="7 weeks"/>
+                                    <xs:enumeration value="8 weeks"/>
+                                    <xs:enumeration value="9 weeks"/>
+                                    <xs:enumeration value="10 weeks"/>
+                                    <xs:enumeration value="11 weeks"/>
+                                    <xs:enumeration value="12 weeks"/>
+                                    <xs:enumeration value="13 weeks"/>
+                                    <xs:enumeration value="14 weeks"/>
+                                    <xs:enumeration value="15 weeks"/>
+                                    <xs:enumeration value="16 weeks"/>
+                                    <xs:enumeration value="17 weeks"/>
+                                    <xs:enumeration value="18 weeks"/>
+                                    <xs:enumeration value="19 weeks"/>
+                                    <xs:enumeration value="20 weeks"/>
+                                    <xs:enumeration value="21 weeks"/>
+                                    <xs:enumeration value="22 weeks"/>
+                                    <xs:enumeration value="23 weeks"/>
+                                    <xs:enumeration value="24 weeks"/>
+                                    <xs:enumeration value="25 weeks"/>
+                                    <xs:enumeration value="26 weeks"/>
+                                    <xs:enumeration value="27 weeks"/>
+                                    <xs:enumeration value="28 weeks"/>
+                                    <xs:enumeration value="29 weeks"/>
+                                    <xs:enumeration value="30 weeks"/>
+                                    <xs:enumeration value="31 weeks"/>
+                                    <xs:enumeration value="32 weeks"/>
+                                    <xs:enumeration value="33 weeks"/>
+                                    <xs:enumeration value="34 weeks"/>
+                                    <xs:enumeration value="35 weeks"/>
+                                    <xs:enumeration value="36 weeks"/>
+                                    <xs:enumeration value="37 weeks"/>
+                                    <xs:enumeration value="38 weeks"/>
+                                    <xs:enumeration value="39 weeks"/>
+                                    <xs:enumeration value="40 weeks"/>
+                                    <xs:enumeration value="41 weeks"/>
+                                    <xs:enumeration value="42 weeks"/>
+                                    <xs:enumeration value="43 weeks"/>
+                                    <xs:enumeration value="44 weeks"/>
+                                    <xs:enumeration value="45 weeks"/>
+                                    <xs:enumeration value="46 weeks"/>
+                                    <xs:enumeration value="47 weeks"/>
+                                    <xs:enumeration value="48 weeks"/>
+                                    <xs:enumeration value="49 weeks"/>
+                                    <xs:enumeration value="50 weeks"/>
+                                    <xs:enumeration value="51 weeks"/>
+                                    <xs:enumeration value="52 weeks"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Type_of_Employment">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Fulltime"/>
+                                    <xs:enumeration value="Part-time"/>
+                                    <xs:enumeration value="Self-employed"/>
+                                    <xs:enumeration value="Seasonal"/>
+                                    <xs:enumeration value="Other"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Duration">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Less than 1 year"/>
+                                    <xs:enumeration value="1 to 2 years"/>
+                                    <xs:enumeration value="2 to 5 years"/>
+                                    <xs:enumeration value="5 to 10 years"/>
+                                    <xs:enumeration value="10 to 20 years"/>
+                                    <xs:enumeration value="More than 20 years"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Occupation">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed">
+                <xs:annotation>
+                    <xs:documentation>Is veteran currently employed:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Usual_Occupation">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Education">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Occupation">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Employer">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Position">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Attitude">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Underemployed">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Underemployed_Y_N">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Service_Connected">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Accomodations">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Industrial_Pretraumatic_Performancy">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Post_Military_Adjustment">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Post_Military_Living">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Post_Military_Friendship">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Post_Military_Marriage">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_After_Personality">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_After_Work">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_After_Emotional">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_After_Symptoms">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_After_Legal">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_After_Psych">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_After_Substance_Abuse">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Prior_DSM">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Prior_Activity">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Prior_Family">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Prior_Significant_Issues">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Adjustment_Prior_Pre_Military_Trauma">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_Injuries">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_Injuries_Inprisoned">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_Captors">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_Internment">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_Work">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_Diet">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_SO_Relationship">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_SO_Change">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_SO_General_Comment">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW_SO_Knew_Before">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Appearance">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Interview_Alone">
+                <xs:annotation>
+                    <xs:documentation>Was veteran interviewed alone?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Personal_Observation">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Personal_Observation_Stressful">
+                <xs:annotation>
+                    <xs:documentation>Does veteran find the interview stressful or threatening?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Personal_Observation_Cooperative">
+                <xs:annotation>
+                    <xs:documentation>Is veteran cooperative and friendly?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Personal_Observation_Guarded">
+                <xs:annotation>
+                    <xs:documentation>Is veteran guarded and withdrawn?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Personal_Observation_Eye_Contact">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Disabilities">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Current_Medications">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Social_History">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Date">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Branch">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Basic_Training">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_MOS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Assignment">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Special_Training">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Combat_Experience">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Sexual_Trauma">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Injury">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_PTSD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_Relationship">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Military_POW">
+                <xs:annotation>
+                    <xs:documentation>Was the veteran a prisoner of war (POW)?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Social_Function_Stressors">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="9">            <xs:element name="Selected" nillable="true">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="Primary support system or group"/>
+                                            <xs:enumeration value="Social environment"/>
+                                            <xs:enumeration value="Educational problems"/>
+                                            <xs:enumeration value="Occupational problems"/>
+                                            <xs:enumeration value="Housing problems"/>
+                                            <xs:enumeration value="Economic problems"/>
+                                            <xs:enumeration value="Problems accessing health care"/>
+                                            <xs:enumeration value="Legal system or criminal problems"/>
+                                            <xs:enumeration value="Other"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Social_Function_Stressors_Discuss">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Social_Function_Appearance">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Social_Function_Relationships">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Social_Function_Lifestyle">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Social_Function_Mental_Status">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_PSYCH_GAFScore">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="99"/>
+                                    <xs:enumeration value="98"/>
+                                    <xs:enumeration value="97"/>
+                                    <xs:enumeration value="96"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="94"/>
+                                    <xs:enumeration value="93"/>
+                                    <xs:enumeration value="92"/>
+                                    <xs:enumeration value="91"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="89"/>
+                                    <xs:enumeration value="88"/>
+                                    <xs:enumeration value="87"/>
+                                    <xs:enumeration value="86"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="84"/>
+                                    <xs:enumeration value="83"/>
+                                    <xs:enumeration value="82"/>
+                                    <xs:enumeration value="81"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="79"/>
+                                    <xs:enumeration value="78"/>
+                                    <xs:enumeration value="77"/>
+                                    <xs:enumeration value="76"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="74"/>
+                                    <xs:enumeration value="73"/>
+                                    <xs:enumeration value="72"/>
+                                    <xs:enumeration value="71"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="69"/>
+                                    <xs:enumeration value="68"/>
+                                    <xs:enumeration value="67"/>
+                                    <xs:enumeration value="66"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="64"/>
+                                    <xs:enumeration value="63"/>
+                                    <xs:enumeration value="62"/>
+                                    <xs:enumeration value="61"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="59"/>
+                                    <xs:enumeration value="58"/>
+                                    <xs:enumeration value="57"/>
+                                    <xs:enumeration value="56"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="54"/>
+                                    <xs:enumeration value="53"/>
+                                    <xs:enumeration value="52"/>
+                                    <xs:enumeration value="51"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="49"/>
+                                    <xs:enumeration value="48"/>
+                                    <xs:enumeration value="47"/>
+                                    <xs:enumeration value="46"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="44"/>
+                                    <xs:enumeration value="43"/>
+                                    <xs:enumeration value="42"/>
+                                    <xs:enumeration value="41"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="39"/>
+                                    <xs:enumeration value="38"/>
+                                    <xs:enumeration value="37"/>
+                                    <xs:enumeration value="36"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="34"/>
+                                    <xs:enumeration value="33"/>
+                                    <xs:enumeration value="32"/>
+                                    <xs:enumeration value="31"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="29"/>
+                                    <xs:enumeration value="28"/>
+                                    <xs:enumeration value="27"/>
+                                    <xs:enumeration value="26"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="24"/>
+                                    <xs:enumeration value="23"/>
+                                    <xs:enumeration value="22"/>
+                                    <xs:enumeration value="21"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="19"/>
+                                    <xs:enumeration value="18"/>
+                                    <xs:enumeration value="17"/>
+                                    <xs:enumeration value="16"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="14"/>
+                                    <xs:enumeration value="13"/>
+                                    <xs:enumeration value="12"/>
+                                    <xs:enumeration value="11"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="9"/>
+                                    <xs:enumeration value="8"/>
+                                    <xs:enumeration value="7"/>
+                                    <xs:enumeration value="6"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="4"/>
+                                    <xs:enumeration value="3"/>
+                                    <xs:enumeration value="2"/>
+                                    <xs:enumeration value="1"/>
+                                    <xs:enumeration value="0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Benefits">
+                <xs:annotation>
+                    <xs:documentation>Does the veteran know the amount of his/her benefit payment:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID__capable">
+                <xs:annotation>
+                    <xs:documentation>Do you view the veteran as capable of managing his/her financial affairs:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Bills">
+                <xs:annotation>
+                    <xs:documentation>Does the veteran know the amounts of his/her monthly bills:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Money_Affairs_Describe_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Prudent">
+                <xs:annotation>
+                    <xs:documentation>Does the veteran prudently handle payments:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Money">
+                <xs:annotation>
+                    <xs:documentation>Does the veteran personally handle money and pay bills:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Summary_Employment">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Summary_Social">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Age">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Gender">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Male"/>
+                                    <xs:enumeration value="Female"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Marital_Status">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Single"/>
+                                    <xs:enumeration value="Married"/>
+                                    <xs:enumeration value="Divorced"/>
+                                    <xs:enumeration value="Widowed"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Service_Connected_Disability">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Verify">
+                <xs:annotation>
+                    <xs:documentation>Were you able to verify the accuracy of the claimant's name, address, and phone number?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Verify_Explain">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Informants">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="9">            <xs:element name="Selected" nillable="true">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:enumeration value="Claims folder"/>
+                                            <xs:enumeration value="Medical record"/>
+                                            <xs:enumeration value="Veteran/Claimant"/>
+                                            <xs:enumeration value="Family members"/>
+                                            <xs:enumeration value="Employers"/>
+                                            <xs:enumeration value="Neighbors"/>
+                                            <xs:enumeration value="Friends"/>
+                                            <xs:enumeration value="Physician"/>
+                                            <xs:enumeration value="Other persons"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Informants_Other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Collateral">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Other_Demo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Name_First">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Name_MI">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_DOB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_C_">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_SSN">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_DOE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Exam_Location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DEMOGRAPHIC_MISC_SSI_Name_Last">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="sis:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="SocialIndustrialSurveyForm" type="sis:SocialIndustrialSurveyFormType"/>
+    <xs:complexType name="Metadata">
+        <xs:all>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="codeSystem" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="source" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+
+</xs:schema>

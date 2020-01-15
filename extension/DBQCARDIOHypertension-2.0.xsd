@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:h="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Hypertension0/2.0" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Hypertension0/2.0" elementFormDefault="qualified" version="2.0">
+	<xs:complexType name="Hypertension0FormType">
+		<xs:sequence>
+			<xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_DXa">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx1">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx1_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx1_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx2">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx2_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx2_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx_Other">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HypertensionContinuousMedication">
+			  <xs:annotation> 
+			    <xs:documentation>b. Does the Veteran's treatment plan include taking continuous medication for hypertension or isolated systolic hypertension?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_Medications_List">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_InitialDx">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			            <xs:enumeration value="Unknown"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP1_1SY">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP1_1DIA">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP1_2SY">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP1_2DIA">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP1_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP2_1SYS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP2_1DIA">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP2_2SYS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP2_2DIA">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP2_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP3_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP3_1SYS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP3_1Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP3_2SYS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_BP3_2Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HypertensionDiastolicElevationHistory">
+			  <xs:annotation> 
+			    <xs:documentation>d. Does the Veteran have a history of  a diastolic BP elevation to predominantly 100 or more?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_CurrentBP_1SYS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_CurrentBP_1Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_CurrentBP_1Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_CurrentBP_2SYS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_CurrentBP_2Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_CurrentBP_2Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_CurrentBP_3SYS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_CurrentBP_3Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_CurrentBP_3Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_PE_Other">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_PE_Other_Describe">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_PE_Other_Scars">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Functional_Impact">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran's hypertension or isolated systolic hypertension impact his or her ability to work?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Functional_Impact_Examples">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Remarks">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP1_1SY">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP1_1Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP1_2SY">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP1_2Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP1_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP2_1SY">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP2_1Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP2_2SY">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP2_2Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP2_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP3_1SY">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP3_1Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP3_2SY">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP3_2Dia">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_NOHx_BP3_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="Hypertension">
+			  <xs:annotation>
+			    <xs:documentation>Hypertension</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx_HTN_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx_HTN_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx_SYSHTN">
+			  <xs:annotation>
+			    <xs:documentation>Isolated systolic hypertension</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx_SYSHTN_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx_SYSHTN_Date">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Dx_OtherCB">
+			  <xs:annotation>
+			    <xs:documentation>Other, specify:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_Medical">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_Hx_Historic_Describe">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HypertensionAverageBloodPressureReadingSystolic">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HypertensionAverageBloodPressureReadingDiastolic">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+			  <xs:annotation> 
+			    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination Request?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_InPersonExamination_CBx">
+			  <xs:annotation>
+			    <xs:documentation>In-person examination</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_RecordsReviewed_CBx">
+			  <xs:annotation>
+			    <xs:documentation>Records reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_CBx">
+			  <xs:annotation>
+			    <xs:documentation>Other, please specify:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_MB">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Comments__MB">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+			  <xs:annotation>
+			    <xs:documentation>Not requested</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+			  <xs:annotation>
+			    <xs:documentation>No records were reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA e-folder (VBMS or Virtual VA)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+			  <xs:annotation>
+			    <xs:documentation>CPRS</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+			  <xs:annotation>
+			    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_PE_Other_Scars_Size_new">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_PE_Other_Scars_Location">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_PE_Other_Scars_Length">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_PE_Other_Scars_Width">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_CARDIO_HTN_PE_Other_Comments">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_3">
+			  <xs:annotation>
+			    <xs:documentation>Examination via approved video telehealth</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_4">
+			  <xs:annotation>
+			    <xs:documentation>In-person examination</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="h:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Hypertension0Form" type="h:Hypertension0FormType"/>
+	<xs:complexType name="Metadata">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

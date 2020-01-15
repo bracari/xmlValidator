@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/IntestinalSurgery/2.0"
+           xmlns:insurg="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/IntestinalSurgery/2.0"
+           xmlns="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/IntestinalSurgery/2.0"
+           targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/IntestinalSurgery/2.0"
+           version="1.0" elementFormDefault="qualified">
+    <xs:complexType name="IntestinalSurgeryFormType">
+        <xs:sequence>
+            <xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_SURG">
+                <xs:annotation>
+                    <xs:documentation>Has the Veteran had intestinal surgery?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_SM">
+                <xs:annotation>
+                    <xs:documentation>Resection of the small intestine</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_SM_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_SM_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_SM_REASON">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_LG">
+                <xs:annotation>
+                    <xs:documentation>Resection of the large intestine</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_LG_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_LG_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_LG_REASON">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_ADHESIONS">
+                <xs:annotation>
+                    <xs:documentation>Peritoneal adhesions attributable to resection of the large or small intestine
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_ADHESIONS_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_ADHESIONS_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_ADHESIONS_REASON">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_FISTULA">
+                <xs:annotation>
+                    <xs:documentation>Persistent fistula</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_FISTULA_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_FISTULA_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_FISTULA_REASON">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_SURG_OTHER">
+                <xs:annotation>
+                    <xs:documentation>Other intestinal surgery, specify diagnoses below, providing only diagnoses that
+                        pertain to intestinal surgery:
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_OTHER_DATE_1">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_OTHER_REASON_1">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_OTHER_DATE_2">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_OTHER_REASON_2">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_ADD_INFO">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_OTHER_DX_1">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_OTHER_DX_2">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_OTHER_ICD_1">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_GI_OTHER_ICD_2">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_GI_MEDS">
+                <xs:annotation>
+                    <xs:documentation>b. Is continuous medication required for control of the Veteran's intestinal
+                        conditions?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_GI_MEDS_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran have any signs or symptoms attributable to any intestinal
+                        surgery?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_SLGT">
+                <xs:annotation>
+                    <xs:documentation>Slight symptoms attributable to resection of large intestine</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_SLGT_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_MOD">
+                <xs:annotation>
+                    <xs:documentation>Moderate symptoms attributable to resection of large intestine</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_MOD_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_SEV">
+                <xs:annotation>
+                    <xs:documentation>Severe symptoms, objectively supported by examination findings, attributable to
+                        resection of large intestine
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_SEV_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_ABD_PN">
+                <xs:annotation>
+                    <xs:documentation>Abdominal pain and/or colic pain</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_ADB_PN_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_DIARR">
+                <xs:annotation>
+                    <xs:documentation>Diarrhea</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_DIARR_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_ALT_DIARR">
+                <xs:annotation>
+                    <xs:documentation>Alternating diarrhea and constipation</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_ALT_DIARR_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_ABD_DIST">
+                <xs:annotation>
+                    <xs:documentation>Abdominal distension</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_ABD_DIST_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_ANEMIA">
+                <xs:annotation>
+                    <xs:documentation>Anemia</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_NAUSEA">
+                <xs:annotation>
+                    <xs:documentation>Nausea</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_NAUSEA_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_PULL_PAIN">
+                <xs:annotation>
+                    <xs:documentation>Pulling pain on attempting work or aggravated by movements of the body
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_OTHER">
+                <xs:annotation>
+                    <xs:documentation>Other, describe:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_OTHER_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_WT_LS">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran have weight loss or inability to gain weight attributable to
+                        intestinal surgery?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_WT_LS_BASE_WT">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_WT_LS_CUR_WT">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_WT_LS_UNABLE_REGAIN">
+                <xs:annotation>
+                    <xs:documentation>c. Has the Veteran been unable to regain weight despite appropriate therapy?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_WT_LS_SUSTAINED">
+                <xs:annotation>
+                    <xs:documentation>b. Has the Veteran's weight loss been sustained for 3 months or longer?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_ABS_NUTR">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran have any interference with absorption and nutrition attributable
+                        to resection of the small intestine?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                    <xs:enumeration value="not applicable"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_ABS_NUTR_IMPAIR">
+                <xs:annotation>
+                    <xs:documentation>If yes, does this cause impairment of health objectively supported by examination
+                        findings including definite and/or material weight loss?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_ABS_NUTR_IMPAIR_SEV">
+                <xs:annotation>
+                    <xs:documentation>If yes, is impairment of health severe?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_ABS_NUTR_IMPAIR_SEV_LVL">
+                <xs:annotation>
+                    <xs:documentation>Indicate severity of interference with absorption and nutrition:
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Definite"/>
+                                    <xs:enumeration value="Marked"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OSTOMY">
+                <xs:annotation>
+                    <xs:documentation>Did the Veteran's intestinal condition require an ileostomy or colostomy?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_FISTULA">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran now have or has he or she ever had a persistent intestinal
+                        fistula attributable to a surgical intestinal condition?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_FISTULA_DC">
+                <xs:annotation>
+                    <xs:documentation>If yes, does the Veteran have fecal discharge attributable to this?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_FISTULA_DC_SLT">
+                <xs:annotation>
+                    <xs:documentation>Slight</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_FISTULA_DC_COP">
+                <xs:annotation>
+                    <xs:documentation>Copious</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_FISTULA_DC_INFREQ">
+                <xs:annotation>
+                    <xs:documentation>Infrequent</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_FISTULA_DC_FREQ">
+                <xs:annotation>
+                    <xs:documentation>Frequent</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_FISTULA_DC_CONST">
+                <xs:annotation>
+                    <xs:documentation>Constant</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_FISTULA_DC_OTH">
+                <xs:annotation>
+                    <xs:documentation>Other, describe:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OTH_PHY_SCARS">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_GI_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_VOMIT">
+                <xs:annotation>
+                    <xs:documentation>Vomiting</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_SAS_VOMIT_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OSTOMY_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_FISTULA_DC_OTH_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OTH_PHY_SCARS_YES">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OTH_PHY_OTH">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OTH_PHY_OTH_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB">
+                <xs:annotation>
+                    <xs:documentation>a. Has laboratory testing been performed?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_CBC">
+                <xs:annotation>
+                    <xs:documentation>CBC (if anemia due to any intestinal condition is suspected or present)
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_CBC_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_CBC_HEMO">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_CBC_HEMA">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_CBC_WBC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_CBC_PLAT">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_IMAGING">
+                <xs:annotation>
+                    <xs:documentation>b. Have imaging studies or diagnostic procedures been performed and are the
+                        results available?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_IMAGING_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_OTH_TESTS">
+                <xs:annotation>
+                    <xs:documentation>c. Are there any other significant diagnostic test findings and/or results?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_OTH_TESTS_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GI_FUNC_IMPACT">
+                <xs:annotation>
+                    <xs:documentation>Do any of the Veteran's intestinal surgery residuals impact his or her ability to
+                        work?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GI_FUNC_IMPACT_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="MISC_GI_RMKS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_OTH">
+                <xs:annotation>
+                    <xs:documentation>Other, specify:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_OTH_SPEC_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_OTH_SPEC_RESULTS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_GI_LAB_OTH_SPEC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+                <xs:annotation>
+                    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination
+                        Request?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_InPersonExamination_CBx">
+                <xs:annotation>
+                    <xs:documentation>In-person examination</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_RecordsReviewed_CBx">
+                <xs:annotation>
+                    <xs:documentation>Records reviewed</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_CBx">
+                <xs:annotation>
+                    <xs:documentation>Other, please specify:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_MB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Comments__MB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+                <xs:annotation>
+                    <xs:documentation>Not requested</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+                <xs:annotation>
+                    <xs:documentation>No records were reviewed</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+                <xs:annotation>
+                    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+                <xs:annotation>
+                    <xs:documentation>VA e-folder (VBMS or Virtual VA)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+                <xs:annotation>
+                    <xs:documentation>CPRS</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+                <xs:annotation>
+                    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OTH_SCARS_Location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OTH_SCARS_Length">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OTH_SCARS_Width">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GI_OTH_Comments">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_3">
+                <xs:annotation>
+                    <xs:documentation>Examination via approved video telehealth</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_4">
+                <xs:annotation>
+                    <xs:documentation>In-person examination</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="insurg:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="IntestinalSurgeryForm" type="IntestinalSurgeryFormType"/>
+    <xs:complexType name="Metadata">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="codeSystem" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="source" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2012 sp1 (x64) (http://www.altova.com) by David Alvey (private) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:v1="http://niem.gov/niem/appinfo/v1" targetNamespace="http://niem.gov/niem/appinfo/v1" version="V1">
+	<xsd:annotation>
+		<xsd:documentation>This appinfo schema provides support for Coding
+			system and template types.
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:simpleType name="OID">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:element name="CodingValueSet">
+		<xsd:annotation>
+			<xsd:documentation>The assignment of a Code System identity, Code
+				System name and Value Set identity for a health coded type.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name="codeSystem" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="v1:OID"/>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="codeSystemName" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="valueSet" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="TemplateId">
+		<xsd:annotation>
+			<xsd:documentation>The AugmentedTypeIndicator may be applied to any
+				NIEM-conformant type. A type that occurs in a NIEM domain and that
+				uses an augmentation element must have an AugmentedTypeIndicator
+				with a true value. No other type should have a true value.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name="Desc" use="optional">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="OID" use="optional">
+				<xsd:simpleType>
+					<xsd:restriction base="v1:OID"/>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

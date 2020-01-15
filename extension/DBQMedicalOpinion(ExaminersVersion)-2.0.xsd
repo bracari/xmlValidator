@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mo="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MedicalOpinion/2.0" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MedicalOpinion/2.0" version="2.0" elementFormDefault="qualified">
+	<xs:complexType name="MedicalOpinionFormType">
+		<xs:sequence>
+			<xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_RequestedOpinion_ExamType">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_DirectServiceConnection_Greater50Percent">
+			  <xs:annotation>
+			    <xs:documentation>The claimed condition was at least as likely as not (50 percent or greater probability) incurred in or caused by the claimed in-service injury,</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_DirectServiceConnection_Less50Percent">
+			  <xs:annotation>
+			    <xs:documentation>The claimed condition was less likely than not (less than 50 percent probability) incurred in or caused by the claimed in-service injury, event,</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_DirectServiceConnection_RationaleResponse">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_SecondaryServiceConnection_Greater50Percent">
+			  <xs:annotation>
+			    <xs:documentation>The claimed condition is at least as likely as not (50 percent or greater probability) proximately due to or the result of the Veteran's service</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_SecondaryServiceConnection_Less50Percent">
+			  <xs:annotation>
+			    <xs:documentation>The claimed condition is less likely than not (less than 50 percent probability) proximately due to or the result of the Veteran's service</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_SecondaryServiceConnection_RationaleResponse">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_Condition_PriorToService_ExistedPriorToService">
+			  <xs:annotation>
+			    <xs:documentation>The claimed condition, which clearly and unmistakably existed prior to service, was clearly and unmistakably not aggravated beyond its</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_Condition_PriorToService_DidNotExisted_PriorToService">
+			  <xs:annotation>
+			    <xs:documentation>The claimed condition, which clearly and unmistakably existed prior to service, was aggravated beyond its natural progression by an</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_Condition_PriorToService_RationaleResponse">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_ServiceConnected_Yes">
+			  <xs:annotation>
+			    <xs:documentation>Yes</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_ServiceConnected_No">
+			  <xs:annotation>
+			    <xs:documentation>No</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_SC_BaselineDateResponse">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_SC_BaselineSeverityResponse">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_ServiceConnected_Greater_Yes">
+			  <xs:annotation>
+			    <xs:documentation>Yes</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_ServiceConnected_Greater_No">
+			  <xs:annotation>
+			    <xs:documentation>No</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_ServiceConnected_BaselineG_Yes">
+			  <xs:annotation>
+			    <xs:documentation>Yes (provide rationale in section b.)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_ServiceConnected_BaselineG_No">
+			  <xs:annotation>
+			    <xs:documentation>No (provide rationale in section b.)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_SC_BaselineDescriptionResponse">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_ServiceConnected_Baseline_Yes">
+			  <xs:annotation>
+			    <xs:documentation>Yes (provide rationale in section b.)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_ServiceConnected_Baseline_No">
+			  <xs:annotation>
+			    <xs:documentation>No (provide rationale in section b.)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_AggravationNSCC_ServiceConnected_RationaleResponse">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_ConflictingMedicalEvidence_OpinionResponse">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_RequestedOpinion_GeneralRemarks_Memo1">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_NARRATIVE_Medical_Opinion_DBQ_Summary">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_3">
+			  <xs:annotation>
+			    <xs:documentation>Examination via approved video telehealth</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_4">
+			  <xs:annotation>
+			    <xs:documentation>In-person examination</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+			  <xs:annotation>
+			    <xs:documentation>Not requested</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+			  <xs:annotation>
+			    <xs:documentation>No records were reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA e-folder (VBMS or Virtual VA)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+			  <xs:annotation>
+			    <xs:documentation>CPRS</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+			  <xs:annotation>
+			    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+			  <xs:annotation> 
+			    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination Request?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="mo:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="MedicalOpinionForm" type="mo:MedicalOpinionFormType"/>
+	<xs:complexType name="Metadata">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

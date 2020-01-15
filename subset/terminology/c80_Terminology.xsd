@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 rel. 2 sp1 (http://www.altova.com) by ANDREW WRIGHT (SYSTEMS MADE SIMPLE, INC.) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:c80_term="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/c80_Terminology"
+        xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:i2="http://niem.gov/niem/appinfo/2.0" xmlns:s="http://niem.gov/niem/structures/2.0"
+        xmlns:v1="http://niem.gov/niem/appinfo/v1" xmlns:i="http://niem.gov/niem/appinfo/2.1"
+        targetNamespace="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/c80_Terminology"
+        elementFormDefault="unqualified" attributeFormDefault="unqualified" version="0.6">
+    <annotation>
+        <documentation>
+            This is the Code list Schema for C80
+        </documentation>
+        <appinfo>
+            <i:ConformantIndicator>true</i:ConformantIndicator>
+        </appinfo>
+    </annotation>
+    <import namespace="http://niem.gov/niem/niem-core/2.0" schemaLocation="../niem/niem-core/2.0/niem-core.xsd"/>
+    <import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="../niem/appinfo/2.0/appinfo.xsd"/>
+    <import namespace="http://niem.gov/niem/appinfo/2.1" schemaLocation="../niem/appinfo/2.1/appinfo.xsd"/>
+    <import namespace="http://niem.gov/niem/appinfo/v1" schemaLocation="../niem/appinfo/V1/appinfo.xsd"/>
+    <import namespace="http://niem.gov/niem/structures/2.0" schemaLocation="../niem/structures/2.0/structures.xsd"/>
+
+    <attribute name="displayName" type="string">
+        <annotation>
+            <documentation>This is a display name attribute to carry the
+                documentation of an enumeration
+            </documentation>
+        </annotation>
+    </attribute>
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!--Condition Code Lists -->
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <simpleType name="SNOMEDCodeSimpleType">
+        <annotation>
+            <documentation>A restricted code to 9 integer length
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:string">
+            <pattern value="\d{6,9}"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="UntypedProblemCodeSimpleType">
+        <annotation>
+            <documentation>The SNOMED CT® has been limited by HITSP to the
+                value set
+                reproduced below in Table 2-60 Problem Type Value Set
+                Definition. This
+                indicates the level of medical judgment used to
+                determine the existence of a
+                problem.
+                Excludes Diagnosis and
+                Functional Limitation
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.3221.7.2"/>
+            </appinfo>
+        </annotation>
+        <restriction base="c80_term:SNOMEDCodeSimpleType">
+            <enumeration value="404684003">
+                <annotation>
+                    <documentation>Finding</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="418799008">
+                <annotation>
+                    <documentation>Symptom</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="55607006">
+                <annotation>
+                    <documentation>Problem</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="409586006">
+                <annotation>
+                    <documentation>Complaint</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="64572001">
+                <annotation>
+                    <documentation>Condition</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="UntypedProblemCodeType">
+        <annotation>
+            <documentation>A data type for untyped problems.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:UntypedProblemCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="UntypedProblemCode" type="c80_term:UntypedProblemCodeType">
+        <annotation>
+            <documentation>Element for the Untyped code</documentation>
+        </annotation>
+    </element>
+    <attribute name="untypedProblemCode" type="c80_term:UntypedProblemCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for untyped problem type
+            </documentation>
+        </annotation>
+    </attribute>
+    <simpleType name="DiagnosisProblemCodeSimpleType">
+        <annotation>
+            <documentation>Diagnosis type code</documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.3221.7.2"/>
+            </appinfo>
+        </annotation>
+        <restriction base="c80_term:SNOMEDCodeSimpleType">
+            <enumeration value="282291009">
+                <annotation>
+                    <documentation>Diagnosis</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="DiagnosisProblemCodeType">
+        <annotation>
+            <documentation>A data type for Diagnosis.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:DiagnosisProblemCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="DiagnosisProblemCode" type="c80_term:DiagnosisProblemCodeType">
+        <annotation>
+            <documentation>Element to carry the Diagnosis code
+            </documentation>
+        </annotation>
+    </element>
+    <attribute name="diagnosisCode" type="c80_term:DiagnosisProblemCodeSimpleType">
+        <annotation>
+            <documentation>The codebinding for diagnosis problem type
+            </documentation>
+        </annotation>
+    </attribute>
+    <simpleType name="FunctionalLimitationProblemCodeSimpleType">
+        <annotation>
+            <documentation>Diagnosis type code</documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.3221.7.2"/>
+            </appinfo>
+        </annotation>
+        <restriction base="c80_term:SNOMEDCodeSimpleType">
+            <enumeration value="55607006">
+                <annotation>
+                    <documentation>Functional Limitation</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="FunctionalLimitationProblemCodeType">
+        <annotation>
+            <documentation>A data type for Functional Limitation.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:FunctionalLimitationProblemCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="FunctionalLimitationProblemCode" type="c80_term:FunctionalLimitationProblemCodeType">
+        <annotation>
+            <documentation>Element to carry the Functional Limitation code
+            </documentation>
+        </annotation>
+    </element>
+    <attribute name="functionalLimitationCode" type="c80_term:FunctionalLimitationProblemCodeSimpleType"
+               fixed="55607006">
+        <annotation>
+            <documentation>The code binding for functional assessment problem
+                type
+            </documentation>
+        </annotation>
+    </attribute>
+    <simpleType name="ProblemTypeCodeSimpleType">
+        <annotation>
+            <documentation>The SNOMED CT® has been limited by HITSP to the
+                value set
+                reproduced
+                below in Table 2-60 Problem Type Value Set
+                Definition. This
+                indicates the
+                level of medical judgment used to
+                determine the existence of a
+                problem
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.3221.7.2"/>
+            </appinfo>
+        </annotation>
+        <union memberTypes="c80_term:UntypedProblemCodeSimpleType c80_term:DiagnosisProblemCodeSimpleType c80_term:FunctionalLimitationProblemCodeSimpleType"/>
+    </simpleType>
+    <simpleType name="ProblemDescriptionCodeSimpleType">
+        <annotation>
+            <documentation>Describes the problem. The SNOMED CT® has been
+                limited by HITSP
+                to terms decending from the Clinical Findings
+                (404684003) or Situation with
+                Explicit Context (243796009)
+                hierarchies.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.3221.7.4"/>
+            </appinfo>
+        </annotation>
+        <restriction base="c80_term:SNOMEDCodeSimpleType"/>
+    </simpleType>
+    <complexType name="ProblemDescriptionCodeType">
+        <annotation>
+            <documentation>A data type for Problem Description.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:ProblemDescriptionCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="ProblemDescriptionCode" type="c80_term:ProblemDescriptionCodeType">
+        <annotation>
+            <documentation>Element for Problem DescriptionCode
+            </documentation>
+        </annotation>
+    </element>
+    <attribute name="problemDescriptionCode" type="c80_term:ProblemDescriptionCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for problem description
+            </documentation>
+        </annotation>
+    </attribute>
+    <simpleType name="DiagnosisDescriptionCodeSimpleType">
+        <annotation>
+            <documentation>The value set is being drawn from SMOMED CT using
+                the
+                vocabularies created by the Omaha System and Clinical Care
+                Classification.
+                The value set is defined as being those SNOMED CT®
+                codes that appear in
+                mappings from the Omaha System or Clinical Care
+                Classification system
+                published by the College of American
+                Pathologists
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.5"/>
+            </appinfo>
+        </annotation>
+        <restriction base="c80_term:SNOMEDCodeSimpleType"/>
+    </simpleType>
+    <complexType name="DiagnosisDescriptionCodeType">
+        <annotation>
+            <documentation>A data type for Diagnosis Description.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:DiagnosisDescriptionCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="DiagnosisDescriptionCode" type="c80_term:DiagnosisDescriptionCodeType">
+        <annotation>
+            <documentation>Element for DiagnosisDesrcriptionCode
+            </documentation>
+        </annotation>
+    </element>
+    <attribute name="diagnosisDescriptionCode" type="c80_term:DiagnosisDescriptionCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for diagnosis description
+            </documentation>
+        </annotation>
+    </attribute>
+    <simpleType name="FunctionalAssesmentDescriptionCodeSimpleType">
+        <annotation>
+            <documentation>The value sets include those concepts in SNOMED
+                CT®
+                used to
+                describe functional status of a patient. When gaps in
+                SNOMED
+                terminologies
+                exist, the International Classification of
+                Functioning, Disability and Health
+                (ICF) may be used
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.61"/>
+            </appinfo>
+        </annotation>
+        <restriction base="c80_term:SNOMEDCodeSimpleType"/>
+    </simpleType>
+    <complexType name="FunctionalAssesmentDescriptionCodeType">
+        <annotation>
+            <documentation>A data type for Functional Assessment.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:FunctionalAssesmentDescriptionCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="FunctionalAssesmentDescriptionCode" type="c80_term:FunctionalAssesmentDescriptionCodeType">
+        <annotation>
+            <documentation>Element for FunctionalAssesmentDescriptionCode
+            </documentation>
+        </annotation>
+    </element>
+    <attribute name="functionalAssesmentDescriptionCode" type="c80_term:FunctionalAssesmentDescriptionCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for functiona;l assessment
+                description
+            </documentation>
+        </annotation>
+    </attribute>
+    <simpleType name="ProblemStatusCodeSimpleType">
+        <annotation>
+            <documentation>Shall contain a SNOMED Code from Table 2-70
+                Problem
+                Status Value
+                Set Definition below
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.68"/>
+            </appinfo>
+        </annotation>
+        <restriction base="c80_term:SNOMEDCodeSimpleType">
+            <enumeration value="55561003">
+                <annotation>
+                    <documentation>Active</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="73425007">
+                <annotation>
+                    <documentation>Inactive</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="413322009">
+                <annotation>
+                    <documentation>Resolved</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="ProblemStatusCodeType">
+        <annotation>
+            <documentation>A data type for Problem Status.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:ProblemStatusCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="ProblemStatusCode" type="c80_term:ProblemStatusCodeType">
+        <annotation>
+            <documentation>
+                7.12 Problem Status The status of the problem
+                (active,
+                inactive, resolved)
+            </documentation>
+            <appinfo>
+                <v1:TemplateId OID="2.16.840.1.113883.10.20.1.50"/>
+            </appinfo>
+        </annotation>
+    </element>
+    <attribute name="problemStatusCode" type="c80_term:ProblemStatusCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for problem status
+            </documentation>
+        </annotation>
+    </attribute>
+    <simpleType name="ProblemSeverityCodeSimpleType">
+        <annotation>
+            <documentation>The SNOMED CT® has been limited by HITSP to the
+                value set
+                reproduced
+                below in Table 2-67 Problem Severity Value Set
+                Definition. These
+                terms descend from the severities (272141005)
+                concept
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.3221.6.8"/>
+            </appinfo>
+        </annotation>
+        <restriction base="c80_term:SNOMEDCodeSimpleType">
+            <enumeration value="255604002">
+                <annotation>
+                    <documentation>Mild</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="371923003">
+                <annotation>
+                    <documentation>Mild to moderate</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="6736007">
+                <annotation>
+                    <documentation>Moderate</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="371924009">
+                <annotation>
+                    <documentation>Moderate to severe</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="24484000">
+                <annotation>
+                    <documentation>Severe</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="399166001">
+                <annotation>
+                    <documentation>Fatal</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="ProblemSeverityCodeType">
+        <annotation>
+            <documentation>A data type for Problem Status.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:ProblemSeverityCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="ProblemSeverityCode" type="c80_term:ProblemSeverityCodeType">
+        <annotation>
+            <documentation>Element for Problem Severity</documentation>
+        </annotation>
+    </element>
+    <attribute name="problemSeverityCode" type="c80_term:ProblemSeverityCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for problem severity
+            </documentation>
+        </annotation>
+    </attribute>
+    <simpleType name="DiagnosisPriorityCodeSimpleType">
+        <annotation>
+            <documentation>See HL7 v2.5.1 Table 0359 as reproduced below in
+                Table 2-64
+                Diagnosis Priority Value Set Definition.
+                This indicates
+                the significance or
+                priority of the diagnosis code
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.12.359"
+                                   codeSystemName="Health Level Seven (HL7) Version 2.5"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.4"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="0">
+                <annotation>
+                    <documentation>Not included in diagnosis ranking
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="1">
+                <annotation>
+                    <documentation>The primary diagnosis</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="2">
+                <annotation>
+                    <documentation>For ranked secondary diagnoses
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="3">
+                <annotation>
+                    <documentation>For ranked secondary diagnoses
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="4">
+                <annotation>
+                    <documentation>For ranked secondary diagnoses
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="5">
+                <annotation>
+                    <documentation>For ranked secondary diagnoses
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="DiagnosisPriorityCodeType">
+        <annotation>
+            <documentation>A data type for Problem Status.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:DiagnosisPriorityCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="DiagnosisPriorityCode" type="c80_term:DiagnosisPriorityCodeType">
+        <annotation>
+            <documentation>Element for Diagnosis Priority</documentation>
+        </annotation>
+    </element>
+    <attribute name="diagnosisPriorityCode" type="c80_term:DiagnosisPriorityCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for diagnosis priority
+            </documentation>
+        </annotation>
+    </attribute>
+    <simpleType name="DiagnosisTypeCodeSimpleType">
+        <annotation>
+            <documentation>See HL7 Table 0052 in Appendix A of HL7 2.5.1 as
+                reproduced
+                below in Table 2-62 Diagnosis Type Value Set Definition
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.12.52"
+                                   codeSystemName="Health Level Seven (HL7) Version 2.5"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.3"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="A">
+                <annotation>
+                    <documentation>Admitting</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="F">
+                <annotation>
+                    <documentation>Final</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="W">
+                <annotation>
+                    <documentation>Working</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="DiagnosisTypeCodeType">
+        <annotation>
+            <documentation>A data type for Diagnosis Type.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:DiagnosisTypeCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="DiagnosisTypeCode" type="c80_term:DiagnosisTypeCodeType">
+        <annotation>
+            <documentation>Element for DiagnosisTypeCode</documentation>
+        </annotation>
+    </element>
+    <attribute name="diagnosisTypeCode" type="c80_term:DiagnosisTypeCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for diagnosis type
+            </documentation>
+        </annotation>
+    </attribute>
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!--Unstructured Document Code Lists -->
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <simpleType name="DocumentClassCodeSimpleType">
+        <annotation>
+            <documentation>A data type Document Class</documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.11.79" codeSystemName="LOINC"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.46"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="11369-6">
+                <annotation>
+                    <documentation>History of Immunization</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="11485-0">
+                <annotation>
+                    <documentation>Anesthesia Records</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="11486-8">
+                <annotation>
+                    <documentation>Chemotherapy Records</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="11488-4">
+                <annotation>
+                    <documentation>Consult Note</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="11506-3">
+                <annotation>
+                    <documentation>Subsequent evaluation note</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="11543-6">
+                <annotation>
+                    <documentation>Nursery Records</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="15508-5">
+                <annotation>
+                    <documentation>Labor And Delivery Records</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="18726-0">
+                <annotation>
+                    <documentation>Radiology Studies</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="18761-7">
+                <annotation>
+                    <documentation>Transfer summarization note</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="18842-5">
+                <annotation>
+                    <documentation>Discharge summary</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="18842-5">
+                <annotation>
+                    <documentation>Laboratory Studies</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="18842-5">
+                <annotation>
+                    <documentation>Cardiology Studies</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="11536-0">
+                <annotation>
+                    <documentation>Notes</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="51847-2">
+                <annotation>
+                    <documentation>Deployment Form</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="29299-5">
+                <annotation>
+                    <documentation>Consults</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="11490-0">
+                <annotation>
+                    <documentation>Discharge Summary</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="34108-1">
+                <annotation>
+                    <documentation>Evaluation and Management (Outpatient)</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="34117-2">
+                <annotation>
+                    <documentation>History and Physicals Note</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="11504-8">
+                <annotation>
+                    <documentation>Surgical Op Note</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="28570-0">
+                <annotation>
+                    <documentation>Procedure Note</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="34112-3">
+                <annotation>
+                    <documentation>Evaluation and Management (Inpatient)</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="34875-5">
+                <annotation>
+                    <documentation>Post-Operative Evaluation and Management Note</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="34876-3">
+                <annotation>
+                    <documentation>Pre-Operative Evaluation and Management Note</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="47045-0">
+                <annotation>
+                    <documentation>Study Report</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="28636-9">
+                <annotation>
+                    <documentation>Initial Evaluation Note</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="51847-2">
+                <annotation>
+                    <documentation>Deployment Form</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="46240-8">
+                <annotation>
+                    <documentation>Outpatient Encounter</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="30954-2">
+                <annotation>
+                    <documentation>Radiology Report</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="DocumentClassCodeType">
+        <annotation>
+            <documentation>A data type for Document class.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:DocumentClassCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="DocumentClassCode" type="c80_term:DocumentClassCodeType">
+        <annotation>
+            <documentation>Element for Document Class Code
+            </documentation>
+        </annotation>
+    </element>
+    <attribute name="documentClassCode" type="c80_term:DocumentClassCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for diagnosis type
+            </documentation>
+        </annotation>
+    </attribute>
+    <element name="RadiologyReportClassCode" type="c80_term:DocumentClassCodeType"
+             substitutionGroup="c80_term:DocumentClassCode" fixed="30954-2">
+        <annotation>
+            <documentation>Terminology Binding of the Radiology Study Class code
+            </documentation>
+        </annotation>
+    </element>
+    <!-- Other codes in C80 not included: 26442-4 Obstetrical Studies Obstetrical studies
+        (set) 27895-2 Gastroenterology Endoscopy Studies Gastroenterology endoscopy studies
+        (set) 27896-0 Pulmonary Studies Pulmonary studies (set) 27897-8 Neuromuscular Electrophysiology
+        Studies Neuromuscular electrophysiology studies (set) 27898-6 Pathology Studies Pathology
+        studies (set) 28570-0 Procedure note Provider-unspecified procedure note 28619-5
+        Ophthalmology Studies Ophthalmology/optometry studies (set) 28634-4 Miscellaneous
+        Studies Miscellaneous studies (set) 29749-9 Dialysis Records Dialysis records HITSP
+        Clinical Document and Message Terminology Component Released for Implementation 20100125
+        V2.0 82 Concept Code Concept Name (LOINC Short Name) Definition (LOINC Long Common
+        Name) 29750-7 Neonatal Intensive Care Records Neonatal intensive care records 29751-5
+        Critical Care Records Critical care records 29752-3 Perioperative Records Perioperative
+        records 34109-9 Evaluation and management note Evaluation and management note 34117-2
+        History and physical note Provider-unspecified, History and physical note 34121-4
+        Interventional procedure note Interventional procedure note 34122-2 Pathology procedure
+        note Pathology procedure note 34133-9 Summarization of episode note Summarization
+        of episode note 34140-4 Transfer of care referral note Transfer of care referral
+        note 34748-4 Telephone encounter note Telephone encounter note 34775-7 Pre-operative
+        evaluation and management note General surgery Pre-operative evaluation and management
+        note 47039-3 Admission history and physical note Inpatient Admission history and
+        physical note 47042-7 Counseling note Counseling note 47045-0 Study report Study
+        report Document 47046-8 Summary of death Summary of death 47049-2 Communication Non-patient
+        Communication 57017-6 Privacy Policy Privacy Policy Organization Document 57016-8
+        Privacy Policy Acknowledgment Privacy Policy Acknowledgment Document 56445-0 Medication
+        Summary Medication Summary Document 53576-5 Personal health monitoring report Personal
+        health monitoring report Documen -->
+    <simpleType name="DocumentFormatCodeSimpleType">
+        <annotation>
+            <documentation>A data type for document MIME type - note thta this is
+                formally not in C80
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <i:CodingValueSet codeSystem="MIME" codeSystemnName="IANA MIME"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="text/plain">
+                <annotation>
+                    <documentation>Text per RFC 2046
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="text/html">
+                <annotation>
+                    <documentation>HTML per RFC 2854
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="text/rtf">
+                <annotation>
+                    <documentation>RTF
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="image/gif">
+                <annotation>
+                    <documentation>GIF Image
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="image/tiff">
+                <annotation>
+                    <documentation>Tag Image File Format (TIFF)per RFC 2302
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="image/jpeg">
+                <annotation>
+                    <documentation>JPEG Format
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="image/png">
+                <annotation>
+                    <documentation>PNG Format
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="application/xml">
+                <annotation>
+                    <documentation>XML per RFC 3023
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="application/msword">
+                <annotation>
+                    <documentation>Microsoft Word
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="application/pdf">
+                <annotation>
+                    <documentation>Adobe Acrobat PDF per RFC3778</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="DocumentFormatCodeType">
+        <annotation>
+            <documentation>A data type for Document class.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:DocumentFormatCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="DocumentFormatCode" type="c80_term:DocumentFormatCodeType">
+        <annotation>
+            <documentation>Element for Format Text</documentation>
+        </annotation>
+    </element>
+    <attribute name="documentFormatCode" type="c80_term:DocumentFormatCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for diagnosis type
+            </documentation>
+        </annotation>
+    </attribute>
+    <!--Other C80 codes not included: urn:ihe:pcc:xphr:2007 HL7 CCD Document urn:ihe:pcc:aps:2007
+        IHE Antepartum Summary urn:ihe:iti:xds-sd:pdf:2008 PDF embedded in CDA per XDS-SD
+        profile urn:ihe:iti:xds-sd:text:2008 Text embedded in CDA per XDS-SD profile urn:ihe:pcc:xds-ms:2007
+        XDS Medical Summaries urn:ihe:pcc:xphr:2007 Personal Health Records urn:ihe:pcc:edr:2007
+        Emergency Department Referral (EDR) urn:ihe:pcc:edes:2007 Emergency Department Encounter
+        Summary (EDES) urn:ihe:pcc:apr:handp:2008 Antepartum Record (APR) - History and Physical
+        urn:ihe:pcc:apr:lab:2008 Antepartum Record (APR) - Laboratory urn:ihe:pcc:apr:edu:2008
+        Antepartum Record (APR) - Education urn:ihe:pcc:irc:2008 Immunization Registry Content
+        (IRC) urn:ihe:pcc:crc:2008 Cancer Registry Content (CRC) urn:ihe:pcc:cm:2008 Care
+        Management (CM) urn:ihe:iti:bppc:2007 Basic Patient Privacy Consents urn:ihe:iti:bppc-sd:2007
+        Basic Patient Privacy Consents with Scanned Document urn:ihe:lab:xd-lab:2008 CDA
+        Laboratory Report urn:nhin:names:acp:XACML Access Consent Policy document formatted
+        as XACML -->
+    <simpleType name="DocumentConfidentialityCodeSimpleType">
+        <annotation>
+            <documentation>A data type Document Confidentiality
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <i:CodingValueSet codeSystem="2.16.840.1.113883.5.25" codeSystemnName="HL7 Confidentiality Code"
+                                  valueSet="2.16.840.1.113883.5.25"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="N">
+                <annotation>
+                    <documentation>Normal confidentiality rules (according to good
+                        health care
+                        practice) apply. That is, only authorized individuals
+                        with a legitimate
+                        medical or business need may access this item.
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="R">
+                <annotation>
+                    <documentation>Restricted access
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="V">
+                <annotation>
+                    <documentation>Very restricted access as declared by the
+                        Privacy
+                        Officer of
+                        the record holder.
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="DocumentConfidentialityCodeType">
+        <annotation>
+            <documentation>A data type for Document class.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:DocumentConfidentialityCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="DocumentConfidentialityCode" type="c80_term:DocumentConfidentialityCodeType">
+        <annotation>
+            <documentation>Element for confidentiality code
+            </documentation>
+        </annotation>
+    </element>
+    <attribute name="documentConfidentialityCode" type="c80_term:DocumentConfidentialityCodeSimpleType">
+        <annotation>
+            <documentation>The value set binding for diagnosis type
+            </documentation>
+        </annotation>
+    </attribute>
+    <!-- B Business Since the service class can represent knowledge structures that
+        may be considered a trade or business secret, there is sometimes (though rarely)
+        the need to flag those items as of business level confidentiality. However, no patient
+        related information may ever be of this confidentiality level D Clinician Only clinicians
+        may see this item, billing and administration persons can not access this item without
+        special permission I Individual Access only to individual persons who are mentioned
+        explicitly as actors of this service and whose actor type warrants that access (cf.
+        to actor type code) L Low No patient record item can be of low confidentiality. However,
+        some service objects are not patient related and therefore may have low confidentiality
+        N Normal Normal confidentiality rules (according to good healthcare practice) apply,
+        that is, only authorized individuals with a legitimate medical or business need may
+        access this item R Restricted Restricted access, e.g. only to providers having a
+        current care relationship to the patient V Very Restricted Very restricted access
+        as declared by the Privacy Officer of the record holder ETH Substance Abuse Related
+        Alcohol/drug-abuse related item HIV HIV related HIV and AIDS related item PSY Psychiatry
+        related Psychiatry related item SDV Sexual and Domestic Violence related Sexual assault
+        / domestic violence related item C Celebrity Celebrities are people of public interest
+        (VIP) including employees, whose information require special protection S Sensitive
+        Information for which the patient seeks heightened confidentiality. Sensitive information
+        is not to be shared with family members. Information reported by the patient about
+        family members is sensitive by default. Flag can be set or cleared on patient's request
+        HITSP Clinical Document and Message Terminology Component Review Copy 20100131 V2.0.1
+        88 Concept Code Concept Name Definition T Taboo Information not to be disclosed or
+        discussed with patient except through physician assigned to patient in this case.
+        This is usually a temporary constraint only, example use is a new fatal diagnosis
+        or finding, such as malignancy or HIV -->
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!--Person Demographics Code Lists -->
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <simpleType name="PersonMaritalStatusCodeSimpleType">
+        <annotation>
+            <documentation>A data type for Marital ststus.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="A">
+                <annotation>
+                    <documentation>Annulled - Marriage contract has been declared
+                        null and to
+                        not have existed
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="D">
+                <annotation>
+                    <documentation>Divorced - Marriage contract has been declared
+                        dissolved and
+                        inactive
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="I">
+                <annotation>
+                    <documentation>Interlocutory - Subject to an Interlocutory
+                        Decree
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="L">
+                <annotation>
+                    <documentation>Legally Separated
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="M">
+                <annotation>
+                    <documentation>Married - A current marriage contract is active
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="P">
+                <annotation>
+                    <documentation>Polygamous - More than 1 current spouse
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="S">
+                <annotation>
+                    <documentation>Never Married - No marriage contract has ever
+                        been entered
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="T">
+                <annotation>
+                    <documentation>Domestic partner - Person declares that a
+                        domestic partner
+                        relationship exists
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="W">
+                <annotation>
+                    <documentation>Widowed - The spouse has died
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="PersonMaritalStatusCodeType">
+        <annotation>
+            <documentation>A data type for Marital Status.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:PersonMaritalStatusCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="PersonMaritalStatusCode" type="c80_term:PersonMaritalStatusCodeType">
+        <annotation>
+            <documentation>Element for Marital Status Code
+            </documentation>
+        </annotation>
+    </element>
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!--Results Code Lists -->
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <simpleType name="ResultCodeSimpleType">
+        <annotation>
+            <documentation>Result Type SHOULD be selected from LOINC (codeSystem
+                2.16.840.1.113883.6.1) or SNOMED CT (codeSystem 2.16.840.1.113883.6.96)
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" valueSet="TBD"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token"/>
+    </simpleType>
+    <complexType name="ResultCodeType">
+        <annotation>
+            <documentation>Result Code Type.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:ResultCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="ResultCode" type="c80_term:ResultCodeType">
+        <annotation>
+            <documentation>A coded representation of the observation performed
+            </documentation>
+        </annotation>
+    </element>
+    <simpleType name="ResultStatusCodeSimpleType">
+        <annotation>
+            <documentation>Extensional Value set for Result Status Code based on the HL7
+                V3 Act Status
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.5.14" codeSystemName="HITSP"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.65"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="completed">
+                <annotation>
+                    <documentation>Completed</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="aborted">
+                <annotation>
+                    <documentation>Aborted</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="active">
+                <annotation>
+                    <documentation>Active</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="cancelled">
+                <annotation>
+                    <documentation>Cancelled</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="held">
+                <annotation>
+                    <documentation>Held</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="new">
+                <annotation>
+                    <documentation>New</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="suspended">
+                <annotation>
+                    <documentation>Suspended</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="ResultStatusCodeType">
+        <annotation>
+            <documentation>Result Status Code Type.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:ResultStatusCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="ResultStatusCode" type="c80_term:ResultStatusCodeType">
+        <annotation>
+            <documentation>Element for Result status Code
+            </documentation>
+        </annotation>
+    </element>
+    <simpleType name="OrderPriorityCodeSimpleType">
+        <annotation>
+            <documentation>Extensional Value set for Order Priority Code based on the HL7
+                V3 Act Status restricted by HITSP
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.5.14" codeSystemName="HITSP"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.71"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="S">
+                <annotation>
+                    <documentation>stat - Highest Priority</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="A">
+                <annotation>
+                    <documentation>ASAP - fill after S orders</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="R">
+                <annotation>
+                    <documentation>Routine</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="P">
+                <annotation>
+                    <documentation>Preop</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="C">
+                <annotation>
+                    <documentation>Callback</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="T">
+                <annotation>
+                    <documentation>Timing Critical</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="OrderPriorityCodeType">
+        <annotation>
+            <documentation>Order Priority Code Type.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:OrderPriorityCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="OrderPriorityCode" type="c80_term:OrderPriorityCodeType">
+        <annotation>
+            <documentation>Element for Order Priority Code
+            </documentation>
+        </annotation>
+    </element>
+    <simpleType name="ProcedureCodeSimpleType">
+        <annotation>
+            <documentation>Shall contain a value descending from the SNOMED Procedures
+                (71388002) hierarchy
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.28"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token"/>
+    </simpleType>
+    <complexType name="ProcedureCodeType">
+        <annotation>
+            <documentation>Procedure Code Type.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:ProcedureCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="ProcedureCode" type="c80_term:ProcedureCodeType">
+        <annotation>
+            <documentation>Element for Procedure Code
+            </documentation>
+        </annotation>
+    </element>
+    <simpleType name="CPTCodeSimpleType">
+        <annotation>
+            <documentation>A uniform coding system used primarily to identify medical
+                services and procedures furnished by physicians and other healthcare
+                professionals
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.12"
+                                   codeSystemName="Current Procedural Terminology (CPT®) Fourth Edition (CPT-4)"
+                                   valueSet="TBD"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token"/>
+    </simpleType>
+    <complexType name="CPTCodeType">
+        <annotation>
+            <documentation>CPT Code Type.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:CPTCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="CPTCode" type="c80_term:CPTCodeType">
+        <annotation>
+            <documentation>Element for Order Priority Code
+            </documentation>
+        </annotation>
+    </element>
+    <simpleType name="VitalSignCodeSimpleType">
+        <annotation>
+            <documentation>Extensional value set for Vitalsign Codes. This identifies the vital sign result type and has
+                been limited by HITSP to the value set reproduced in Table 2-104 (C80 v2.01).
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                                   valueSet="2.16.840.1.113883.3.88.12.80.62"/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="9729-1">
+                <annotation>
+                    <documentation>Respiratory Rate</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="8867-4">
+                <annotation>
+                    <documentation>Heart Rate</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="2710-2">
+                <annotation>
+                    <documentation>O2 % BldC Oximetry</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="8480-6">
+                <annotation>
+                    <documentation>BP Systolic</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="8462-4">
+                <annotation>
+                    <documentation>BP Diastolic</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="8310-5">
+                <annotation>
+                    <documentation>Body Temperature</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="8302-2">
+                <annotation>
+                    <documentation>Height</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="8306-3">
+                <annotation>
+                    <documentation>Height (Lying)</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="8287-5">
+                <annotation>
+                    <documentation>Head Circumference</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="3141-9">
+                <annotation>
+                    <documentation>Weight Measured</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="VitalSignCodeType">
+        <annotation>
+            <documentation>A data type for VitalSignCode</documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:VitalSignCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="VitalSignCode" type="c80_term:VitalSignCodeType">
+        <annotation>
+            <documentation>A coded value that represents the category of vital sign result.</documentation>
+        </annotation>
+    </element>
+    <simpleType name="ClinicalResultInterpretationCodeSimpleTest">
+        <annotation>
+            <documentation>Extensional value set for ClinicalResulyInterpretation codes. Based on HL7v3 [ref: Table 2-98
+                in C80, v2.01]
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7v3"
+                                   valueSet="2.16.840.1.113883.1.11.78"/>
+            </appinfo>
+        </annotation>
+        <restriction base="token">
+            <enumeration value="B">
+                <annotation>
+                    <documentation>Better</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="D">
+                <annotation>
+                    <documentation>Decreased</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="U">
+                <annotation>
+                    <documentation>Increased</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="W">
+                <annotation>
+                    <documentation>Worse</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="(">
+                <annotation>
+                    <documentation>Low off scale</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value=">">
+                <annotation>
+                    <documentation>High off scale</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="A">
+                <annotation>
+                    <documentation>Abnormal</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="AA">
+                <annotation>
+                    <documentation>Abnormal Alert</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="HH">
+                <annotation>
+                    <documentation>High alert</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LL">
+                <annotation>
+                    <documentation>Low alert</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="H">
+                <annotation>
+                    <documentation>High</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="L">
+                <annotation>
+                    <documentation>Low</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="N">
+                <annotation>
+                    <documentation>Normal</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="I">
+                <annotation>
+                    <documentation>Intermediate</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="MS">
+                <annotation>
+                    <documentation>Moderately susceptible</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="R">
+                <annotation>
+                    <documentation>Resistant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="S">
+                <annotation>
+                    <documentation>Susceptible</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="VS">
+                <annotation>
+                    <documentation>Very susceptible</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="HX">
+                <annotation>
+                    <documentation>Above high threshold</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="LX">
+                <annotation>
+                    <documentation>Below low threashold</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="ClinicalResultInterpretationCodeType">
+        <annotation>
+            <documentation>A data type for ClinicalResultInterpretationCode</documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:ClinicalResultInterpretationCodeSimpleTest">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="ClinicalResultInterpretationCode" type="c80_term:ClinicalResultInterpretationCodeType">
+        <annotation>
+            <documentation>A coded value that represents a clinical interpreation of a clinical result.</documentation>
+        </annotation>
+    </element>
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+    <simpleType name="BodySiteCodeSimpleType">
+        <annotation>
+            <documentation>An intensional value set containing a value descending from the SNOMED CT® Anatomical
+                Structure (91723000) hierarchy or Acquired body structure (body structure) (280115004) or Anatomical
+                site notations for tumor staging (body structure) (258331007) or Body structure, altered from its
+                original anatomical structure (morphologic abnormality) (118956008) or Physical anatomical entity (body
+                structure) (91722005)
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                   valueSet="2.16.840.1.113883.3.88.12.3221.8.9"/>
+            </appinfo>
+        </annotation>
+        <restriction base="c80_term:SNOMEDCodeSimpleType"/>
+    </simpleType>
+    <complexType name="BodySiteCodeType">
+        <annotation>
+            <documentation>A data type for BodySiteCode</documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="c80_term:BodySiteCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="c80_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="BodySiteCode" type="c80_term:BodySiteCodeType">
+        <annotation>
+            <documentation>A code specifying detail about the anatomical site or system that is the focus of the
+                observation.
+            </documentation>
+        </annotation>
+    </element>
+</schema>

@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ec="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EsophagealConditions/2.0" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EsophagealConditions/2.0" version="2.0" elementFormDefault="qualified">
+	<xs:complexType name="EsophagealConditionsFormType">
+		<xs:sequence>
+			<xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_DIAGNOSIS">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran now have or has he/she ever been diagnosed with an esophageal condition?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="GastroesophagealRefluxDisease">
+			  <xs:annotation>
+			    <xs:documentation>Gastroesophageal reflux disease (GERD)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_GERD_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_GERD_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HerniaHiatal">
+			  <xs:annotation>
+			    <xs:documentation>Hernia hiatal</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_HERNIA_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_HERNIA_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusStrictureOf">
+			  <xs:annotation>
+			    <xs:documentation>Esophagus, stricture of</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_STRICTURE_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_STRICTURE_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSpasmOf">
+			  <xs:annotation>
+			    <xs:documentation>Esophagus, spasm of (cardiospasm)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_SPASM_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_SPASM_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusDiverticulum">
+			  <xs:annotation>
+			    <xs:documentation>Esophagus, diverticulum of, acquired</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_DIV_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_DIV_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_OTHER">
+			  <xs:annotation>
+			    <xs:documentation>Other esophageal condition (such as eosinophilic esophagitis, Barrett's esophagus, etc.)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_OTHER_1">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_OTHER_1_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_OTHER_1_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_OTHER_2">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_OTHER_2_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_OTHER_2_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_ESOPHAGEAL_ADDITIONAL">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_ESOPHAGEAL_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_ESOPHAGEAL_MEDS">
+			  <xs:annotation> 
+			    <xs:documentation>b.  Does the Veteran's treatment plan include taking continuous medication for the diagnosed condition?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran have any of the following signs or symptoms due to any esophageal conditions (including GERD)?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsPersistentlyRecurrentEpigastriDistress">
+			  <xs:annotation>
+			    <xs:documentation>Persistently recurrent epigastric distress</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_INFREQ">
+			  <xs:annotation>
+			    <xs:documentation>Infrequent episodes of epigastric distress</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsDysphagia">
+			  <xs:annotation>
+			    <xs:documentation>Dysphagia</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsPyrosis">
+			  <xs:annotation>
+			    <xs:documentation>Pyrosis</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_REFLUX">
+			  <xs:annotation>
+			    <xs:documentation>Reflux</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsRegurgitation">
+			  <xs:annotation>
+			    <xs:documentation>Regurgitation</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_SLEEP">
+			  <xs:annotation>
+			    <xs:documentation>Sleep disturbance caused by esophageal reflux</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_SLEEP_FREQ">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate frequency of symptom recurrence per year:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="1"/>
+			            <xs:enumeration value="2"/>
+			            <xs:enumeration value="3"/>
+			            <xs:enumeration value="4 or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_SLEEP_DURATION">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate average duration of episodes of symptoms:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Less than 1 day"/>
+			            <xs:enumeration value="1-9 days"/>
+			            <xs:enumeration value="10 days or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsMaterialWeightLoss">
+			  <xs:annotation>
+			    <xs:documentation>Material weight loss</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_WEIGHT_BASELINE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_WEIGHT_CURRENT">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_NAUSEA">
+			  <xs:annotation>
+			    <xs:documentation>Nausea</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_NAUSEA_FREQ">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate frequency of episodes of nausea per year:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="1"/>
+			            <xs:enumeration value="2"/>
+			            <xs:enumeration value="3"/>
+			            <xs:enumeration value="4 or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_NAUSEA_DURATION">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate average duration of episodes of nausea:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Less than 1 day"/>
+			            <xs:enumeration value="1-9 days"/>
+			            <xs:enumeration value="10 days or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsVomiting">
+			  <xs:annotation>
+			    <xs:documentation>Vomiting</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_VOMIT_FREQ">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate frequency of episodes of vomiting per year:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="1"/>
+			            <xs:enumeration value="2"/>
+			            <xs:enumeration value="3"/>
+			            <xs:enumeration value="4 or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_VOMIT_DURATION">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate average duration of episodes of vomiting:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Less than 1 day"/>
+			            <xs:enumeration value="1-9 days"/>
+			            <xs:enumeration value="10 days or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsHematemesis">
+			  <xs:annotation>
+			    <xs:documentation>Hematemesis</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_HEMA_FREQ">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate frequency of episodes of hematemesis per year:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="1"/>
+			            <xs:enumeration value="2"/>
+			            <xs:enumeration value="3"/>
+			            <xs:enumeration value="4 or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_HEMA_DURATION">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate average duration of episodes of hematemesis:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Less than 1 day"/>
+			            <xs:enumeration value="1-9 days"/>
+			            <xs:enumeration value="10 days or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsMelenaAnemia">
+			  <xs:annotation>
+			    <xs:documentation>Melena with moderate anemia</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_MELENA_FREQ">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate frequency of episodes of melena per year:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="1"/>
+			            <xs:enumeration value="2"/>
+			            <xs:enumeration value="3"/>
+			            <xs:enumeration value="4 or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_SIGNS_MELENA_DURATION">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, indicate average duration of episodes of melena:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Less than 1 day"/>
+			            <xs:enumeration value="1-9 days"/>
+			            <xs:enumeration value="10 days or more"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_STRICTURE">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran have an esophageal stricture, spasm of esophagus (cardiospasm or achalasia), or an acquired diverticulum of the esophagus?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_STRICTURE_ASYM">
+			  <xs:annotation>
+			    <xs:documentation>Asymptomatic</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="NotAmenableToDilation">
+			  <xs:annotation>
+			    <xs:documentation>Not amenable to dilation</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_STRICTURE_MILD">
+			  <xs:annotation>
+			    <xs:documentation>Mild</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_STRICTURE_MILD_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagealStrictureModerate">
+			  <xs:annotation>
+			    <xs:documentation>Moderate</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_STRICTURE_MOD_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_STRICTURE_SEVERE_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_OPP_SCARS">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_OPP_OTHER_PERT">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_OPP_OTHER_PERT_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING">
+			  <xs:annotation> 
+			    <xs:documentation>a. Have diagnostic imaging studies or other diagnostic procedures been performed?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_ENDO">
+			  <xs:annotation>
+			    <xs:documentation>Upper endoscopy</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_ENDO_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_ENDO_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_GI">
+			  <xs:annotation>
+			    <xs:documentation>Upper GI radiographic studies</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_GI_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_GI_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_ESO">
+			  <xs:annotation>
+			    <xs:documentation>Esophagram (barium swallow)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_ESO_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_MRI">
+			  <xs:annotation>
+			    <xs:documentation>MRI</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_MRI_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_MRI_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_CT">
+			  <xs:annotation>
+			    <xs:documentation>CT</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_CT_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_CT_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_BIOPSY">
+			  <xs:annotation>
+			    <xs:documentation>Biopsy, specify site:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_BIOPSY_EDIT">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_BIOPSY_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_BIOPSY_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_OTHER">
+			  <xs:annotation>
+			    <xs:documentation>Other, specify:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_OTHER_EDIT">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_OTHER_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_OTHER_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB">
+			  <xs:annotation> 
+			    <xs:documentation>b. Has laboratory testing been performed?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_CBC">
+			  <xs:annotation>
+			    <xs:documentation>CBC</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_CBC_HEMO">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_CBC_HEMA">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_CBC_WHITE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_CBC_PLATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_CBC_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_HELI">
+			  <xs:annotation>
+			    <xs:documentation>Helicobacter pylori</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_HELI_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_HELI_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_HELI_OTHER">
+			  <xs:annotation>
+			    <xs:documentation>Other, specify:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_HELI_OTHER_EDIT">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_HELI_OTHER_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_LAB_HELI_OTHER_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_OTHER_SIGN">
+			  <xs:annotation> 
+			    <xs:documentation>c. Are there any other significant diagnostic test findings and/or results?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_OTHER_SIGN_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_FI">
+			  <xs:annotation> 
+			    <xs:documentation>Do any of the Veteran's esophageal conditions impact on his or her ability to work?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_FI_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_REMARKS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_ESOPHAGEAL_DT_IMAGING_ESO_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_ESOPHAGEAL_MEDS_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagealStricturePassageLiquidWithMarkedImpairment">
+			  <xs:annotation>
+			    <xs:documentation>Permitting passage of liquids only, with marked impairment of general health</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagealStricturePassageLiquidOnly">
+			  <xs:annotation>
+			    <xs:documentation>Permitting liquids only</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="AmenableToDilation">
+			  <xs:annotation>
+			    <xs:documentation>Amenable to dilation</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsPainSubsternal">
+			  <xs:annotation>
+			    <xs:documentation>Substernal</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsPainArm">
+			  <xs:annotation>
+			    <xs:documentation>Arm</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsPainShoulder">
+			  <xs:annotation>
+			    <xs:documentation>Shoulder</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsComboSevereImpairment">
+			  <xs:annotation>
+			    <xs:documentation>Symptom combinations productive of severe impairment of health</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsConsiderableImpairment">
+			  <xs:annotation>
+			    <xs:documentation>Symptoms productive of considerable impairment of health</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagusSymptomsPain">
+			  <xs:annotation>
+			    <xs:documentation>Pain</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EsophagealStrictureSevere">
+			  <xs:annotation>
+			    <xs:documentation>Severe</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+			  <xs:annotation> 
+			    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination Request?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_InPersonExamination_CBx">
+			  <xs:annotation>
+			    <xs:documentation>In-person examination</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_RecordsReviewed_CBx">
+			  <xs:annotation>
+			    <xs:documentation>Records reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_CBx">
+			  <xs:annotation>
+			    <xs:documentation>Other, please specify:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_MB">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Comments__MB">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+			  <xs:annotation>
+			    <xs:documentation>Not requested</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+			  <xs:annotation>
+			    <xs:documentation>No records were reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA e-folder (VBMS or Virtual VA)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+			  <xs:annotation>
+			    <xs:documentation>CPRS</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+			  <xs:annotation>
+			    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM__ESOPHAGEAL_OPP_SCARS_YES_New">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM__ESOPHAGEAL_OPP_SCARS_Location">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM__ESOPHAGEAL_OPP_SCARS_Length">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM__ESOPHAGEAL_OPP_SCARS_Width">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM__ESOPHAGEAL_OPP_Comments">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_3">
+			  <xs:annotation>
+			    <xs:documentation>Examination via approved video telehealth</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_4">
+			  <xs:annotation>
+			    <xs:documentation>In-person examination</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="ec:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="EsophagealConditionsForm" type="ec:EsophagealConditionsFormType"/>
+	<xs:complexType name="Metadata">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

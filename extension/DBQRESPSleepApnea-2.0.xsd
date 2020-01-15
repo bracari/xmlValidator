@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sa="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SleepApnea/2.0" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SleepApnea/2.0" version="2.0" elementFormDefault="qualified">
+	<xs:complexType name="SleepApneaFormType">
+		<xs:sequence>
+			<xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApnea">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran have or has he/she ever had sleep apnea?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE">
+			  <xs:annotation>
+			    <xs:documentation>Obstructive</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_OBSTRUCTIVE_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_CENTRAL">
+			  <xs:annotation>
+			    <xs:documentation>Central</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_CENTRAL_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_CENTRAL_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_MIXED">
+			  <xs:annotation>
+			    <xs:documentation>Mixed, components of both</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_MIXED_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_MIXED_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_OTHER">
+			  <xs:annotation>
+			    <xs:documentation>Other sleep disorder, specify:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_OTHER_EDIT">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_OTHER_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_OTHER_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_SLEEP_APNEA_ADDITIONAL">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_SLEEP_APNEA_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_SLEEP_APNEA_MEDS">
+			  <xs:annotation> 
+			    <xs:documentation>b. Is continuous medication required for control of a sleep disorder condition?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_SLEEP_APNEA_MEDS_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApneaFindings">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran currently have any findings, signs or symptoms attributable to sleep apnea?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApneaPersistentDaytimeHypersomnolence">
+			  <xs:annotation>
+			    <xs:documentation>Persistent daytime hypersomnolence</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApneaCorPulmonale">
+			  <xs:annotation>
+			    <xs:documentation>Cor pulmonale</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApneaRequiresTracheostomy">
+			  <xs:annotation>
+			    <xs:documentation>Requires tracheostomy</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_FINDINGS_OTHER">
+			  <xs:annotation>
+			    <xs:documentation>Other, describe:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_FINDINGS_OTHER_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_OPP_SCARS">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_OPP_OTHER_PERT">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_OPP_OTHER_PERT_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_DT_SLEEP_STUDY">
+			  <xs:annotation> 
+			    <xs:documentation>a. Has a sleep study been performed?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApneaDocumentedSleepDisorderBreathing">
+			  <xs:annotation> 
+			    <xs:documentation>If yes, does the Veteran have documented sleep disorder breathing?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_FACILITY">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_DT_SLEEP_STUDY_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_DT_OTHER_SIGN">
+			  <xs:annotation> 
+			    <xs:documentation>b. Are there any other significant diagnostic test findings and/or results?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_DT_OTHER_SIGN_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_FI">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran's sleep apnea impact his or her ability to work?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_FI_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_REMARKS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApneaCardonDioxideRetention">
+			  <xs:annotation>
+			    <xs:documentation>Carbon dioxide retention</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApneaChronicRespiratoryFailure">
+			  <xs:annotation>
+			    <xs:documentation>Chronic respiratory failure</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApneaBreathingAssistanceDevice">
+			  <xs:annotation> 
+			    <xs:documentation>c. Does the Veteran require the use of a breathing assistance device?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="SleepApneaContinuousPositiveAirwayPressureMachine">
+			  <xs:annotation> 
+			    <xs:documentation>d. Does the Veteran require the use of a continuous positive airway pressure (CPAP) machine?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+			  <xs:annotation> 
+			    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination Request?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_InPersonExamination_CBx">
+			  <xs:annotation>
+			    <xs:documentation>In-person examination</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_RecordsReviewed_CBx">
+			  <xs:annotation>
+			    <xs:documentation>Records reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_CBx">
+			  <xs:annotation>
+			    <xs:documentation>Other, please specify:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_MB">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Comments__MB">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_3">
+			  <xs:annotation>
+			    <xs:documentation>Examination via approved video telehealth</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_4">
+			  <xs:annotation>
+			    <xs:documentation>In-person examination</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+			  <xs:annotation>
+			    <xs:documentation>Not requested</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+			  <xs:annotation>
+			    <xs:documentation>No records were reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA e-folder (VBMS or Virtual VA)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+			  <xs:annotation>
+			    <xs:documentation>CPRS</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+			  <xs:annotation>
+			    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_OPP_SCARS_Size_RG">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_OPP_SCARS_Location_edit">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_OPP_SCARS_Length_edit">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_OPP_Comments_memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_SLEEP_APNEA_OPP_SCARS_Width_edit">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="sa:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SleepApneaForm" type="sa:SleepApneaFormType"/>
+	<xs:complexType name="Metadata">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:vler="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/vler"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:nc="http://niem.gov/niem/niem-core/2.0"
+	xmlns:s="http://niem.gov/niem/structures/2.0"
+	xmlns:i="http://niem.gov/niem/appinfo/2.0"
+	xmlns:i2="http://niem.gov/niem/appinfo/2.1"
+	xmlns:niem-xsd="http://niem.gov/niem/proxy/xsd/2.0"
+	xmlns:v1="http://niem.gov/niem/appinfo/v1"
+	xmlns:c80_term="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/c80_Terminology"
+	xmlns:jeb_term="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/jeb2.0_Terminology"
+	xmlns:vba_term="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/vba1.0_Terminology"
+	xmlns:vha_term="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/vha_Terminology"
+	targetNamespace="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/vler"
+	elementFormDefault="unqualified"
+	attributeFormDefault="unqualified"
+	version="0.7">
+
+	<xsd:annotation>
+		<xsd:documentation>
+			This is the subset of the VLER EIEM
+		</xsd:documentation>
+		<xsd:appinfo>
+			<i:ConformantIndicator>true</i:ConformantIndicator>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:import namespace="http://niem.gov/niem/niem-core/2.0" schemaLocation="../niem/niem-core/2.0/niem-core.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/structures/2.0" schemaLocation="../niem/structures/2.0/structures.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/proxy/xsd/2.0" schemaLocation="../niem/proxy/xsd/2.0/xsd.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="../niem/appinfo/2.0/appinfo.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/appinfo/2.1" schemaLocation="../niem/appinfo/2.1/appinfo.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/appinfo/v1" schemaLocation="../niem/appinfo/V1/appinfo.xsd">
+		<xsd:annotation>
+			<xsd:documentation>
+				This is the VLER special Appinfo
+			</xsd:documentation>
+			<xsd:appinfo>
+				<i:ConformantIndicator>true</i:ConformantIndicator>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/c80_Terminology" schemaLocation="../terminology/c80_Terminology.xsd">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<i:ConformantIndicator>false</i:ConformantIndicator>
+			</xsd:appinfo>
+			<xsd:documentation>
+				This is the C80 terminology schema
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/jeb2.0_Terminology" schemaLocation="../terminology/jeb2.0_Terminology.xsd">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<i:ConformantIndicator>true</i:ConformantIndicator>
+			</xsd:appinfo>
+			<xsd:documentation>
+				This is the CHRIS JEB 2.0 terminology schema
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/vba1.0_Terminology" schemaLocation="../terminology/vba1.0_Terminology.xsd">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<i:ConformantIndicator>true</i:ConformantIndicator>
+			</xsd:appinfo>
+			<xsd:documentation>
+				VBA terminology schema
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<xsd:import namespace="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/vha_Terminology" schemaLocation="../terminology/vha_Terminology.xsd">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<i:ConformantIndicator>false</i:ConformantIndicator>
+			</xsd:appinfo>
+			<xsd:documentation>This schema contains VHA-unique code sets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:import>
+	<!--*********************** Section Divider ***********************-->
+	<xsd:element name="ActivityDistance" type="nc:MeasureType">
+		<xsd:annotation>
+			<xsd:documentation>The distance over which an activity was performed</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ActivityDuration" type="nc:TimeMeasureType">
+		<xsd:annotation>
+			<xsd:documentation>Length of time performing an activity</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ActivityPerformerReference" type="s:ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>A reference to a person performing the activity
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ActivityPerformingFacilityReference" type="s:ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>A reference to a facility where an activity is performed
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ActivityRequestingFacilityReference" type="s:ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>A reference to a facility where an activity is requestered
+				or ordered
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AdmissionDate" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date a patient is admitted into a clinical care facility</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AgeAtDeath" type="nc:TimeMeasureType" substitutionGroup="nc:PersonAgeMeasure">
+		<xsd:annotation>
+			<xsd:documentation>
+				7.08 The age of the patient or subject at death
+			</xsd:documentation>
+			<xsd:appinfo>
+				<v1:TemplateId OID="2.16.840.1.113883.10.20.1.38"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AgeAtOnset" type="nc:TimeMeasureType" substitutionGroup="nc:PersonAgeMeasure">
+		<xsd:annotation>
+			<xsd:documentation>
+				7.06 The age of the patient or subject at onset of
+				the
+				condition
+			</xsd:documentation>
+			<xsd:appinfo>
+				<v1:TemplateId OID="2.16.840.1.113883.10.20.1.38"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AlertLevel" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>The current functional status of an automated device.[HL7 V3]. Possible values include: Normal, Warning, Critical, etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AllowAccessByClinicalStaff" type="niem-xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>An indicator as to whether a patient allows access to designated information by clinical staff</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AssessmentEntity" type="nc:EntityType">
+		<xsd:annotation>
+			<xsd:documentation>A person or organization that performs an
+				assessment
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AssigningAuthority" type="vler:AssigningAuthorityCodeSimpleType" substitutionGroup="nc:IdentificationJurisdiction">
+		<xsd:annotation>
+			<xsd:documentation>An Assigning Authority for a person identifier
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AssociationActiveIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>An indicator as to whether a Service Provider -
+				Client
+				relationship is still active
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Author" type="vler:AuthorType">
+		<xsd:annotation>
+			<xsd:documentation>A person role who created a document</xsd:documentation>
+			<xsd:appinfo>
+				<v1:TemplateId OID="1.3.6.1.4.1.19376.1.2.20.1"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AuthorReference" type="s:ReferenceType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>Reference to person role who created a document
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AwardedBenefitName" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The name of an awarded benefit. (Candidate for
+				standardized list of terms)
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Bed" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Specifies the code for the patient's bed. After room, it is the most general person location designation  [HL7 v2]</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitAdministratorEntity" type="nc:EntityType">
+		<xsd:annotation>
+			<xsd:documentation>A person or organization responsible for
+				adminstrating a
+				benefit
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitAssessment" type="vler:BenefitAssessmentType">
+		<xsd:annotation>
+			<xsd:documentation>An activity that determines whether a benefit
+				applies or
+				the level of benefit to be applied
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitAward" type="vler:BenefitAwardType">
+		<xsd:annotation>
+			<xsd:documentation>A benefit officially granted to a Person
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitAwardStatus" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>A representation of the current state of the
+				delivery of an
+				awarded benefit
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitCategory" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The Category which correlates to a named benefit.
+				(Candidate for standardized list of terms)
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitDateRange" type="nc:DateRangeType">
+		<xsd:annotation>
+			<xsd:documentation>The start and end date associated with a benefit
+				entitlment
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitEligibility" type="vler:BenefitEligibilityType">
+		<xsd:annotation>
+			<xsd:documentation>A qualified benefit under which a Client may be
+				entitled to
+				receive care or services
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitName" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The name of a Benefit (Candidate for a
+				standardized
+				list of
+				names)
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitPayment" type="vler:BenefitPaymentType">
+		<xsd:annotation>
+			<xsd:documentation>A record of a benefit payment instance
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitPaymentDate" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>A date that a payment was made</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitPayments" type="vler:BenefitPaymentsType">
+		<xsd:annotation>
+			<xsd:documentation>Payment history for an awarded benefit
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BenefitProcessStatus" type="nc:StatusType">
+		<xsd:annotation>
+			<xsd:documentation>A representation of the current state of the
+				benefit
+				elligibility business cycle - from claim prep through award
+				and delivery of
+				benefit (Candidate for standardized list of terms)
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="BloodPressureValue" type="vler:BloodPressureValueType" substitutionGroup="vler:ClinicalResultValueRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>A measurement set for a Blood Pressure observation.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Calories" type="nc:MeasureType">
+		<xsd:annotation>
+			<xsd:documentation>A measured (or estimated) amount of Calories</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Carbohydrates" type="nc:MeasureType">
+		<xsd:annotation>
+			<xsd:documentation>A measured (or estimated) amount of Carbohydrates</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CauseOfDeath" type="niem-xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>
+				7.07 Cause of Death Indicates that this
+				problem was
+				one of
+				the
+				causes of death for the patient or subject
+				of the condition
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Cemetary" type="vler:CemetaryType">
+		<xsd:annotation>
+			<xsd:documentation>A Cemetary</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClaimIdentifier" type="nc:IdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>A unique identifier for a claim
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClaimRequired" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Denotes whether a claim must be submitted to
+				receive a
+				benefit entitlment. True means a claim is required.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Client" type="vler:ClientType">
+		<xsd:annotation>
+			<xsd:documentation>A Veteran, Service Member, or eligible
+				beneficiary.
+				A client
+				is a role of a person.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClientIdentifier" type="vler:ClientIdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>An identifier for a Client
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClientReference" type="s:ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>An association reference to a Client
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClientStatus" type="vler:ClientStatusType">
+		<xsd:annotation>
+			<xsd:documentation>Indicates the state of the client's record, as defined in the state-transition model in the HL7 RIM. Examples include Active, Pending, Terminated, etc. Additional states might be defined such as 'Temporary' or 'Permanent'</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClientStatusCode" type="vha_term:ClientStatusCodeType" substitutionGroup="vler:ClientStatusRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>A coded representation for ClientStatus</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClientStatusRepresentation" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>A substitutable abstract representation for expressing ClinetStatus</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClientStatusText" type="nc:TextType" substitutionGroup="vler:ClientStatusRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>A textual representation for ClientStatus</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClinicalDocumentAugmentation" type="vler:ClinicalDocumentAugmentationType" substitutionGroup="s:Augmentation">
+		<xsd:annotation>
+			<xsd:documentation>Clinical Document Augmentation component
+			</xsd:documentation>
+			<xsd:appinfo>
+				<i:AppliesTo i:name="DocumentType" i:namespace="http://niem.gov/niem/niem-core/2.0"/>
+				<i2:AugmentedElementIndicator>true</i2:AugmentedElementIndicator>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClinicalResultCodedValue" type="vha_term:ClinicalResultCodedValueCodeType" substitutionGroup="vler:ClinicalResultValueRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>A ClinicalResult observation expressed by a coded value.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClinicalResultIdentifier" type="nc:IdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>A unique identifier for  a Clinical Result measurement.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClinicalResultInterpretation" type="vler:ClinicalResultInterpretationCodeSimpleType">
+		<xsd:annotation>
+			<xsd:documentation>An abbreviated interpretation of the observation, e.g., normal, abnormal, high, etc</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClinicalResultRatioValue" type="vler:RatioType" substitutionGroup="vler:ClinicalResultValueRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>A ClinicalResult observation expressed by a rato.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClinicalResultReferenceRange" type="nc:MeasureRangeValueType">
+		<xsd:annotation>
+			<xsd:documentation>Reference range(s) for the observation to which normal is compared.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClinicalResultTime" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date/time on which the clinical result measurement was taken.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClinicalResultValue" type="vler:ClinicalResultValueType" substitutionGroup="vler:ClinicalResultValueRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>The measured value and unit of measurement of a Clinical Result</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ClinicalResultValueRepresentation" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation> An abstract representation to be substitued by the specific type of Clinical Result measurement appropriate for the Clinical Result Code</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CollectionSessionTime" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>A time representing when a sample is collected if it is distinct from the time it was analyzed.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Concentration" type="nc:MeasureType">
+		<xsd:annotation>
+			<xsd:documentation>The amount of a substance dissolved in another. Expressed as a measured value per unit of measurement.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ContactDateTime" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date time that a contact encounter took place</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ContactLogEntry" type="vler:ContactLogEntryType" substitutionGroup="vler:PatientJournalEntryBody">
+		<xsd:annotation>
+			<xsd:documentation>Documents key aspects of a contact encounter</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DailyEventJournalEntry" type="vler:DailyEventJournalEntryType" substitutionGroup="vler:PatientJournalEntryBody">
+		<xsd:annotation>
+			<xsd:documentation>Documents key aspects of a daily event</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DataEnterer" type="vler:DataEntererType">
+		<xsd:annotation>
+			<xsd:documentation>A person who enters data into a document on behalf
+				of an
+				author
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DataEntererReference" type="s:ReferenceType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a Data Enterer</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DateLastCalibrated" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date and time the device was last calibrated.[HL7 V3]</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Denominator" type="niem-xsd:decimal">
+		<xsd:annotation>
+			<xsd:documentation>The bottom number of a fraction.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Diagnosis" type="vler:DiagnosisType" substitutionGroup="nc:PersonMedicalCondition">
+		<xsd:annotation>
+			<xsd:documentation>Substitution of a Diagnosis</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Diastolic" type="nc:MeasureType">
+		<xsd:annotation>
+			<xsd:documentation>A Blood Pressure is recorded by two numbers. The second (diastolic pressure) is measured before the heart contracts and lowest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DietJournalEntry" type="vler:DailyEventJournalEntryType" substitutionGroup="vler:PatientJournalEntryBody">
+		<xsd:annotation>
+			<xsd:documentation>Documents key dietary aspects of a meal</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentApproverReference" type="s:ReferenceType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>Reference to person who maintains a document
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentCustodian" type="vler:DocumentCustodianType">
+		<xsd:annotation>
+			<xsd:documentation>A person who maintains a document
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentCustodianReference" type="s:ReferenceType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>Reference to person who maintains a document
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentDictator" type="vler:DocumentDictatorType">
+		<xsd:annotation>
+			<xsd:documentation>The person who dictated the document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentDictatorReference" type="s:ReferenceType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>Reference to person who dictates a document
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentInterpreterReference" type="s:ReferenceType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>Reference to person who interprets results for a document
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentLegalAuthenticator" type="vler:DocumentLegalAuthenticatorType">
+		<xsd:annotation>
+			<xsd:documentation>A person who authenticates and "releases" a
+				document
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentLegalAuthenticatorReference" type="s:ReferenceType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a Legal Authenticator
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- <xsd:element name="DocumentRepresentation" type="xsd:base64Binary"> <xsd:annotation>
+		<xsd:documentation>The Base64 content of a document </xsd:documentation> </xsd:annotation>
+		</xsd:element> -->
+	<xsd:element name="DocumentScannerAssociation" type="vler:DocumentScannerAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>An association between a document and a scanner
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentSupervisor" type="vler:DocumentSupervisorType">
+		<xsd:annotation>
+			<xsd:documentation>A person who supervises a
+				document
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentSupervisorReference" type="s:ReferenceType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a Document supervisor
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentVerifier" type="vler:DocumentVerifierType">
+		<xsd:annotation>
+			<xsd:documentation>A person who verifies a
+				document
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentVerifierReference" type="s:ReferenceType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a Document Verifier
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EnititlementCode" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>A code indicating the circumstances under which a
+				person is
+				enitled to a benefit (Canadidate for standardized list of
+				terms)
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EventDescription" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>A textual description of an event</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EventTitle" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>A summary title for an event</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ExerciseJournalEntry" type="vler:ExerciseJournalEntryType" substitutionGroup="vler:PatientJournalEntryBody">
+		<xsd:annotation>
+			<xsd:documentation>Documents key aspects of an exercise activity</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Fat" type="nc:MeasureType">
+		<xsd:annotation>
+			<xsd:documentation>A measured (or estimated) amount of Fat</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FinancialHardship" type="vler:FinancialHardshipType">
+		<xsd:annotation>
+			<xsd:documentation>Finacial Hardship considerations used in Benefits
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FunctionalAssessment" type="vler:FunctionalLimitationProblemType" substitutionGroup="nc:PersonMedicalCondition">
+		<xsd:annotation>
+			<xsd:documentation>Substitution of FunctionalAssessment for Person
+				Medical
+				Condition
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="HardshipDateRange" type="nc:DateRangeType">
+		<xsd:annotation>
+			<xsd:documentation>The effective start and end date of the financial
+				hardship
+				condition
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="HardshipDeterminationDate" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date on which the financial hardship was
+				determined.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="HardshipReason" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The reason identified for the financial hardship
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="HealthcareOrder" type="vler:HealthcareOrderType">
+		<xsd:annotation>
+			<xsd:documentation>A healthcare order</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="HomeAppliance" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Conveys the type of Home Telehealth Monitor used by a patient</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="HomeTelehealthMonitor" type="vler:HomeTelehealthMonitorType">
+		<xsd:annotation>
+			<xsd:documentation>A measurement device used by patients in a home setting</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="LocalRemoteControlState" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>The state of control of the device. A device can either work autonomously or it can be controlled by another system. The
+control status of a device must be communicated between devices prior to remote commands being transmitted. If the device
+is not in "Remote" status, external commands will be ignored.[HL7 V3]</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="LocationDescription" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Describes the location in free text [HL7 v2]</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MealDescription" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>A free text description of a meal</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MeasurementDevice" type="vler:DeviceType">
+		<xsd:annotation>
+			<xsd:documentation>A machine or instrument used to obtain measurements of clinical observations.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MemberActiveDutyPersonnelStrengthGainDate" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Member Active Duty Personnel Strength Gain Date is the
+				first day on which a DoD Military Service member is counted in the Active
+				Duty personnel strength of a Military Service.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MemberActiveDutyPersonnelStrengthLossDate" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Member Active Duty Personnel Strength Loss Date is the
+				last day on which a DoD Military Service member
+				is counted in the Active Duty personnel strength of a Military Service.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MilitarySummaryAugmentation" type="vler:MilitarySummaryAugmentationType" substitutionGroup="s:Augmentation">
+		<xsd:annotation>
+			<xsd:documentation>Military Summary Augmentation component
+			</xsd:documentation>
+			<xsd:appinfo>
+				<i:AppliesTo i:name="MilitarySummaryType" i:namespace="http://niem.gov/niem/niem-core/2.0"/>
+				<i2:AugmentedElementIndicator>true</i2:AugmentedElementIndicator>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MonthlyAwardAmount" type="nc:AmountType">
+		<xsd:annotation>
+			<xsd:documentation>The amount of money to be paid each month for the
+				awarded
+				benefit
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MoodJournalEntry" type="vler:MoodJournalEntryType" substitutionGroup="vler:PatientJournalEntryBody">
+		<xsd:annotation>
+			<xsd:documentation>Documents key aspects of a mood observation</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="NullifiedState" type="niem-xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>An indicator as to whether the observation has been nullified or not.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Nullify" type="vler:NullifyType">
+		<xsd:annotation>
+			<xsd:documentation>Documents the nullification of a record. Typically used when an erroneous record is "deleted". Because medical
+records should never be deleted, the record is instead "nullified", and is rendered not visible to typical users, but still
+exists in the system for the purpose of audit trails, etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="NullifyDateTime" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date time when a Nullfy act is recorded.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Numerator" type="niem-xsd:decimal">
+		<xsd:annotation>
+			<xsd:documentation>The top number of a fraction.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="OrderingFacilityIdentifier" type="nc:IdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>A unique identifer for the facility from which the order was placed.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Patient" type="vler:PatientType">
+		<xsd:annotation>
+			<xsd:documentation>A medical client</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PatientCareLocation" type="vler:PatientCareLocationType">
+		<xsd:annotation>
+			<xsd:documentation>The location at which a patient is administered clinical care</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PatientJournalEntryBody" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>An abstract representation to be substituted by the entries for specifc journal types</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PatientJournalEntryHeader" type="vler:PatientJournalEntryHeaderType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of elements common to all Patient Journal Entries</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PatientReference" type="s:ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>Reference to a Patient</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PatientState" type="vler:PatientStateType">
+		<xsd:annotation>
+			<xsd:documentation>An indication of the state of the patient at the time of an observation. For example, a blood pressure may be taken while the patient is exercising or at rest.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PatientStateCode" type="vha_term:PatientStateCodeType" substitutionGroup="vler:PatientStateRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>A coded value representaton of the Patient State</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PatientStateRepresentation" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>An abstract representation of the PatientState. To be substituted.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PatientStateText" type="nc:TextType" substitutionGroup="vler:PatientStateRepresentation">
+		<xsd:annotation>
+			<xsd:documentation>A textual description of the Patient State.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PaymentAmount" type="nc:AmountType">
+		<xsd:annotation>
+			<xsd:documentation>The amount of a payment</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PaymentStatus" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The overall status of payments being made relative
+				to an
+				awarded benefit
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Period" type="nc:TimeMeasureType">
+		<xsd:annotation>
+			<xsd:documentation>A length or portion of time</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PersonAugmentation" type="vler:PersonAugmentationType" substitutionGroup="s:Augmentation">
+		<xsd:annotation>
+			<xsd:documentation>Person Augmentation component
+			</xsd:documentation>
+			<xsd:appinfo>
+				<i:AppliesTo i:name="PersonType" i:namespace="http://niem.gov/niem/niem-core/2.0"/>
+				<i2:AugmentedElementIndicator>true</i2:AugmentedElementIndicator>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PersonContacted" type="nc:PersonNameTextType">
+		<xsd:annotation>
+			<xsd:documentation>The person engaged in a contact encounter</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PersonIdentifier" type="vler:PersonIdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>A unique reference for a Person
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PersonInternmentDate" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of Internemnt
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PersonLocationMethod" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Person location type is the categorization of the person’s location defined by facility, building, floor, point of care,
+room or bed. Although not a required field, when used, it may be the only populated field. It usually includes values such
+as nursing unit, department, clinic, SNF, physician’s office.[HL7 v2]</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PointOfCare" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Specifies the code for the point where patient care is administered. It is conditional on Person Location Type (e.g.,
+nursing unit or department or clinic). After floor, it is the most general patient location designation. [HL7 v2]</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ProblemDate" type="nc:DateRangeType">
+		<xsd:annotation>
+			<xsd:documentation>Date range for a Problem</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Protein" type="nc:MeasureType">
+		<xsd:annotation>
+			<xsd:documentation>A measured (or estimated) amount of Protein</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="RadiologyExamination" type="vler:RadiologyExaminationType">
+		<xsd:annotation>
+			<xsd:documentation>A Radiology Examinatiion Element</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="RadiologyNuclearMedicineRequest" type="vler:RadiologyNuclearMedicineRequestType">
+		<xsd:annotation>
+			<xsd:documentation>A request (order)for Radiology/Nuclear Medicine
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="RadNucReport" type="vler:RadNucReportType" substitutionGroup="nc:Document">
+		<xsd:annotation>
+			<xsd:documentation>The augmented Document element</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Rate" type="vler:RateType">
+		<xsd:annotation>
+			<xsd:documentation>A measurement expressed as a quanity with respect to some period of time</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Reason" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>The recorded reason an action was taken.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="RelatedTaskOrItem" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>The primary subject of a contact encounter</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Room" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Specifies the code for the patient's room. After point of care, it is the most general person location designation. [HL7
+v2
+]</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ServiceEventEffectiveTime" type="nc:DateRangeType">
+		<xsd:annotation>
+			<xsd:documentation>Service Event time range</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ServiceProvider" type="vler:ServiceProviderType">
+		<xsd:annotation>
+			<xsd:documentation> A person who delivers medical or non medical
+				services on behalf of a client. A Service Provider is a role of a
+				person.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ServiceProviderClientAssociation" type="vler:ServiceProviderClientAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>A role a Service Provider plays relative to
+				Clients
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ServiceProviderReference" type="s:ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>An association reference to a Service Provider
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ServiceProviderRoleTitle" type="niem-xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>A name given for the service provider role
+				performed
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="SignatureCode" type="niem-xsd:string" fixed="S">
+		<xsd:annotation>
+			<xsd:documentation>A code to represent that it has been signed
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="SoftwareName" type="niem-xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>A software configuration reference
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Spouse" type="vler:ClientType" substitutionGroup="vler:Client">
+		<xsd:annotation>
+			<xsd:documentation>Spouse as a Client</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="SupplementalOxygen" type="vler:SupplementalOxygenType">
+		<xsd:annotation>
+			<xsd:documentation>Supplemental Oxygen measurement administered to the patient - it affects the interpretation of a pulse oximetry observations</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Systolic" type="nc:MeasureType">
+		<xsd:annotation>
+			<xsd:documentation>A Blood Pressure is recorded by two numbers. The first (systolic pressure) is measured after the heart contracts and is highest</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="TimeOfMeal" type="nc:TimeMeasureType">
+		<xsd:annotation>
+			<xsd:documentation>The date time a meal was consumed</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="TreatingProvider" type="vler:TreatingProviderType">
+		<xsd:annotation>
+			<xsd:documentation>A Treating Provider</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="TreatingProviderReference" type="s:ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>A reference to a treating provider
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="UntypedProblem" type="vler:UntypedProblemType" substitutionGroup="nc:PersonMedicalCondition">
+		<xsd:annotation>
+			<xsd:documentation>Substitution of untyped problem which has a coded
+				semantic
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--*********************** Section Divider ***********************-->
+	<xsd:complexType name="AuthorType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Author</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:AssociationBeginDate"/>
+					<xsd:element ref="vler:PersonIdentifier"/>
+					<xsd:element ref="nc:RoleOfPersonReference"/>
+					<xsd:element ref="nc:ContactInformation"/>
+					<xsd:element ref="nc:OrganizationReference"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BenefitAssessmentType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Benefit Assessment
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:ActivityType">
+				<xsd:annotation>
+					<xsd:appinfo>
+						<i:Base i:name="ActivityType" i:namespace="http://niem.gov/niem/niem-core/2.0"/>
+					</xsd:appinfo>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element ref="vler:AssessmentEntity" minOccurs="0"/>
+					<xsd:element ref="vler:ClaimIdentifier" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BenefitAwardType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Benefit Award</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:AwardedBenefitName" minOccurs="0"/>
+					<xsd:element ref="vler:MonthlyAwardAmount" minOccurs="0"/>
+					<xsd:element ref="vler:BenefitAwardStatus" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BenefitEligibilityType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Benefit Eligibility
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:BenefitName" minOccurs="0"/>
+					<xsd:element ref="vler:BenefitCategory" minOccurs="0"/>
+					<xsd:element ref="vler:BenefitDateRange" minOccurs="0" maxOccurs="5000">
+						<xsd:annotation>
+							<xsd:documentation>The start and end date associated with a
+								benefit
+								entitlment
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="vler:ClaimRequired" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Denotes whether a claim must be submitted to
+								receive a
+								benefit entitlment. True means a claim is required.
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="vler:ClaimIdentifier" minOccurs="0" maxOccurs="5000">
+						<xsd:annotation>
+							<xsd:documentation>A unique identifier for a claim
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="vler:BenefitAdministratorEntity" minOccurs="0" maxOccurs="5000">
+						<xsd:annotation>
+							<xsd:documentation>An organization responsible for adminstrating
+								a
+								benefit
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="vler:BenefitProcessStatus" minOccurs="0" maxOccurs="5000">
+						<xsd:annotation>
+							<xsd:documentation>A representation of the current state of the
+								benefit
+								elligibility business cycle - from claim prep through
+								award and delivery
+								of benefit (Candidate for standardized list
+								of
+								terms)
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element ref="vler:EnititlementCode" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>A code indicating the circumstances under
+								which
+								a
+								person
+								is enitled to a benefit (Canadidate for
+								standardized list
+								of terms)
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BenefitPaymentsType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Benefit Payments
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:PaymentStatus" minOccurs="0"/>
+					<xsd:element ref="vler:BenefitPayment" minOccurs="0" maxOccurs="5000"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BenefitPaymentType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Benefit Payment
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:BenefitPaymentDate" minOccurs="0"/>
+					<xsd:element ref="vler:PaymentAmount" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="BloodPressureValueType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for a BloodPressureValue</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:Diastolic"/>
+					<xsd:element ref="vler:Systolic"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CemetaryType">
+		<xsd:annotation>
+			<xsd:documentation>A cemetary as an extension of facility</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:FacilityType">
+				<xsd:sequence/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ClientIdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for a Patient Identifier
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:IdentificationID" minOccurs="0"/>
+					<xsd:element ref="vler:AssigningAuthority" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ClientStatusType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for ClientStatus</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:ClientStatusRepresentation"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ClientType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for a Client.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:ClientIdentifier" maxOccurs="5000"/>
+					<xsd:element ref="vler:ClientStatus"/>
+					<xsd:element ref="nc:RoleOfPersonReference"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ClinicalDocumentAugmentationType">
+		<xsd:annotation>
+			<xsd:documentation>Augmentation for a Document to add clinical elements
+			</xsd:documentation>
+			<xsd:appinfo>
+				<i2:AugmentedTypeIndicator>true</i2:AugmentedTypeIndicator>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:AugmentationType">
+				<xsd:sequence>
+					<xsd:element ref="vler:ClientReference"/>
+					<xsd:element ref="vler:ServiceEventEffectiveTime" minOccurs="0"/>
+					<xsd:element ref="vler:AdmissionDate" minOccurs="0"/>
+					<xsd:element ref="c80_term:DocumentClassCode"/>
+					<xsd:element ref="c80_term:DocumentFormatCode"/>
+					<xsd:element ref="c80_term:DocumentConfidentialityCode"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ClinicalResultValueType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for a ClientResultValue</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:MeasureType">
+				<xsd:sequence>
+					<xsd:element ref="vha_term:VitalSignMeasurementUnitCode"/>
+					<xsd:element ref="vha_term:ClinicalResultQualifierCode" minOccurs="0" maxOccurs="5000"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="ClinicalResultInterpretationCodeSimpleType">
+		<xsd:annotation>
+			<xsd:documentation>A list of clinical result interpretation terms</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Very High">
+				<xsd:annotation>
+					<xsd:documentation>Very High</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="High">
+				<xsd:annotation>
+					<xsd:documentation>High</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Normal">
+				<xsd:annotation>
+					<xsd:documentation>Normal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Low">
+				<xsd:annotation>
+					<xsd:documentation>Low</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Very Low">
+				<xsd:annotation>
+					<xsd:documentation>Very Low</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="ContactLogEntryType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for ContactLogEntry</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vha_term:ContactMethodyCode"/>
+					<xsd:element ref="vler:RelatedTaskOrItem"/>
+					<xsd:element ref="vler:PersonContacted"/>
+					<xsd:element ref="vler:ContactDateTime"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DailyEventJournalEntryType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for DailyEventJournalEntry</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:EventTitle"/>
+					<xsd:element ref="vler:EventDescription"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DataEntererType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Data Enterer</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:AssociationBeginDate" minOccurs="0"/>
+					<xsd:element ref="vler:PersonIdentifier"/>
+					<xsd:element ref="nc:RoleOfPersonReference"/>
+					<xsd:element ref="nc:OrganizationReference"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DeviceType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Device</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:TangibleItemType">
+				<xsd:sequence>
+					<xsd:element ref="vler:SoftwareName"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DiagnosisType">
+		<xsd:annotation>
+			<xsd:documentation>Defines a coded and text type for diagnostic value
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:MedicalConditionType">
+				<xsd:sequence>
+					<xsd:element ref="c80_term:DiagnosisProblemCode"/>
+					<xsd:element ref="vler:ProblemDate"/>
+					<xsd:element ref="c80_term:ProblemStatusCode"/>
+					<xsd:element ref="vler:CauseOfDeath" minOccurs="0"/>
+					<xsd:element ref="c80_term:DiagnosisDescriptionCode"/>
+					<xsd:element ref="c80_term:DiagnosisPriorityCode"/>
+					<xsd:element ref="c80_term:DiagnosisTypeCode"/>
+					<xsd:element ref="c80_term:ProblemSeverityCode"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DietJournalEntryType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for DietJournalEntry</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vha_term:MealCode"/>
+					<xsd:element ref="vler:TimeOfMeal"/>
+					<xsd:element ref="vler:MealDescription"/>
+					<xsd:element ref="vler:Calories" minOccurs="0"/>
+					<xsd:element ref="vler:Carbohydrates" minOccurs="0"/>
+					<xsd:element ref="vler:Fat" minOccurs="0"/>
+					<xsd:element ref="vler:Protein" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentCustodianType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Document Custodian
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:EntityRepresentation"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentDictatorType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Document Dictator
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:PersonIdentifier"/>
+					<xsd:element ref="nc:RoleOfPersonReference"/>
+					<xsd:element ref="nc:OrganizationReference"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentLegalAuthenticatorType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Document Legal Authenticator
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:SignatureCode"/>
+					<xsd:element ref="vler:PersonIdentifier"/>
+					<xsd:element ref="nc:RoleOfPersonReference"/>
+					<xsd:element ref="nc:OrganizationReference"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentScannerAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Document Scanner Association
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:AssociationBeginDate"/>
+					<xsd:element ref="nc:RoleOfItemReference"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentSupervisorType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Document Legal Authenticator
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:AssociationBeginDate" minOccurs="0"/>
+					<xsd:element ref="vler:SignatureCode"/>
+					<xsd:element ref="vler:PersonIdentifier"/>
+					<xsd:element ref="nc:RoleOfPersonReference"/>
+					<xsd:element ref="nc:OrganizationReference"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentVerifierType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Document Legal Authenticator
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:AssociationBeginDate" minOccurs="0"/>
+					<xsd:element ref="vler:SignatureCode"/>
+					<xsd:element ref="vler:PersonIdentifier"/>
+					<xsd:element ref="nc:RoleOfPersonReference"/>
+					<xsd:element ref="nc:OrganizationReference"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ExerciseJournalEntryType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for ExerciseJournalEntry</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vha_term:ExerciseActivityCode"/>
+					<xsd:element ref="vha_term:ExerciseIntensityCode"/>
+					<xsd:element ref="vler:ActivityDuration"/>
+					<xsd:element ref="vler:ActivityDistance" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="FinancialHardshipType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Financial Hardship
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:HardshipDeterminationDate" minOccurs="0"/>
+					<xsd:element ref="vler:HardshipReason" minOccurs="0"/>
+					<xsd:element ref="vler:HardshipDateRange" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="FunctionalLimitationProblemType">
+		<xsd:annotation>
+			<xsd:documentation>Clinical finding (finding)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:MedicalConditionType">
+				<xsd:sequence>
+					<xsd:element ref="c80_term:FunctionalLimitationProblemCode"/>
+					<xsd:element ref="vler:ProblemDate"/>
+					<xsd:element ref="c80_term:ProblemStatusCode"/>
+					<xsd:element ref="vler:CauseOfDeath" minOccurs="0"/>
+					<xsd:element ref="c80_term:FunctionalAssesmentDescriptionCode"/>
+					<xsd:element ref="c80_term:ProblemSeverityCode"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="HealthcareOrderType" abstract="true">
+		<xsd:annotation>
+			<xsd:documentation>A general type for healthcare order</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:ActivityType">
+				<xsd:sequence>
+					<xsd:element ref="c80_term:OrderPriorityCode" minOccurs="0"/>
+					<xsd:element ref="vler:ActivityRequestingFacilityReference" minOccurs="0"/>
+					<xsd:element ref="vler:AuthorReference" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="HomeOfRecordType">
+		<xsd:annotation>
+			<xsd:documentation>A subset of structured address for Home of record
+			</xsd:documentation>
+			<xsd:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:LocationCityName" minOccurs="0"/>
+					<xsd:element ref="nc:LocationState" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="HomeTelehealthMonitorType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for HomeTelehealthMonitor</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="vler:DeviceType">
+				<xsd:sequence>
+					<xsd:element ref="vler:HomeAppliance" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MilitarySummaryAugmentationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Augmentation for Military Summary
+			</xsd:documentation>
+			<xsd:appinfo>
+				<i2:AugmentedTypeIndicator>true</i2:AugmentedTypeIndicator>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:AugmentationType">
+				<xsd:sequence>
+					<xsd:element ref="jeb_term:MemberUniformedServiceRankCode"/>
+					<xsd:element ref="vba_term:PeriodOfWarCode" minOccurs="0" maxOccurs="5000"/>
+					<xsd:element ref="vler:MemberActiveDutyPersonnelStrengthGainDate" maxOccurs="5000"/>
+					<xsd:element ref="vler:MemberActiveDutyPersonnelStrengthLossDate" minOccurs="0" maxOccurs="5000"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MoodJournalEntryType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for MoodJournalEntry</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vha_term:MoodCode"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="NullifyType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for Nullify</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:CommentText"/>
+					<xsd:element ref="vler:NullifyDateTime"/>
+					<xsd:element ref="vler:Reason"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PatientCareLocationType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for PatientCareLocation</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:PointOfCare" minOccurs="0"/>
+					<xsd:element ref="vler:Room" minOccurs="0"/>
+					<xsd:element ref="vler:Bed" minOccurs="0"/>
+					<xsd:element ref="nc:FacilityReference" minOccurs="0"/>
+					<xsd:element ref="vler:PersonLocationMethod" minOccurs="0"/>
+					<xsd:element ref="vler:LocationDescription" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PatientJournalEntryHeaderType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for PatientJournalEntryHeader</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vha_term:JournalEntryCodedValueCode"/>
+					<xsd:element ref="nc:DocumentCreationDate"/>
+					<xsd:element ref="nc:CommentText" minOccurs="0"/>
+					<xsd:element ref="vler:AllowAccessByClinicalStaff" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PatientStateType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for PatientState</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:PatientStateRepresentation"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PatientType">
+		<xsd:annotation>
+			<xsd:documentation>Type for a Patient role
+			</xsd:documentation>
+			<xsd:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="vler:ClientType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PersonAugmentationType">
+		<xsd:annotation>
+			<xsd:documentation>Augmentation for a Person</xsd:documentation>
+			<xsd:appinfo>
+				<i2:AugmentedTypeIndicator>true</i2:AugmentedTypeIndicator>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:AugmentationType">
+				<xsd:sequence>
+					<xsd:element ref="c80_term:PersonMaritalStatusCode" minOccurs="0"/>
+					<xsd:element ref="vler:PersonInternmentDate" minOccurs="0" maxOccurs="5000"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="PersonIdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for a Person Identifier
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:IdentificationType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RadiologyExaminationType">
+		<xsd:annotation>
+			<xsd:documentation>The activity of conducting a radiology examination
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:ActivityType">
+				<xsd:sequence>
+					<xsd:element ref="c80_term:ResultStatusCode"/>
+					<xsd:element ref="vler:ActivityPerformingFacilityReference" minOccurs="0"/>
+					<xsd:element ref="vler:ActivityPerformerReference" minOccurs="0"/>
+					<xsd:element ref="c80_term:CPTCode"/>
+					<xsd:element ref="c80_term:ResultCode"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RadiologyNuclearMedicineRequestType">
+		<xsd:annotation>
+			<xsd:documentation>The type associated with the
+				Radiology / Nuclear Medicine
+				Examination Request.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="vler:HealthcareOrderType">
+				<xsd:sequence>
+					<xsd:element ref="c80_term:ProcedureCode" minOccurs="0" maxOccurs="5000"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RadNucReportType">
+		<xsd:annotation>
+			<xsd:documentation>Extension for Clinical Document
+			</xsd:documentation>
+			<xsd:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="DocumentType"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:DocumentType">
+				<xsd:sequence>
+					<xsd:element ref="vler:ClinicalDocumentAugmentation"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- <xsd:complexType name="PersonsType"> <xsd:annotation> <xsd:documentation>A
+		data type for Persons</xsd:documentation> </xsd:annotation> <xsd:sequence> <xsd:element
+		ref="nc:Person" maxOccurs="5000" /> </xsd:sequence> </xsd:complexType> -->
+	<!-- <xsd:complexType name="ProblemEntryC32Type"> <xsd:complexContent> <xsd:extension
+		base="s:ComplexObjectType"> <xsd:sequence> <xsd:element ref="vler:ProblemDate" minOccurs="0"
+		/> <xsd:element ref="vler:ProblemCategory" minOccurs="0" /> <xsd:element ref="vler:ProblemName"
+		/> <xsd:element ref="vler:ProblemCode" minOccurs="0" /> <xsd:element ref="vler:TreatingProvider"
+		minOccurs="0" maxOccurs="5000" /> <xsd:element ref="vler:AgeAtOnset" minOccurs="0"
+		/> <xsd:element ref="vler:CauseOfDeath" minOccurs="0" /> <xsd:element ref="vler:AgeAtDeath"
+		minOccurs="0" /> </xsd:sequence> </xsd:extension> </xsd:complexContent> </xsd:complexType> -->
+	<!-- <xsd:complexType name="ReferenceCodeType"> <xsd:annotation> <xsd:documentation>A
+		data type for coded values whose enumerations are maintained outside the schema (e.g.
+		a terminology server) </xsd:documentation> </xsd:annotation> <xsd:complexContent>
+		<xsd:extension base="s:ComplexObjectType"> <xsd:sequence> <xsd:element name="CodeValue"
+		type="xsd:string" /> <xsd:element name="DisplayText" type="xsd:string" /> <xsd:element
+		name="CodingSystem" type="xsd:string" /> </xsd:sequence> </xsd:extension> </xsd:complexContent>
+		</xsd:complexType> -->
+	<xsd:complexType name="RateType">
+		<xsd:annotation>
+			<xsd:documentation>A datatype for Rate</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:MeasureType">
+				<xsd:sequence>
+					<xsd:element ref="vler:Period"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RatioType">
+		<xsd:annotation>
+			<xsd:documentation>A data type that carries both the numerator and denominator.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:Numerator" minOccurs="0"/>
+					<xsd:element ref="vler:Denominator" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ServiceProviderClientAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for a Service Provider Client
+				Association
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:AssociationType">
+				<xsd:sequence>
+					<xsd:element ref="vler:ServiceProviderReference"/>
+					<xsd:element ref="vler:ClientReference"/>
+					<xsd:element ref="vler:AssociationActiveIndicator" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ServiceProviderType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for a Service Provider.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:PersonIdentifier" minOccurs="0"/>
+					<xsd:element ref="vler:ServiceProviderRoleTitle"/>
+					<xsd:element ref="nc:ContactInformation" minOccurs="0"/>
+					<xsd:element ref="nc:RoleOfPersonReference"/>
+					<xsd:element ref="nc:OrganizationReference" minOccurs="0"/>
+					<xsd:element ref="nc:FacilityReference" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="SupplementalOxygenType">
+		<xsd:annotation>
+			<xsd:documentation>A data type for SupplementalOxygen</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="vler:Concentration" minOccurs="0"/>
+					<xsd:element ref="vler:Rate" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TreatingProviderType">
+		<xsd:annotation>
+			<xsd:documentation>A role of Treating Provider</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="vler:ServiceProviderType">
+				<xsd:sequence>
+					<xsd:element ref="nc:AssociationBeginDate" minOccurs="0"/>
+					<xsd:element ref="nc:AssociationEndDate" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="UntypedProblemType">
+		<xsd:annotation>
+			<xsd:documentation>Clinical finding (finding)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:MedicalConditionType">
+				<xsd:sequence>
+					<xsd:element ref="c80_term:UntypedProblemCode"/>
+					<xsd:element ref="vler:ProblemDate"/>
+					<xsd:element ref="c80_term:ProblemStatusCode"/>
+					<xsd:element ref="vler:CauseOfDeath" minOccurs="0"/>
+					<xsd:element ref="c80_term:ProblemDescriptionCode"/>
+					<xsd:element ref="c80_term:ProblemSeverityCode"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+	<xsd:simpleType name="AssigningAuthorityCodeSimpleType">
+		<xsd:annotation>
+			<xsd:documentation>Allowable assigning authorities
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="2.16.840.1.113883.4.349">
+				<xsd:annotation>
+					<xsd:documentation>Department of Veterans Affairs
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2.16.840.1.113883.3.42.10001.100001.12">
+				<xsd:annotation>
+					<xsd:documentation>Department of Defense</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="2.16.840.1.113883.3.184">
+				<xsd:annotation>
+					<xsd:documentation>Social Security Administration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,2758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:blt="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Bones/2.0"
+           targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Bones/2.0"
+           version="2.0"
+           elementFormDefault="qualified">
+    <xs:complexType name="BonesConditionsFormType">
+        <xs:all>
+
+            <xs:element name="DIAGNOSIS_MISC_Opinion_Summary_Bones">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_motion_joint_flare_ups_frequency">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Weekly"/>
+                                    <xs:enumeration value="Every 2 to 3 weeks"/>
+                                    <xs:enumeration value="Every 1 to 2 months"/>
+                                    <xs:enumeration value="Every 3 to 4 months"/>
+                                    <xs:enumeration value="Every 5 to 6 months"/>
+                                    <xs:enumeration value="Once a year"/>
+                                    <xs:enumeration value="Less than yearly"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_motion_joint_flare_ups_duration">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Hours"/>
+                                    <xs:enumeration value="1 to 2 days"/>
+                                    <xs:enumeration value="3 to 7 days"/>
+                                    <xs:enumeration value="1 to 2 weeks"/>
+                                    <xs:enumeration value="Between 2 and 4 weeks"/>
+                                    <xs:enumeration value="More than a month"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_motion_joint_flare_ups_severity">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_motion_joint_flare_ups_veteran_impression">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_motion_joint_flare_ups_precipitating_factors">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_neoplasm_residual">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_functional_limitation_on_walking_choices">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Unable to walk more than few yards"/>
+                                    <xs:enumeration value="Able to walk 1/4 mile"/>
+                                    <xs:enumeration value="Able to walk more than 1/4 mile but less than 1 mile"/>
+                                    <xs:enumeration value="Able to walk 1-3 miles"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_functional_limitation_on_standing_choices">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Unable to stand for more than few minutes"/>
+                                    <xs:enumeration value="Able to stand for 15-30 minutes"/>
+                                    <xs:enumeration value="Able to stand up to one hour"/>
+                                    <xs:enumeration value="Able to stand more than one, but less than 3 hours"/>
+                                    <xs:enumeration value="Able to stand 3 to 8 hours, with short rest periods"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_weight_bearing_feet_callosities">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_weight_bearing_joint_callosities_location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_weight_bearing_abnormal_other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_weight_bearing_feet_breakdown">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_weight_bearing_feet_breakdown_location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_weight_bearing_abnormal_shoe_pattern">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_weight_bearing_abnormal_shoe_pattern_describe">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_JOINT_Weight_Bearing_Gait">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Normal"/>
+                                                <xs:enumeration value="Antalgic"/>
+                                                <xs:enumeration value="Poor propulsion"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_JOINT_Weight_Bearing_Gait_Other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_LR">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Right"/>
+                                    <xs:enumeration value="Left"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_Summary">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_JOINT_Bone_Joint_Affected_Edit">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_deformity">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_malunion">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_angulation">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_motion_false_joint">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_nonunion">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_lost_bone_or_part">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_other_findings">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_malunion_location_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_nonunion_location_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_FEET_Assistive_Devices_List">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="6">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="1 Cane"/>
+                                                <xs:enumeration value="2 Canes"/>
+                                                <xs:enumeration value="Brace"/>
+                                                <xs:enumeration value="1 Crutch"/>
+                                                <xs:enumeration value="2 Crutches"/>
+                                                <xs:enumeration value="Walker"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_FEET_Assistive_Devices_Effectiveness">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Good"/>
+                                    <xs:enumeration value="Fair"/>
+                                    <xs:enumeration value="Poor"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_inflammation_location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_inflammation_heat">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_inflammation_swelling">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_inflammation_redness">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_inflammation_drainage">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_inflammation_tenderness">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_osteomyelitis_affected_bones">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_osteomyelitis_active_infection">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="1"/>
+                                    <xs:enumeration value="2"/>
+                                    <xs:enumeration value="3"/>
+                                    <xs:enumeration value="4"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="more than 5"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_osteomyelitis_active_infection_constitutional_symptoms_YN_RG">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_osteomyelitis_active_infection_constitutional_symptoms_Yes">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Fever"/>
+                                                <xs:enumeration value="Anemia"/>
+                                                <xs:enumeration value="Debility"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_osteomyelitis_active_infection_constitutional_symptoms_Yes_other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_osteomyelitis_symptomatic_bones">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_osteomyelitis_active_infection_year">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_osteomyelitis_active_infection_comfirmed">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Summary_of_Problem_Specific_HX">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_C__File_New_Message">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Medicalrecord_New_Message">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_C__File_New">
+                <xs:annotation>
+                    <xs:documentation>C File Review:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Reviewed"/>
+                                    <xs:enumeration value="Not requested by VARO"/>
+                                    <xs:enumeration value="Requested by VARO but not available"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Medicalrecord_New">
+                <xs:annotation>
+                    <xs:documentation>Medical Record Review:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Reviewed"/>
+                                    <xs:enumeration value="Not requested by VARO"/>
+                                    <xs:enumeration value="Requested by VARO but not available"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Comments">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Neoplasm_Type">
+                <xs:annotation>
+                    <xs:documentation>Was the tumor malignant?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                    <xs:enumeration value="Unknown"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Neoplasm_Diagnosis">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Neoplasm_Diagnosis_Date">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Neoplasm_Treatment">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Neoplasm_Treatment_Antineoplastic_Last_Date">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Neoplasm_Treatment_Last_Date">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Neoplasm_Treatment_Description">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Hospitalization_Location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Hospitalization_Surgery_Date">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Hospitalization_Surgery_Type">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Hospitalization_Surgery_Summary_Bones">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_Current_Problem_Onset_Date">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_initial_manifestations">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_course">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice>
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Stable"/>
+                                                <xs:enumeration value="Progressively worse"/>
+                                                <xs:enumeration value="Improved"/>
+                                                <xs:enumeration value="Intermittent w/ remissions"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_treatment_classes">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="None"/>
+                                                <xs:enumeration value="Medication"/>
+                                                <xs:enumeration value="Surgical"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_treatment_side_effects_current">
+                <xs:annotation>
+                    <xs:documentation>Side effects from current treatment:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_treatment_Describe">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_treatment_side_effects_current_Describe">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_treatment_response">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice>
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Good"/>
+                                                <xs:enumeration value="Fair"/>
+                                                <xs:enumeration value="Poor"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_treatment_response_other_box">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_being_described_Problem_List">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value=""/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_additional_comments">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Trauma_Type">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_occupational_impact">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice>
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="No Significant Effects"/>
+                                                <xs:enumeration value="Significant Effects"/>
+                                                <xs:enumeration value="Not Employed"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_occupational_impact_Work_Problem">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Assigned different duties"/>
+                                                <xs:enumeration value="Increased tardiness"/>
+                                                <xs:enumeration value="Increased absenteeism"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_occupational_impact_List_Box">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="21">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Memory loss"/>
+                                                <xs:enumeration value="Decreased concentration"/>
+                                                <xs:enumeration value="Inappropriate behavior"/>
+                                                <xs:enumeration value="Poor social interactions"/>
+                                                <xs:enumeration value="Difficulty following instructions"/>
+                                                <xs:enumeration value="Decreased mobility"/>
+                                                <xs:enumeration value="Decreased manual dexterity"/>
+                                                <xs:enumeration value="Problems with lifting and carrying"/>
+                                                <xs:enumeration value="Difficulty reaching"/>
+                                                <xs:enumeration value="Speech difficulty"/>
+                                                <xs:enumeration value="Hearing difficulty"/>
+                                                <xs:enumeration value="Vision difficulty"/>
+                                                <xs:enumeration value="Lack of stamina"/>
+                                                <xs:enumeration value="Weakness or fatigue"/>
+                                                <xs:enumeration value="Decreased strength: upper extremity"/>
+                                                <xs:enumeration value="Decreased strength: lower extremity"/>
+                                                <xs:enumeration value="Urinary incontinence"/>
+                                                <xs:enumeration value="Fecal incontinence"/>
+                                                <xs:enumeration value="Pain"/>
+                                                <xs:enumeration value="Disfigurement"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_occupational_impact_List_Box_Other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MEDICAL_HISTORY_current_problem_being_described_Problem_List">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value=""/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_household_chores">
+                <xs:annotation>
+                    <xs:documentation>Chores:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_shopping">
+                <xs:annotation>
+                    <xs:documentation>Shopping:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_sports_or_exercise">
+                <xs:annotation>
+                    <xs:documentation>Exercise:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_recreation">
+                <xs:annotation>
+                    <xs:documentation>Sports:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_other_recreation">
+                <xs:annotation>
+                    <xs:documentation>Recreation:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_traveling">
+                <xs:annotation>
+                    <xs:documentation>Traveling:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_self_feeding">
+                <xs:annotation>
+                    <xs:documentation>Feeding:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_self_bathing">
+                <xs:annotation>
+                    <xs:documentation>Bathing:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_self_dressing">
+                <xs:annotation>
+                    <xs:documentation>Dressing:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_toileting">
+                <xs:annotation>
+                    <xs:documentation>Toileting:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_grooming">
+                <xs:annotation>
+                    <xs:documentation>Grooming:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Severe"/>
+                                    <xs:enumeration value="Prevents"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_impact_other_effect_Describe">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MEDICAL_HISTORY_current_problem_ADL_Present">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_Base_Form_Bones">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_additional_comments">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_constitutional_signs_disease_list">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="6">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Anemia"/>
+                                                <xs:enumeration value="Weight loss"/>
+                                                <xs:enumeration value="Fever"/>
+                                                <xs:enumeration value="Debility"/>
+                                                <xs:enumeration value="Amyloid liver"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_constitutional_signs_disease_list_other_box">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired">
+                <xs:annotation>
+                    <xs:documentation>Is veteran retired:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_Date">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_cause">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Eligible by age or duration of work"/>
+                                                <xs:enumeration value="Medical (physical problem)"/>
+                                                <xs:enumeration value="Medical (psychiatric problem)"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_cause_Other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Unemployed_RG">
+                <xs:annotation>
+                    <xs:documentation>Is veteran unemployed but not retired:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Unemployed_Duration">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Less than 1 year"/>
+                                    <xs:enumeration value="1 to 2 years"/>
+                                    <xs:enumeration value="2 to 5 years"/>
+                                    <xs:enumeration value="5 to 10 years"/>
+                                    <xs:enumeration value="10 to 20 years"/>
+                                    <xs:enumeration value="More than 20 years"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Unemployed_Effect_Mental_Disorder_Other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_cause_Medical">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Retired_cause_Psych">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Describe_Other_Hx">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Time_Lost_Cause">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Time_Lost">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="Less than 1 week"/>
+                                    <xs:enumeration value="1 week"/>
+                                    <xs:enumeration value="2 weeks"/>
+                                    <xs:enumeration value="3 weeks"/>
+                                    <xs:enumeration value="4 weeks"/>
+                                    <xs:enumeration value="5 weeks"/>
+                                    <xs:enumeration value="6 weeks"/>
+                                    <xs:enumeration value="7 weeks"/>
+                                    <xs:enumeration value="8 weeks"/>
+                                    <xs:enumeration value="9 weeks"/>
+                                    <xs:enumeration value="10 weeks"/>
+                                    <xs:enumeration value="11 weeks"/>
+                                    <xs:enumeration value="12 weeks"/>
+                                    <xs:enumeration value="13 weeks"/>
+                                    <xs:enumeration value="14 weeks"/>
+                                    <xs:enumeration value="15 weeks"/>
+                                    <xs:enumeration value="16 weeks"/>
+                                    <xs:enumeration value="17 weeks"/>
+                                    <xs:enumeration value="18 weeks"/>
+                                    <xs:enumeration value="19 weeks"/>
+                                    <xs:enumeration value="20 weeks"/>
+                                    <xs:enumeration value="21 weeks"/>
+                                    <xs:enumeration value="22 weeks"/>
+                                    <xs:enumeration value="23 weeks"/>
+                                    <xs:enumeration value="24 weeks"/>
+                                    <xs:enumeration value="25 weeks"/>
+                                    <xs:enumeration value="26 weeks"/>
+                                    <xs:enumeration value="27 weeks"/>
+                                    <xs:enumeration value="28 weeks"/>
+                                    <xs:enumeration value="29 weeks"/>
+                                    <xs:enumeration value="30 weeks"/>
+                                    <xs:enumeration value="31 weeks"/>
+                                    <xs:enumeration value="32 weeks"/>
+                                    <xs:enumeration value="33 weeks"/>
+                                    <xs:enumeration value="34 weeks"/>
+                                    <xs:enumeration value="35 weeks"/>
+                                    <xs:enumeration value="36 weeks"/>
+                                    <xs:enumeration value="37 weeks"/>
+                                    <xs:enumeration value="38 weeks"/>
+                                    <xs:enumeration value="39 weeks"/>
+                                    <xs:enumeration value="40 weeks"/>
+                                    <xs:enumeration value="41 weeks"/>
+                                    <xs:enumeration value="42 weeks"/>
+                                    <xs:enumeration value="43 weeks"/>
+                                    <xs:enumeration value="44 weeks"/>
+                                    <xs:enumeration value="45 weeks"/>
+                                    <xs:enumeration value="46 weeks"/>
+                                    <xs:enumeration value="47 weeks"/>
+                                    <xs:enumeration value="48 weeks"/>
+                                    <xs:enumeration value="49 weeks"/>
+                                    <xs:enumeration value="50 weeks"/>
+                                    <xs:enumeration value="51 weeks"/>
+                                    <xs:enumeration value="52 weeks"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Type_of_Employment">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Fulltime"/>
+                                    <xs:enumeration value="Part-time"/>
+                                    <xs:enumeration value="Self-employed"/>
+                                    <xs:enumeration value="Seasonal"/>
+                                    <xs:enumeration value="Other"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Duration">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Less than 1 year"/>
+                                    <xs:enumeration value="1 to 2 years"/>
+                                    <xs:enumeration value="2 to 5 years"/>
+                                    <xs:enumeration value="5 to 10 years"/>
+                                    <xs:enumeration value="10 to 20 years"/>
+                                    <xs:enumeration value="More than 20 years"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Occupation">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed">
+                <xs:annotation>
+                    <xs:documentation>Is veteran currently employed:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_PSYCH_PostMilitary_Employed_Usual_Occupation">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_abnormal_motion_YN">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_motion_limitation">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_motion_painful">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_motion_flail_joint">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_JOINT_Bone_Joint_Affected_Edit_Joints">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_LR_Joints">
+                <xs:annotation>
+                    <xs:documentation>Side:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Right"/>
+                                    <xs:enumeration value="Left"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_JOINT_Bone_Joint_Affected_Edit_Joints_Summary">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_infection">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_inflammatory_signs_tenderness">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_inflammatory_signs_effusion">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_inflammatory_signs_drainage">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_inflammatory_signs_redness">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_inflammatory_signs_edema">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_inflammatory_signs_heat">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_Infection_Location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_Infection_Summary">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_MUSCULOSKELETAL_Bones_results">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_MISC_All_Forms">
+                <xs:annotation>
+                    <xs:documentation>Were the results of all tests included on the exam report?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_MUSCULOSKELETAL_Bones_osteomyelitis_involucrum_RG">
+                <xs:annotation>
+                    <xs:documentation>Evidence of involucrum:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_MUSCULOSKELETAL_Bones_osteomyelitis_sequestrum_RG">
+                <xs:annotation>
+                    <xs:documentation>Evidence of sequestrum:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_MUSCULOSKELETAL_Bones_osteomyelitis_draining_sinus_RG">
+                <xs:annotation>
+                    <xs:documentation>Evidence of a draining sinus:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_MUSCULOSKELETAL_Bones_osteomyelitis_involucrum_location_memobox">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_MUSCULOSKELETAL_Bones_osteomyelitis_sequestrum_location_Memobox">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_MUSCULOSKELETAL_Bones_osteomyelitis_draining_sinus_location_Memobox">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_Base_Form_Bones_Effects_on_Occupation_Summary">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_Base_Form_Bones_Comments">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_MedOp_Bones">
+                <xs:annotation>
+                    <xs:documentation>Was a Medical Opinion Requested?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_specify">
+                <xs:annotation>
+                    <xs:documentation>Is a bone abnormal?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_weight_bearing_joint_callosities">
+                <xs:annotation>
+                    <xs:documentation>Evidence in the feet of abnormal weight bearing?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_functional_limitation_on_standing">
+                <xs:annotation>
+                    <xs:documentation>Functional limitation on standing?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_functional_limitation_on_walking_YN">
+                <xs:annotation>
+                    <xs:documentation>Functional limitation on walking?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_Shortening_Left">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_Shortening_Right">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_Shortening">
+                <xs:annotation>
+                    <xs:documentation>Evidence of leg shortening?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_JOINT_Weight_Bearing">
+                <xs:annotation>
+                    <xs:documentation>Is a weight bearing joint affected?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_specify_Joint">
+                <xs:annotation>
+                    <xs:documentation>Is a joint abnormal?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_affected_joint_bone_Infection">
+                <xs:annotation>
+                    <xs:documentation>Are there signs of active infection?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_malunion_os_calcis_astragalus_degree">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Mild"/>
+                                    <xs:enumeration value="Moderate"/>
+                                    <xs:enumeration value="Marked"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_other_significant_physical_finding">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_neoplasm_YN">
+                <xs:annotation>
+                    <xs:documentation>Are there residuals of neoplasm or its treatment?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_genu_recurvatum_RG">
+                <xs:annotation>
+                    <xs:documentation>Evidence of genu recurvatum?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_genu_recurvatum_weakness_RG">
+                <xs:annotation>
+                    <xs:documentation>Objective evidence of weakness?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_genu_recurvatum_insecurity_weight_bearing_RG">
+                <xs:annotation>
+                    <xs:documentation>Objective evidence of insecurity in weight bearing?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_malunion_os_calcis_astragalus_RG">
+                <xs:annotation>
+                    <xs:documentation>Malunion of the Os Calcis or Astraqalus?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MUSCULOSKELETAL_Bones_constitutional_signs_disease_RG">
+                <xs:annotation>
+                    <xs:documentation>Constitutional signs of bone disease?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_dominant_hand">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Right"/>
+                                    <xs:enumeration value="Left"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_dominant_hand_how_determined">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="3">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Veteran's statement"/>
+                                                <xs:enumeration value="Handwriting"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_dominant_hand_how_determined_other_box">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_other_significant_history">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_motion_joint_flare_ups_YN">
+                <xs:annotation>
+                    <xs:documentation>Are there flare-ups of bone disease?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_osteomyelitis_YN">
+                <xs:annotation>
+                    <xs:documentation>History of osteomyelitis?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Hospitalization">
+                <xs:annotation>
+                    <xs:documentation>History of hospitalization or surgery?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Trauma">
+                <xs:annotation>
+                    <xs:documentation>History of trauma to the bone(s)?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Bones_Neoplasm">
+                <xs:annotation>
+                    <xs:documentation>History of bone neoplasm?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_inflammation_YN">
+                <xs:annotation>
+                    <xs:documentation>Is there inflammation?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_pain_location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_motion_abnormal_YN">
+                <xs:annotation>
+                    <xs:documentation>Is there fracture site motion?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_deformity_location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_deformity_RG">
+                <xs:annotation>
+                    <xs:documentation>Deformity?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_fever_RG">
+                <xs:annotation>
+                    <xs:documentation>History of fever?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_debility_RG">
+                <xs:annotation>
+                    <xs:documentation>General debility?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_pain_RG">
+                <xs:annotation>
+                    <xs:documentation>Is there pain?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_symptoms_device_assistive_YN">
+                <xs:annotation>
+                    <xs:documentation>Are assistive devices needed for walking?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MUSCULOSKELETAL_Bones_motion_joint_YN">
+                <xs:annotation>
+                    <xs:documentation>Does this condition affect motion of a joint?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="blt:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:all>
+    </xs:complexType>
+    <xs:element name="BonesConditionsForm" type="blt:BonesConditionsFormType"/>
+    <xs:complexType name="Metadata">
+        <xs:all>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="codeSystem" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="source" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+</xs:schema>

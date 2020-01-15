@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:cir="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ColdInjuryResiduals/2.0"
+           targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ColdInjuryResiduals/2.0"
+           version="2.0" elementFormDefault="qualified">
+    <xs:complexType name="ColdInjuryResidualsFormType">
+        <xs:sequence>
+            <xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjury">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran now have or has he/she ever been diagnosed with any cold
+                        injury(ies)?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_1">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_1_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_1_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_2">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_2_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_2_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_3">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_3_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_3_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_COLD_INJURY_DIAGNOSIS_ADDITIONAL">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_COLD_INJURY_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_COLD_INJURY_HAND">
+                <xs:annotation>
+                    <xs:documentation>b. Dominant Hand:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Right"/>
+                                    <xs:enumeration value="Left"/>
+                                    <xs:enumeration value="Ambidextrous"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsRightHand">
+                <xs:annotation>
+                    <xs:documentation>Right hand</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsLeftHand">
+                <xs:annotation>
+                    <xs:documentation>Left hand</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsRightFoot">
+                <xs:annotation>
+                    <xs:documentation>Right foot</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsLeftFoot">
+                <xs:annotation>
+                    <xs:documentation>Left foot</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsRightEar">
+                <xs:annotation>
+                    <xs:documentation>Right ear</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsLeftEar">
+                <xs:annotation>
+                    <xs:documentation>Left ear</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsNose">
+                <xs:annotation>
+                    <xs:documentation>Nose</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsOther">
+                <xs:annotation>
+                    <xs:documentation>Other, specify:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsOtherSpecify">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_SIGNS_ADDITIONAL">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_DT_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD">
+                <xs:annotation>
+                    <xs:documentation>a. Does the Veteran use any assistive device(s) as a normal mode of locomotion,
+                        although occasional locomotion by other methods may be possible?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_WHEELCHAIR">
+                <xs:annotation>
+                    <xs:documentation>Wheelchair</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_WHEELCHAIR_FOU">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Occasional"/>
+                                    <xs:enumeration value="Regular"/>
+                                    <xs:enumeration value="Constant"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_BRACES">
+                <xs:annotation>
+                    <xs:documentation>Brace(s)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_BRACES_FOU">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Occasional"/>
+                                    <xs:enumeration value="Regular"/>
+                                    <xs:enumeration value="Constant"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_CRUTCHES">
+                <xs:annotation>
+                    <xs:documentation>Crutch(es)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_CRUTCHES_FOU">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Occasional"/>
+                                    <xs:enumeration value="Regular"/>
+                                    <xs:enumeration value="Constant"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_CANE">
+                <xs:annotation>
+                    <xs:documentation>Cane(s)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_CANE_FOU">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Occasional"/>
+                                    <xs:enumeration value="Regular"/>
+                                    <xs:enumeration value="Constant"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_WALKER">
+                <xs:annotation>
+                    <xs:documentation>Walker</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_WALKER_FOU">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Occasional"/>
+                                    <xs:enumeration value="Regular"/>
+                                    <xs:enumeration value="Constant"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_OTHER">
+                <xs:annotation>
+                    <xs:documentation>Other:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_OTHER_EDIT">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_OTHER_FOU">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Occasional"/>
+                                    <xs:enumeration value="Regular"/>
+                                    <xs:enumeration value="Constant"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_REF">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration
+                                            value="Yes, functioning is so diminished that amputation with prosthesis would equally serve the Veteran."/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_REF_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Right upper"/>
+                                                <xs:enumeration value="Left upper"/>
+                                                <xs:enumeration value="Right lower"/>
+                                                <xs:enumeration value="Left lower"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_REF_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_FI_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_REMARKS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_FUNC_IMPACT">
+                <xs:annotation>
+                    <xs:documentation>Do the Veteran's cold injury residuals impact his or her ability to work?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjuryTestingRightFootCondition">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration
+                                                        value="No evidence of osteoarthritis, osteoporosis, or subarticular punched out lesions"/>
+                                                <xs:enumeration value="Osteoarthritis"/>
+                                                <xs:enumeration value="Osteoporosis"/>
+                                                <xs:enumeration value="Subarticular punched out lesions   "/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjuryTestingRightFoot">
+                <xs:annotation>
+                    <xs:documentation>Right foot</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_OTH">
+                <xs:annotation>
+                    <xs:documentation>b. Are there any other significant diagnostic test findings and/or results?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjuryTestingRightHand">
+                <xs:annotation>
+                    <xs:documentation>Right hand:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjuryTestingRightHandCondition">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration
+                                                        value="No evidence of osteoarthritis, osteoporosis, or subarticular punched out lesions"/>
+                                                <xs:enumeration value="Osteoarthritis"/>
+                                                <xs:enumeration value="Osteoporosis"/>
+                                                <xs:enumeration value="Subarticular punched out lesions"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjuryTestingLeftFootCondition">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration
+                                                        value="No evidence of osteoarthritis, osteoporosis, or subarticular punched out lesions"/>
+                                                <xs:enumeration value="Osteoarthritis"/>
+                                                <xs:enumeration value="Osteoporosis"/>
+                                                <xs:enumeration value="Subarticular punched out lesions"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjuryTestingLeftFoot">
+                <xs:annotation>
+                    <xs:documentation>Left foot</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjuryTestingLeftHandCondition">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="4">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration
+                                                        value="No evidence of osteoarthritis, osteoporosis, or subarticular punched out lesions"/>
+                                                <xs:enumeration value="Osteoarthritis"/>
+                                                <xs:enumeration value="Osteoporosis "/>
+                                                <xs:enumeration value="Subarticular punched out lesions"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjuryTestingLeftHand">
+                <xs:annotation>
+                    <xs:documentation>Left hand</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_DT_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_DT_XRAYS">
+                <xs:annotation>
+                    <xs:documentation>a. Have X-rays been performed?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsRightHandSymptoms">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="9">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="No signs or symptoms at present time"/>
+                                                <xs:enumeration value="Arthralgia or other pain"/>
+                                                <xs:enumeration value="Numbness"/>
+                                                <xs:enumeration value="Cold sensitivity"/>
+                                                <xs:enumeration value="Tissue loss"/>
+                                                <xs:enumeration value="Color changes"/>
+                                                <xs:enumeration value="Locally impaired sensation"/>
+                                                <xs:enumeration value="Hyperhidrosis"/>
+                                                <xs:enumeration value="Nail abnormalities"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_SIGNS_RIGHT_HAND_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsLeftHandSymptoms">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="9">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="No signs or symptoms at present time"/>
+                                                <xs:enumeration value="Arthralgia or other pain"/>
+                                                <xs:enumeration value="Numbness"/>
+                                                <xs:enumeration value="Cold sensitivity"/>
+                                                <xs:enumeration value="Tissue loss"/>
+                                                <xs:enumeration value="Color changes"/>
+                                                <xs:enumeration value="Locally impaired sensation"/>
+                                                <xs:enumeration value="Hyperhidrosis"/>
+                                                <xs:enumeration value="Nail abnormalities"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_SIGNS_LEFT_HAND_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsRightFootSymptoms">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="9">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="No signs or symptoms at present time"/>
+                                                <xs:enumeration value="Arthralgia or other pain"/>
+                                                <xs:enumeration value="Numbness"/>
+                                                <xs:enumeration value="Cold sensitivity"/>
+                                                <xs:enumeration value="Tissue loss"/>
+                                                <xs:enumeration value="Color changes"/>
+                                                <xs:enumeration value="Locally impaired sensation"/>
+                                                <xs:enumeration value="Hyperhidrosis"/>
+                                                <xs:enumeration value="Nail abnormalities"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_SIGNS_RIGHT_FOOT_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsLeftFootSymptoms">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="9">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="No signs or symptoms at present time"/>
+                                                <xs:enumeration value="Arthralgia or other pain"/>
+                                                <xs:enumeration value="Numbness"/>
+                                                <xs:enumeration value="Cold sensitivity"/>
+                                                <xs:enumeration value="Tissue loss"/>
+                                                <xs:enumeration value="Color changes"/>
+                                                <xs:enumeration value="Locally impaired sensation"/>
+                                                <xs:enumeration value="Hyperhidrosis"/>
+                                                <xs:enumeration value="Nail abnormalities"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_SIGNS_LEFT_FOOT_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsRightEarSymptoms">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="8">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="No signs or symptoms at present time"/>
+                                                <xs:enumeration value="Pain"/>
+                                                <xs:enumeration value="Numbness"/>
+                                                <xs:enumeration value="Cold sensitivity"/>
+                                                <xs:enumeration value="Tissue loss"/>
+                                                <xs:enumeration value="Color changes"/>
+                                                <xs:enumeration value="Locally impaired sensation"/>
+                                                <xs:enumeration value="Hyperhidrosis"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_SIGNS_RIGHT_EAR_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsLeftEarSymptoms">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="8">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="No signs or symptoms at present time"/>
+                                                <xs:enumeration value="Pain"/>
+                                                <xs:enumeration value="Numbness"/>
+                                                <xs:enumeration value="Cold sensitivity"/>
+                                                <xs:enumeration value="Tissue loss"/>
+                                                <xs:enumeration value="Color changes"/>
+                                                <xs:enumeration value="Locally impaired sensation"/>
+                                                <xs:enumeration value="Hyperhidrosis"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_SIGNS_LEFT_EAR_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsNoseSymptoms">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="8">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="No signs or symptoms at present time"/>
+                                                <xs:enumeration value="Pain"/>
+                                                <xs:enumeration value="Numbness"/>
+                                                <xs:enumeration value="Cold sensitivity"/>
+                                                <xs:enumeration value="Tissue loss"/>
+                                                <xs:enumeration value="Color changes"/>
+                                                <xs:enumeration value="Locally impaired sensation"/>
+                                                <xs:enumeration value="Hyperhidrosis"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_SIGNS_NOSE_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ColdInjurySignsOtherSymptoms">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="7">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Arthralgia or other pain"/>
+                                                <xs:enumeration value="Numbness"/>
+                                                <xs:enumeration value="Cold sensitivity"/>
+                                                <xs:enumeration value="Tissue loss"/>
+                                                <xs:enumeration value="Color changes"/>
+                                                <xs:enumeration value="Locally impaired sensation"/>
+                                                <xs:enumeration value="Hyperhidrosis"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+                <xs:annotation>
+                    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination
+                        Request?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_InPersonExamination_CBx">
+                <xs:annotation>
+                    <xs:documentation>In-person examination</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_RecordsReviewed_CBx">
+                <xs:annotation>
+                    <xs:documentation>Records reviewed</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_CBx">
+                <xs:annotation>
+                    <xs:documentation>Other, please specify:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_MB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Comments__MB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+                <xs:annotation>
+                    <xs:documentation>Not requested</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+                <xs:annotation>
+                    <xs:documentation>No records were reviewed</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+                <xs:annotation>
+                    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+                <xs:annotation>
+                    <xs:documentation>VA e-folder (VBMS or Virtual VA)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+                <xs:annotation>
+                    <xs:documentation>CPRS</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+                <xs:annotation>
+                    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_PHYSICAL_EXAMINATION_COLD_INJURY_PE_Other_RG">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_PHYSICAL_EXAMINATION_COLD_INJURY_PE_Other_Describe_MB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_PHYSICAL_EXAMINATION_COLD_INJURY_PE_Other_Scars_Size_RG">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_PHYSICAL_EXAMINATION_COLD_INJURY_PE_Other_Scars_Location_EB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_PHYSICAL_EXAMINATION_COLD_INJURY_PE_Other_Scars_Length_EB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_PHYSICAL_EXAMINATION_COLD_INJURY_PE_Other_Scars_Width_EB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_PHYSICAL_EXAMINATION_COLD_INJURY_PE_Other_Comments_MB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_PHYSICAL_EXAMINATION_COLD_INJURY_PE_Other_Scars_RG">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_COLD_INJURY_AD_ADDITIONAL">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_3">
+                <xs:annotation>
+                    <xs:documentation>Examination via approved video telehealth</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_4">
+                <xs:annotation>
+                    <xs:documentation>In-person examination</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="cir:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="ColdInjuryResidualsForm" type="cir:ColdInjuryResidualsFormType"/>
+    <xs:complexType name="Metadata">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="codeSystem" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="source" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

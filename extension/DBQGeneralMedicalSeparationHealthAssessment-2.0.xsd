@@ -1,0 +1,3468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:pdshr="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PostDeploymentSeparationHealthReassessment/2.0"
+           targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PostDeploymentSeparationHealthReassessment/2.0"
+           version="2.0" elementFormDefault="qualified">
+    <xs:complexType name="PostDeploymentSeparationHealthReassessmentFormType">
+        <xs:sequence>
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_SUICIDE_1">
+                <xs:annotation>
+                    <xs:documentation>Are you feeling hopeless about the present or future?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_SUICIDE_2">
+                <xs:annotation>
+                    <xs:documentation>Have you had thoughts about taking your life - if yes - when did you have these
+                        thoughts and do you have a plan to take your life?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_SUICIDE_4">
+                <xs:annotation>
+                    <xs:documentation>Have you ever had a suicide attempt?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_DEPRESS_1">
+                <xs:annotation>
+                    <xs:documentation>Little interest or pleasure in doing things.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="0 = Not at all"/>
+                                    <xs:enumeration value="1 = Several days"/>
+                                    <xs:enumeration value="2 = More than half the days"/>
+                                    <xs:enumeration value="3 = Nearly every day"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_DEPRESS_2">
+                <xs:annotation>
+                    <xs:documentation>Feeling down, depressed, or hopeless.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="0 = Not at all"/>
+                                    <xs:enumeration value="1 = Several days"/>
+                                    <xs:enumeration value="2 = More than half the days"/>
+                                    <xs:enumeration value="3 = Nearly every day"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_DEPRESS_3">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_PTSD_1">
+                <xs:annotation>
+                    <xs:documentation>1. Have had nightmares about it or thought about it when you did not want to?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_PTSD_2">
+                <xs:annotation>
+                    <xs:documentation>2. Tried hard not to think about it or went out of your way to avoid situations
+                        that reminded you of it?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_PTSD_3">
+                <xs:annotation>
+                    <xs:documentation>3. Were constantly on guard, watchful, or easily startled?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_PTSD_4">
+                <xs:annotation>
+                    <xs:documentation>4. Felt numb or detached from others, activities, or your surroundings?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_SSN">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_DD2807_1">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                    <xs:enumeration value="N/A"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_DD2807_1_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_DD2807_1_CHANGES">
+                <xs:annotation>
+                    <xs:documentation>Any changes to his/her health status since DD 2807-1 completed?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                    <xs:enumeration value="N/A"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_DD2807_SEP_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_B">
+                <xs:annotation>
+                    <xs:documentation>a. Head, face, neck and scalp:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_C">
+                <xs:annotation>
+                    <xs:documentation>b. Nose:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_C_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_D">
+                <xs:annotation>
+                    <xs:documentation>c. Sinuses:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_D_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_E">
+                <xs:annotation>
+                    <xs:documentation>d. Mouth and Throat:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_E_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_F">
+                <xs:annotation>
+                    <xs:documentation>e. Ears:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_F_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_G">
+                <xs:annotation>
+                    <xs:documentation>i. Breasts:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_G_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_H">
+                <xs:annotation>
+                    <xs:documentation>f. Eyes:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_H_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_I">
+                <xs:annotation>
+                    <xs:documentation>g. Heart:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_I_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_J">
+                <xs:annotation>
+                    <xs:documentation>h. Lungs and Chest:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_J_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_K">
+                <xs:annotation>
+                    <xs:documentation>j. Vascular (Varicosities, hypertension, etc.):</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_K_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_L">
+                <xs:annotation>
+                    <xs:documentation>k. Anus and Rectum (Hemorrhoids, Fistulae, Prostate):</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_L_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_M">
+                <xs:annotation>
+                    <xs:documentation>l. Abdomen and Viscera (include hernia):</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_M_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_N">
+                <xs:annotation>
+                    <xs:documentation>m. Genitourinary:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_N_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_O">
+                <xs:annotation>
+                    <xs:documentation>n. Upper Extremities:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_O_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_P">
+                <xs:annotation>
+                    <xs:documentation>o. Lower Extremities:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_P_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Q">
+                <xs:annotation>
+                    <xs:documentation>p. Feet:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Q_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_R">
+                <xs:annotation>
+                    <xs:documentation>q. Spine:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_R_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S">
+                <xs:annotation>
+                    <xs:documentation>r. Miscellaneous musculoskeletal conditions:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_AMP">
+                <xs:annotation>
+                    <xs:documentation>Amputations</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_AMP_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_ARTH">
+                <xs:annotation>
+                    <xs:documentation>Arthritis</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_ARTH_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_OSTEO">
+                <xs:annotation>
+                    <xs:documentation>Osteoporosis/osteopenia</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_FIBRO">
+                <xs:annotation>
+                    <xs:documentation>Fibromyalgia</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_FIBRO_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_MUSC">
+                <xs:annotation>
+                    <xs:documentation>Muscle Injuries</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_MUSC_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_FRAC">
+                <xs:annotation>
+                    <xs:documentation>Fracture(s)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_FRAC_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_OTH">
+                <xs:annotation>
+                    <xs:documentation>Other:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_OTH_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_T">
+                <xs:annotation>
+                    <xs:documentation>s. Identifying body marks, scars, tattoos:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_T_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_U">
+                <xs:annotation>
+                    <xs:documentation>t. Skin, Lymphatic:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_U_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_V">
+                <xs:annotation>
+                    <xs:documentation>u. Neurologic:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_V_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W">
+                <xs:annotation>
+                    <xs:documentation>v. Psychiatric:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_W_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_X">
+                <xs:annotation>
+                    <xs:documentation>w. Gynecologic: (excluding breasts)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_X_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Y">
+                <xs:annotation>
+                    <xs:documentation>x. Endocrine:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Y_YES">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z">
+                <xs:annotation>
+                    <xs:documentation>y. Infectious disease, immune disorder or nutritional deficiency:
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_CFS">
+                <xs:annotation>
+                    <xs:documentation>Chronic Fatigue Syndrome</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_CFS_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_HIV">
+                <xs:annotation>
+                    <xs:documentation>HIV and Related Illnesses</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_HIV_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_INF">
+                <xs:annotation>
+                    <xs:documentation>Infectious Diseases</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_INF_DESCR">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_NUT">
+                <xs:annotation>
+                    <xs:documentation>Nutritional Deficiencies</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_NUT_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_PG">
+                <xs:annotation>
+                    <xs:documentation>Persian Gulf and Afghanistan Infectious Diseases</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_PG_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_SLE">
+                <xs:annotation>
+                    <xs:documentation>Systemic Lupus Erythematosus or other Immune Disorders</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_SLE_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_TB">
+                <xs:annotation>
+                    <xs:documentation>Tuberculosis</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_Z_TB_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA">
+                <xs:annotation>
+                    <xs:documentation>z. Miscellaneous conditions:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA_COLD">
+                <xs:annotation>
+                    <xs:documentation>Cold Injury</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA_COLD_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA_POW">
+                <xs:annotation>
+                    <xs:documentation>Former Prisoner of War (POW)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA_POW_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA_UNDIAG">
+                <xs:annotation>
+                    <xs:documentation>Undiagnosed Illness and Unexplained Chronic Multi-symptom Illness
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA_UNDIAG_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA_OTH">
+                <xs:annotation>
+                    <xs:documentation>Other:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_AA_OTH_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_HAND">
+                <xs:annotation>
+                    <xs:documentation>a. Dominant hand</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Right"/>
+                                    <xs:enumeration value="Left"/>
+                                    <xs:enumeration value="Ambidextrous"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_BP1">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_BP2">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_BP3">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_PULSE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_RESP">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_LFT_EYE_UN">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_LFT_EYE_COR">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_RT_EYE_UN">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_RT_EYE_COR">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_FACE">
+                <xs:annotation>
+                    <xs:documentation>1. Head, face, neck and scalp</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_FACE_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_NOSE">
+                <xs:annotation>
+                    <xs:documentation>4. Nose</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_NOSE_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_SINUS">
+                <xs:annotation>
+                    <xs:documentation>5. Sinuses</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_SINUS_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_MOUTH">
+                <xs:annotation>
+                    <xs:documentation>6. Mouth and throat</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_MOUTH_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_EYES">
+                <xs:annotation>
+                    <xs:documentation>8. Eyes - General (Visual acuity and refraction to be completed on Eye DBQ if
+                        appropriate)
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_EYES_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_OPHTH">
+                <xs:annotation>
+                    <xs:documentation>9. Ophthalmoscopic</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_OPHTH_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_PUPILS">
+                <xs:annotation>
+                    <xs:documentation>10. Pupils (Equality and reaction)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_PUPILS_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_OCULAR">
+                <xs:annotation>
+                    <xs:documentation>11. Ocular motility (Associated parallel movements, nystagmus)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_OCULAR_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_HEART">
+                <xs:annotation>
+                    <xs:documentation>14. Heart (Thrust, size, rhythm, sounds)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_HEART_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_LUNGS">
+                <xs:annotation>
+                    <xs:documentation>15. Lungs and chest (Include breasts)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_LUNGS_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_VASC">
+                <xs:annotation>
+                    <xs:documentation>16. Vascular system (Varicosities, etc.)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_VASC_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_ANUS">
+                <xs:annotation>
+                    <xs:documentation>18. Anus and rectum (Hemorrhoids, fistulae, prostate if indicated)
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_ANUS_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_AB">
+                <xs:annotation>
+                    <xs:documentation>17. Abdomen and viscera (Include hernia)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_AB_DESC_">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_EXT_GEN_MALE">
+                <xs:annotation>
+                    <xs:documentation>19. Genitourinary (Male and female)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_EXT_GEN_MALE_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_UE">
+                <xs:annotation>
+                    <xs:documentation>20. Upper extremities</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_UE_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_LE">
+                <xs:annotation>
+                    <xs:documentation>21. Lower extremities (Except feet)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_LE_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_FEET">
+                <xs:annotation>
+                    <xs:documentation>22. Feet (other than arch)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_FEET_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_FEET_ARCH_PES_PLANUS_SYMPTOMS_SEV">
+                <xs:annotation>
+                    <xs:documentation>23. Feet (arch) (X-rays are not required to evaluate arch)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_FEET_ARCH_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_SPINE">
+                <xs:annotation>
+                    <xs:documentation>24. Spine and other musculoskeletal conditions (including ribs, clavicle, etc.)
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_SPINE_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_LYMPH">
+                <xs:annotation>
+                    <xs:documentation>25. Lymphatic</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_LYMP_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_NEURO">
+                <xs:annotation>
+                    <xs:documentation>26. Neurologic</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_NEURO_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_PSYCH">
+                <xs:annotation>
+                    <xs:documentation>27. Psychiatric (Specify any personality deviation)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_PSYCH_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_PELVIC">
+                <xs:annotation>
+                    <xs:documentation>28. Pelvic and external genitalia (Females only)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_PELVIC_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_BREASTS">
+                <xs:annotation>
+                    <xs:documentation>29. Breast</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_BREAST_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_ENDO">
+                <xs:annotation>
+                    <xs:documentation>30. Endocrine</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_COMMENTS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_PE_LFT_EAR_AVG">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_LAB_DIAGNOSIS_CURRENT_DG">
+                <xs:annotation>
+                    <xs:documentation>The Veteran does not have a current diagnosis associated with the claimed or
+                        discovered condition(s) listed above.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_LAB_DIAGNOSIS_ADDITIONAL">
+                <xs:annotation>
+                    <xs:documentation>Diagnosis/diagnoses are listed on additional DBQs (This is just a reminder to
+                        please fill out the DBQs as needed for VA rating purposes)
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_LAB_DIAGNOSIS_COMMENTS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_REMARKS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_HEIGHT">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_WEIGHT">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_SCARS">
+                <xs:annotation>
+                    <xs:documentation>2. Identifying body marks, scars, tattoos</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_SKIN">
+                <xs:annotation>
+                    <xs:documentation>3. Skin</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_SKIN_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_EARS">
+                <xs:annotation>
+                    <xs:documentation>12. Ears - External ear and canal</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_EARS_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_TYMPANIC">
+                <xs:annotation>
+                    <xs:documentation>13. Tympanic membranes (Perforation)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_TYMPANIC_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_DENTAL">
+                <xs:annotation>
+                    <xs:documentation>7. Dental defects and disease</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Abnormal"/>
+                                    <xs:enumeration value="Not examined"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_DENTAL_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_AUDIOGRAM_YES_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_TINNITIS">
+                <xs:annotation>
+                    <xs:documentation>Are you bothered by noises in your head or ears such as ringing, roaring, buzzing,
+                        crickets, or a humming tone?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_LAB_RESULTS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_DIAGNOSIS_LIST_SYMP_SYS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_REMARKS_DBQS_COMPLETED">
+                <xs:annotation>
+                    <xs:documentation>All additional DBQs found to be necessary completed as appropriate at time of
+                        signing this DBQ?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_DIAGNOSIS_ADD_DBQS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="78">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="DBQ AUDIO HEARING LOSS AND TINNITUS"/>
+                                                <xs:enumeration value="DBQ CARDIO ARTERIES &amp; VEINS (VASCULAR)"/>
+                                                <xs:enumeration value="DBQ CARDIO HEART "/>
+                                                <xs:enumeration value="DBQ CARDIO HYPERTENSION"/>
+                                                <xs:enumeration value="DBQ COLD INJURY RESIDUALS"/>
+                                                <xs:enumeration value="DBQ DENTAL DENTAL &amp; ORAL (OTHER THAN TMJ)"/>
+                                                <xs:enumeration value="DBQ DERM SCARS"/>
+                                                <xs:enumeration value="DBQ DERM SKIN"/>
+                                                <xs:enumeration value="DBQ ENDO DIABETES MELLITUS"/>
+                                                <xs:enumeration value="DBQ ENDO ENDOCRINE MISCELLANEOUS"/>
+                                                <xs:enumeration value="DBQ ENDO THYROID &amp; PARATHYROID"/>
+                                                <xs:enumeration value="DBQ ENT EAR CONDITIONS"/>
+                                                <xs:enumeration value="DBQ ENT LOSS OF SENSE OF SMELL &amp; TASTE"/>
+                                                <xs:enumeration
+                                                        value="DBQ ENT SINUSITIS, RHINITIS &amp; OTHER ENT CONDITIONS"/>
+                                                <xs:enumeration
+                                                        value="DBQ GEN SURG HERNIA INGUINAL, FEMORAL &amp; ABDOM (NOT HIATAL)"/>
+                                                <xs:enumeration
+                                                        value="DBQ GEN SURG RECTUM &amp; ANUS (INCLUDING HEMORRHOIDS)"/>
+                                                <xs:enumeration value="DBQ GENERAL MEDICAL COMPENSATION"/>
+                                                <xs:enumeration value="DBQ GENERAL MEDICAL GULF WAR"/>
+                                                <xs:enumeration value="DBQ GENERAL MEDICAL PENSION"/>
+                                                <xs:enumeration
+                                                        value="DBQ GI ESOPHAGUS (INCLUDING GERD &amp; HIATAL HERNIA)"/>
+                                                <xs:enumeration value="DBQ GI GALLBLADDER &amp; PANCREAS"/>
+                                                <xs:enumeration value="DBQ GI INTESTINES (INFECTIOUS)"/>
+                                                <xs:enumeration
+                                                        value="DBQ GI INTESTINES (OTHER THAN SURGICAL OR INFECTIOUS)"/>
+                                                <xs:enumeration value="DBQ GI INTESTINES (SURGICAL)"/>
+                                                <xs:enumeration
+                                                        value="DBQ GI LIVER CONDITIONS HEPATITIS, CIRRHOSIS &amp; OTHER LIVER"/>
+                                                <xs:enumeration value="DBQ GI PERITONEAL ADHESION"/>
+                                                <xs:enumeration value="DBQ GI STOMACH &amp; DUODENUM"/>
+                                                <xs:enumeration value="DBQ GU KIDNEY (NEPHROLOGY)"/>
+                                                <xs:enumeration value="DBQ GU MALE REPRODUCTIVE SYSTEM"/>
+                                                <xs:enumeration value="DBQ GU PROSTATE CANCER"/>
+                                                <xs:enumeration value="DBQ GU URINARY TRACT (BLADDER AND URETHRA)"/>
+                                                <xs:enumeration value="DBQ GYN BREAST CONDITIONS AND DISORDERS"/>
+                                                <xs:enumeration value="DBQ GYN GYNECOLOGICAL CONDITIONS"/>
+                                                <xs:enumeration
+                                                        value="DBQ HEM HAIRY CELL &amp; OTHER B-CELL LEUKEMIAS"/>
+                                                <xs:enumeration
+                                                        value="DBQ HEM HEMIC &amp; LYMPHATIC, INCLUDING LEUKEMIA"/>
+                                                <xs:enumeration value="DBQ INFECT HIV RELATED ILLNESS"/>
+                                                <xs:enumeration value="DBQ INFECT INFECTIOUS DISEASES"/>
+                                                <xs:enumeration value="DBQ INFECT SOUTH WEST ASIA INFECTIOUS DISEASES"/>
+                                                <xs:enumeration value="DBQ INFECT TUBERCULOSIS"/>
+                                                <xs:enumeration value="DBQ MUSC AMPUTATIONS"/>
+                                                <xs:enumeration value="DBQ MUSC ANKLE"/>
+                                                <xs:enumeration value="DBQ MUSC BACK (THORACOLUMBAR SPINE)"/>
+                                                <xs:enumeration value="DBQ MUSC ELBOW &amp; FOREARM"/>
+                                                <xs:enumeration
+                                                        value="DBQ MUSC FOOT CONDITIONS, INCLUDING FLATFOOT (PES PLANUS)"/>
+                                                <xs:enumeration value="DBQ MUSC HAND &amp; FINGER"/>
+                                                <xs:enumeration value="DBQ MUSC HIP &amp; THIGH CONDITIONS"/>
+                                                <xs:enumeration value="DBQ MUSC KNEE &amp; LOWER LEG"/>
+                                                <xs:enumeration value="DBQ MUSC MUSCLE INJURIES"/>
+                                                <xs:enumeration value="DBQ MUSC NECK (CERVICAL SPINE)"/>
+                                                <xs:enumeration value="DBQ MUSC OSTEOMYELITIS"/>
+                                                <xs:enumeration value="DBQ MUSC SHOULDER &amp; ARM"/>
+                                                <xs:enumeration value="DBQ MUSC TEMPOROMANDIBULAR JOINT"/>
+                                                <xs:enumeration value="DBQ MUSC WRIST"/>
+                                                <xs:enumeration value="DQB NEURO AMYOTROPHIC LATERAL SCLEROSIS"/>
+                                                <xs:enumeration value="DBQ NEURO CENTRAL NERVOUS SYSTEM"/>
+                                                <xs:enumeration value="DBQ NEURO CRANIAL NERVES"/>
+                                                <xs:enumeration
+                                                        value="DBQ NEURO DIABETIC SENSORY-MOTOR PERIPHERAL NEUROPATHY"/>
+                                                <xs:enumeration value="DBQ NEURO FIBROMYALGIA"/>
+                                                <xs:enumeration
+                                                        value="DBQ NEURO HEADACHES (INCLUDING MIGRAINE HEADACHES)"/>
+                                                <xs:enumeration value="DBQ NEURO MULTIPLE SCLEROSIS"/>
+                                                <xs:enumeration value="DBQ NEURO NARCOLEPSY"/>
+                                                <xs:enumeration value="DBQ NEURO PARKINSONS DISEASE"/>
+                                                <xs:enumeration value="DBQ NEURO PERIPHERAL NERVES"/>
+                                                <xs:enumeration value="DBQ NEURO SEIZURE DISORDERS (EPILEPSY)"/>
+                                                <xs:enumeration value="DBQ NEURO TBI INITIAL"/>
+                                                <xs:enumeration value="DBQ NEURO TBI REVIEW"/>
+                                                <xs:enumeration value="DBQ NUTRI NUTRITIONAL DEFICIENCIES"/>
+                                                <xs:enumeration value="DBQ OPHTH EYE"/>
+                                                <xs:enumeration value="DBQ PRISONER OF WAR (POW)"/>
+                                                <xs:enumeration value="DBQ PYSCH EATING DISORDERS"/>
+                                                <xs:enumeration value="DBQ PYSCH MENTAL DISORDERS"/>
+                                                <xs:enumeration value="DBQ PYSCH PTSD INTITIAL"/>
+                                                <xs:enumeration value="DBQ PYSCH PTSD REVIEW"/>
+                                                <xs:enumeration value="DBQ RESP RESPIRATORY CONDITIONS"/>
+                                                <xs:enumeration value="DBQ RESP SLEEP APNEA"/>
+                                                <xs:enumeration
+                                                        value="DBQ RHEUM ARTHRITIS NON-DEGEN (INFLAM, IMM, CRYST, INFECT)"/>
+                                                <xs:enumeration value="DBQ RHEUM CHRONIC FATIGUE SYNDROME"/>
+                                                <xs:enumeration value="DBQ RHEUM SYSTEMIC LUPUS ERYTHEMATOSUS"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_S_OSTEO_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_ENDO_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_SCARS_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_PE_RT_EAR_AVG">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_TINNITIS_YES_BOTHERED">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="1. Not at all"/>
+                                    <xs:enumeration
+                                            value="2. Mildly bothersome (e.g., noticed but does not interfere with daily activities)"/>
+                                    <xs:enumeration
+                                            value="3. Moderately bothersome (e.g., interferes with concentration, communication)"/>
+                                    <xs:enumeration
+                                            value="4. Severely bothersome (e.g., interferes with sleep, causes depression or anxiety)"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_LAB_CLAIMED_CONDITION">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_LAB_DIAGNOSIS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_LAB_DIAGNOSIS_CLAIMED_CONDITION">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_RE_500">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_RE_1000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_RE_2000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_RE_3000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_RE_4000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_RE_6000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_RE_8000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_LE_500">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_LE_1000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_LE_2000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_LE_3000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_LE_4000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_LE_6000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAMGROUP_AUDIO__HearingLoss_PuretoneThreshold_LE_8000">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="-10"/>
+                                    <xs:enumeration value="-5"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="10"/>
+                                    <xs:enumeration value="15"/>
+                                    <xs:enumeration value="20"/>
+                                    <xs:enumeration value="25"/>
+                                    <xs:enumeration value="30"/>
+                                    <xs:enumeration value="35"/>
+                                    <xs:enumeration value="40"/>
+                                    <xs:enumeration value="45"/>
+                                    <xs:enumeration value="50"/>
+                                    <xs:enumeration value="55"/>
+                                    <xs:enumeration value="60"/>
+                                    <xs:enumeration value="65"/>
+                                    <xs:enumeration value="70"/>
+                                    <xs:enumeration value="75"/>
+                                    <xs:enumeration value="80"/>
+                                    <xs:enumeration value="85"/>
+                                    <xs:enumeration value="90"/>
+                                    <xs:enumeration value="90+"/>
+                                    <xs:enumeration value="95"/>
+                                    <xs:enumeration value="95+"/>
+                                    <xs:enumeration value="100"/>
+                                    <xs:enumeration value="100+"/>
+                                    <xs:enumeration value="105"/>
+                                    <xs:enumeration value="105+"/>
+                                    <xs:enumeration value="CNT"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_VAMaterial_MilitarySexualTrauma_Cbx">
+                <xs:annotation>
+                    <xs:documentation>Designated VA materials regarding military sexual trauma (MST) were provided to
+                        the Veteran/Servicemember.
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_OTHER_DESC">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_PE_AUDIOGRAM_New_RG">
+                <xs:annotation>
+                    <xs:documentation>Has an audiogram been completed in the last 30 days?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_DIAGNOSIS_LIST_ABNORMAL">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+                <xs:annotation>
+                    <xs:documentation>Not requested</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+                <xs:annotation>
+                    <xs:documentation>No records were reviewed</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+                <xs:annotation>
+                    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+                <xs:annotation>
+                    <xs:documentation>VA e-folder</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+                <xs:annotation>
+                    <xs:documentation>CPRS</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+                <xs:annotation>
+                    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+                <xs:annotation>
+                    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination
+                        Request?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="ASSESSMENT_GENERAL_SHA_MH_TransAsst_18_1">
+                <xs:annotation>
+                    <xs:documentation>Was the Servicemember referred to the requisite transition assistance program?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No (Servicemember did not consent)"/>
+                                    <xs:enumeration value="N/A (Servicemember did not screen positive)"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="pdshr:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="PostDeploymentSeparationHealthReassessmentForm"
+                type="pdshr:PostDeploymentSeparationHealthReassessmentFormType"/>
+    <xs:complexType name="Metadata">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="codeSystem" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="source" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

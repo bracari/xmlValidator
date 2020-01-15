@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:aa="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/AidAndAttendance/2.0"
+           targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/AidAndAttendance/2.0"
+           version="2.0"
+           elementFormDefault="qualified">
+    <xs:complexType name="AidAndAttendanceFormType">
+        <xs:all>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Benefits">
+                <xs:annotation>
+                    <xs:documentation>Does the veteran know the amount of his/her benefit payment:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Prudent">
+                <xs:annotation>
+                    <xs:documentation>Does the veteran prudently handle payments:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Bills">
+                <xs:annotation>
+                    <xs:documentation>Does the veteran know the amounts of his/her monthly bills:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Money">
+                <xs:annotation>
+                    <xs:documentation>Does the veteran personally handle money and pay bills:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID__capable">
+                <xs:annotation>
+                    <xs:documentation>Do you view the veteran as capable of managing his/her financial affairs:
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Money_Affairs_Describe_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Social_Worker_Describe_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Social_Worker">
+                <xs:annotation>
+                    <xs:documentation>Do you believe a Social Work assessment is necessary to make this determination:
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_GENERAL_Temperature">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_CARDIO_Pulse">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_CARDIO_Respiratory_Rate">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_GENERAL_ROS_Weight">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_GENERAL_ROS_Weight_change_frequency">
+                <xs:annotation>
+                    <xs:documentation>Weight change:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Loss"/>
+                                    <xs:enumeration value="Gain"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_GENERAL_ROS_Weight_change_frequency_Loss__">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="&lt; 10%"/>
+                                    <xs:enumeration value="10%"/>
+                                    <xs:enumeration value="20%"/>
+                                    <xs:enumeration value="30%"/>
+                                    <xs:enumeration value="40% or more"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_GENERAL_ROS_Weight_change_frequency_Gain__">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="&lt; 10%"/>
+                                    <xs:enumeration value="10%"/>
+                                    <xs:enumeration value="20%"/>
+                                    <xs:enumeration value="30%"/>
+                                    <xs:enumeration value="40% or more"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_CARDIO_Established_HTN_Yes_Reading__1_Systolic">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_CARDIO_Established_HTN_Yes_Reading__1_Diastolic">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_VITAL_height">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_VITAL_height_units">
+                <xs:annotation>
+                    <xs:documentation/>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="inch"/>
+                                    <xs:enumeration value="cm"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Nutrition">
+                <xs:annotation>
+                    <xs:documentation>Current nutritional status:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Good"/>
+                                    <xs:enumeration value="Overweight"/>
+                                    <xs:enumeration value="Obese"/>
+                                    <xs:enumeration value="Underweight"/>
+                                    <xs:enumeration value="Malnourished"/>
+                                    <xs:enumeration value="Cachectic"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Gait">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="7">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Normal"/>
+                                                <xs:enumeration value="Ataxic"/>
+                                                <xs:enumeration value="Antalgic"/>
+                                                <xs:enumeration value="Stuttering"/>
+                                                <xs:enumeration value="Hemiplegic"/>
+                                                <xs:enumeration value="Unable to walk"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Build_Described">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Average"/>
+                                    <xs:enumeration value="Muscular"/>
+                                    <xs:enumeration value="Frail"/>
+                                    <xs:enumeration value="Lanky"/>
+                                    <xs:enumeration value="Squat"/>
+                                    <xs:enumeration value="Other"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Posture_Described">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Stooped"/>
+                                    <xs:enumeration value="Sway-back"/>
+                                    <xs:enumeration value="Flat-back"/>
+                                    <xs:enumeration value="Kyphotic"/>
+                                    <xs:enumeration value="Lordotic"/>
+                                    <xs:enumeration value="Slouched"/>
+                                    <xs:enumeration value="Military-type"/>
+                                    <xs:enumeration value="Other"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Posture_Described_Other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Build_Described_Other">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Gait_Other_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Amputation">
+                <xs:annotation>
+                    <xs:documentation>Is there a lower extremity amputation:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Amputation_Describe">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_List">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="7">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="None"/>
+                                                <xs:enumeration value="Limitation of joint motion"/>
+                                                <xs:enumeration value="Muscle weakness"/>
+                                                <xs:enumeration value="Paralysis"/>
+                                                <xs:enumeration value="Atrophy"/>
+                                                <xs:enumeration value="Contractures"/>
+                                                <xs:enumeration value="Lack of coordination"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_List_Right">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="7">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="None"/>
+                                                <xs:enumeration value="Limitation of joint motion"/>
+                                                <xs:enumeration value="Muscle weakness"/>
+                                                <xs:enumeration value="Paralysis"/>
+                                                <xs:enumeration value="Atrophy"/>
+                                                <xs:enumeration value="Contractures"/>
+                                                <xs:enumeration value="Lack of coordination"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Limitation_Weight__Bearing">
+                <xs:annotation>
+                    <xs:documentation>Is weight bearing normal:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Limitation_Propulsion">
+                <xs:annotation>
+                    <xs:documentation>Is propulsion normal:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Limitation_Balance">
+                <xs:annotation>
+                    <xs:documentation>Is balance normal:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Limitation_Other">
+                <xs:annotation>
+                    <xs:documentation>Are there other functional limitations of the lower extremity:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Limitation_Weight__Bearing_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Limitation_Propulsion_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Limitation_Balance_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity__Limitation_Other_Describe_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity_Amputation">
+                <xs:annotation>
+                    <xs:documentation>Is there an upper extremity amputation?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity_Amputation_Digit_Describe_Left">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity_Left_Strength">
+                <xs:annotation>
+                    <xs:documentation>Left upper extremity strength and coordination:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Mild or moderate impairment"/>
+                                    <xs:enumeration value="Severe impairment"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity_Right_Strength_12">
+                <xs:annotation>
+                    <xs:documentation>Right upper extremity strength and coordination:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Mild or moderate impairment"/>
+                                    <xs:enumeration value="Severe impairment"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity_Self_Feeding">
+                <xs:annotation>
+                    <xs:documentation>Ability for self feeding:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Some difficulty"/>
+                                    <xs:enumeration value="Marked difficulty"/>
+                                    <xs:enumeration value="Cannot perform"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity_Dressing">
+                <xs:annotation>
+                    <xs:documentation>Ability to dress and undress:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Some difficulty"/>
+                                    <xs:enumeration value="Marked difficulty"/>
+                                    <xs:enumeration value="Cannot perform"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity_Bathing">
+                <xs:annotation>
+                    <xs:documentation>Ability to self bathe:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Some difficulty"/>
+                                    <xs:enumeration value="Marked difficulty"/>
+                                    <xs:enumeration value="Cannot perform"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity_Grooming">
+                <xs:annotation>
+                    <xs:documentation>Ability to self groom:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Some difficulty"/>
+                                    <xs:enumeration value="Marked difficulty"/>
+                                    <xs:enumeration value="Cannot perform"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity_Toileting">
+                <xs:annotation>
+                    <xs:documentation>Toileting ability:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Normal"/>
+                                    <xs:enumeration value="Some difficulty"/>
+                                    <xs:enumeration value="Marked difficulty"/>
+                                    <xs:enumeration value="Cannot perform"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Cervical_Describe_memo_2">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Thoracolumbar_Describe">
+                <xs:annotation>
+                    <xs:documentation>Does the abnormality interfere with breathing:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Cervical_Describe_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Walk_Circumstances_Other_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Walk_Aid_Type">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="6">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Brace"/>
+                                                <xs:enumeration value="One cane"/>
+                                                <xs:enumeration value="Two canes"/>
+                                                <xs:enumeration value="Walker"/>
+                                                <xs:enumeration value="One crutch"/>
+                                                <xs:enumeration value="Two crutches"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Transportation_Attendant_Other_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Transportation_Mode_Attendant">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="5">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Family member"/>
+                                                <xs:enumeration value="Friend"/>
+                                                <xs:enumeration value="Nurse"/>
+                                                <xs:enumeration value="Nurse's aide"/>
+                                                <xs:enumeration value="Other"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Transportation_Mode_Attendant_Other_memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Hospitalized_Date">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Hospitalized_Location_City_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Hospitalized_Location_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_C__File_New_Message">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Medicalrecord_New_Message">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_C__File_New">
+                <xs:annotation>
+                    <xs:documentation>C File Review:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Reviewed"/>
+                                    <xs:enumeration value="Not requested by VARO"/>
+                                    <xs:enumeration value="Requested by VARO but not available"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Medicalrecord_New">
+                <xs:annotation>
+                    <xs:documentation>Medical Record Review:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Reviewed"/>
+                                    <xs:enumeration value="Not requested by VARO"/>
+                                    <xs:enumeration value="Requested by VARO but not available"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Base_Form_Comments">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Assistance_Describe">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_AID_Test">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="TESTS_MISC_All_Forms">
+                <xs:annotation>
+                    <xs:documentation>Were the results of all tests included on the exam report?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_Diagnosis_Aid_comments">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_Diagnosis_Base_Form">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_MISC_MedOp_AidAtt">
+                <xs:annotation>
+                    <xs:documentation>Was a Medical Opinion Requested?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Walk">
+                <xs:annotation>
+                    <xs:documentation>Can the veteran walk without the assistance of another person?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Walk_Distance_v2">
+                <xs:annotation>
+                    <xs:documentation>Distance veteran can walk:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Only within the home"/>
+                                    <xs:enumeration value="Up to few hundred yards"/>
+                                    <xs:enumeration value="Up to 1/2 mile"/>
+                                    <xs:enumeration value="&gt; 1/2 but &lt; 1 mile"/>
+                                    <xs:enumeration value="1 mile"/>
+                                    <xs:enumeration value="&gt; 1 mile"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Walk_Aid">
+                <xs:annotation>
+                    <xs:documentation>Does the veteran need aid for ambulation?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Walk_Circumstances">
+                <xs:annotation>
+                    <xs:documentation>Circumstances the veteran can leave the home?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Unrestricted"/>
+                                    <xs:enumeration value="Medical care only"/>
+                                    <xs:enumeration value="Other"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Permanent">
+                <xs:annotation>
+                    <xs:documentation>Apart from amputations, are the functional impairments permanent?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Cervical">
+                <xs:annotation>
+                    <xs:documentation>Does the cervical spine have limitation of motion or deformity?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Thoracolumbar">
+                <xs:annotation>
+                    <xs:documentation>Does the thoracolumbar spine have limitation of motion or deformity?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Upper_Extremity">
+                <xs:annotation>
+                    <xs:documentation>Is function of the upper extremities normal?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Lower_Extremity_Functional_Limitations">
+                <xs:annotation>
+                    <xs:documentation>Is function of the lower extremities normal?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_General_Limitations_Walk_Wheelchair">
+                <xs:annotation>
+                    <xs:documentation>Wheelchair required:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PHYSICAL_EXAM_MISC_Functional_disabilities">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Visual_Quantify">
+                <xs:annotation>
+                    <xs:documentation>Is the best corrected vision 5/200 or worse in both eyes?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Hospitalized">
+                <xs:annotation>
+                    <xs:documentation>Is the veteran hospitalized?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Bedridden">
+                <xs:annotation>
+                    <xs:documentation>Is the veteran permanently bedridden?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Travel">
+                <xs:annotation>
+                    <xs:documentation>Can the veteran travel beyond current domicile?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Typical_Activity">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Assistance">
+                <xs:annotation>
+                    <xs:documentation>Does the individual use an orthopedic or prosthetic appliance?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Transportation_Mode">
+                <xs:annotation>
+                    <xs:documentation>Mode of travel to this exam?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Alone"/>
+                                    <xs:enumeration value="Accompanied public transportation"/>
+                                    <xs:enumeration value="Accompanied private vehicle"/>
+                                    <xs:enumeration value="Accompanied specially equipped van"/>
+                                    <xs:enumeration value="Accompanied ambulance"/>
+                                    <xs:enumeration value="Other"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Other_Impairments">
+                <xs:annotation>
+                    <xs:documentation/>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Dizziness_CB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Never"/>
+                                    <xs:enumeration value="Less than weekly"/>
+                                    <xs:enumeration value="Weekly but less than daily"/>
+                                    <xs:enumeration value="Once or more per day"/>
+                                    <xs:enumeration value="Constantly"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Memory_Loss_CB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="None"/>
+                                    <xs:enumeration value="Mild (occasional)"/>
+                                    <xs:enumeration value="Moderate short-term"/>
+                                    <xs:enumeration value="Moderate long-term"/>
+                                    <xs:enumeration value="Moderate both "/>
+                                    <xs:enumeration value="Severe short-term"/>
+                                    <xs:enumeration value="Severe long-term"/>
+                                    <xs:enumeration value="Severe both"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Balance_CB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Never"/>
+                                    <xs:enumeration value="Occasionally (&lt; weekly)"/>
+                                    <xs:enumeration value="Weekly (1 or more)"/>
+                                    <xs:enumeration value="Constantly (or nearly)"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Self_care_LB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Values">
+                            <xs:complexType>
+                                <xs:choice maxOccurs="6">
+                                    <xs:element name="Selected" nillable="true">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="Can perform all functions"/>
+                                                <xs:enumeration value="Self-feeding"/>
+                                                <xs:enumeration value="Dressing and undressing"/>
+                                                <xs:enumeration value="Bathing"/>
+                                                <xs:enumeration value="Grooming"/>
+                                                <xs:enumeration value="Toileting"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:choice>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_MISC_Aid_Impairement_Other_describe">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="aa:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:all>
+    </xs:complexType>
+    <xs:element name="AidAndAttendanceForm" type="aa:AidAndAttendanceFormType"/>
+    <xs:complexType name="Metadata">
+        <xs:all>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="codeSystem" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="source" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+</xs:schema>

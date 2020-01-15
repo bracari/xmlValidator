@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:jeb_term="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/jeb2.0_Terminology"
+        xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:i="http://niem.gov/niem/appinfo/2.0" xmlns:s="http://niem.gov/niem/structures/2.0"
+        xmlns:v1="http://niem.gov/niem/appinfo/v1"
+        targetNamespace="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/jeb2.0_Terminology"
+        elementFormDefault="unqualified" attributeFormDefault="unqualified" version="2.0">
+    <annotation>
+        <documentation>
+            This is the Code list Schema for Common Human Resource
+            Information Standards for the DoD
+        </documentation>
+        <appinfo>
+            <i:ConformantIndicator>true</i:ConformantIndicator>
+        </appinfo>
+    </annotation>
+    <import namespace="http://niem.gov/niem/niem-core/2.0" schemaLocation="../niem/niem-core/2.0/niem-core.xsd"/>
+    <import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="../niem/appinfo/2.0/appinfo.xsd"/>
+    <import namespace="http://niem.gov/niem/appinfo/v1" schemaLocation="../niem/appinfo/V1/appinfo.xsd"/>
+    <import namespace="http://niem.gov/niem/structures/2.0" schemaLocation="../niem/structures/2.0/structures.xsd"/>
+
+    <attribute name="displayName" type="string">
+        <annotation>
+            <documentation>This is a display name attribute to carry the
+                documentation of an enumeration
+            </documentation>
+        </annotation>
+    </attribute>
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!--Common Human Resource Information Standards -->
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <simpleType name="MemberUniformedServiceRankCodeSimpleType">
+        <annotation>
+            <documentation>Member Uniformed Service Rank is used to determine
+                eligibility
+                for pay, allowances, stipends, promotion
+                eligibility, performance evaluation
+                processes, orders generation, assignments,
+                retirement processing,
+                enlistment/reenlistment eligibility, and several other major functional
+                processes.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="" codeSystemName="JEB 2.0" valueSet=""/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="Admiral">
+                <annotation>
+                    <documentation>Admiral</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Airman">
+                <annotation>
+                    <documentation>Airman</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Airman Apprentice">
+                <annotation>
+                    <documentation>Airman Apprentice</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Airman Basic">
+                <annotation>
+                    <documentation>Airman Basic</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Airman First Class">
+                <annotation>
+                    <documentation>Airman First Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Airman Recruit">
+                <annotation>
+                    <documentation>Airman Recruit</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Brigadier General">
+                <annotation>
+                    <documentation>Brigadier General</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Cadet First Class">
+                <annotation>
+                    <documentation>Cadet First Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Cadet Fourth Class">
+                <annotation>
+                    <documentation>Cadet Fourth Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Cadet Second Class">
+                <annotation>
+                    <documentation>Cadet Second Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Cadet Third Class">
+                <annotation>
+                    <documentation>Cadet Third Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Captain">
+                <annotation>
+                    <documentation>Captain</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Chief Master Sergeant">
+                <annotation>
+                    <documentation>Chief Master Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Chief Petty Officer">
+                <annotation>
+                    <documentation>Chief Petty Officer</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Chief Warrant Officer Five">
+                <annotation>
+                    <documentation>Chief Warrant Officer Five</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Chief Warrant Officer Four">
+                <annotation>
+                    <documentation>Chief Warrant Officer Four</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Chief Warrant Officer Three">
+                <annotation>
+                    <documentation>Chief Warrant Officer Three</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Chief Warrant Officer Two">
+                <annotation>
+                    <documentation>Chief Warrant Officer Two</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Colonel">
+                <annotation>
+                    <documentation>Colonel</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Commander">
+                <annotation>
+                    <documentation>Commander</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Constructionman">
+                <annotation>
+                    <documentation>Constructionman</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Constructionman Apprentice">
+                <annotation>
+                    <documentation>Constructionman Apprentice</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Constructionman Recruit">
+                <annotation>
+                    <documentation>Constructionman Recruit</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Corporal">
+                <annotation>
+                    <documentation>Corporal</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Dentalman">
+                <annotation>
+                    <documentation>Dentalman</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Dentalman Apprentice">
+                <annotation>
+                    <documentation>Dentalman Apprentice</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Dentalman Recruit">
+                <annotation>
+                    <documentation>Dentalman Recruit</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Ensign">
+                <annotation>
+                    <documentation>Ensign</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Fireman">
+                <annotation>
+                    <documentation>Fireman</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Fireman Apprentice">
+                <annotation>
+                    <documentation>Fireman Apprentice</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Fireman Recruit">
+                <annotation>
+                    <documentation>Fireman Recruit</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="First Lieutenant">
+                <annotation>
+                    <documentation>First Lieutenant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="First Sergeant">
+                <annotation>
+                    <documentation>First Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="General">
+                <annotation>
+                    <documentation>General</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Gunnery Sergeant">
+                <annotation>
+                    <documentation>Gunnery Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Hospitalman">
+                <annotation>
+                    <documentation>Hospitalman</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Hospitalman Apprentice">
+                <annotation>
+                    <documentation>Hospitalman Apprentice</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Hospitalman Recruit">
+                <annotation>
+                    <documentation>Hospitalman Recruit</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Lance Corporal">
+                <annotation>
+                    <documentation>Lance Corporal</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Lieutenant">
+                <annotation>
+                    <documentation>Lieutenant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Lieutenant Colonel">
+                <annotation>
+                    <documentation>Lieutenant Colonel</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Lieutenant Commander">
+                <annotation>
+                    <documentation>Lieutenant Commander</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Lieutenant General">
+                <annotation>
+                    <documentation>Lieutenant General</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Lieutenant Junior Grade">
+                <annotation>
+                    <documentation>Lieutenant Junior Grade</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Major">
+                <annotation>
+                    <documentation>Major</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Major General">
+                <annotation>
+                    <documentation>Major General</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Master Chief Petty Officer">
+                <annotation>
+                    <documentation>Master Chief Petty Officer</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Master Gunnery Sergeant">
+                <annotation>
+                    <documentation>Master Gunnery Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Master Sergeant">
+                <annotation>
+                    <documentation>Master Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Midshipman First Class">
+                <annotation>
+                    <documentation>Midshipman First Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Midshipman Second Class">
+                <annotation>
+                    <documentation>Midshipman Second Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Midshipman Third Class">
+                <annotation>
+                    <documentation>Midshipman Third Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Petty Officer First Class">
+                <annotation>
+                    <documentation>Petty Officer First Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Petty Officer Second Class">
+                <annotation>
+                    <documentation>Petty Officer Second Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Petty Officer Third Class">
+                <annotation>
+                    <documentation>Petty Officer Third Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Platoon Sergeant">
+                <annotation>
+                    <documentation>Platoon Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Private">
+                <annotation>
+                    <documentation>Private</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Private First Class">
+                <annotation>
+                    <documentation>Private First Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Rear Admiral">
+                <annotation>
+                    <documentation>Rear Admiral</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Rear Admiral (Lower Half)">
+                <annotation>
+                    <documentation>Rear Admiral (Lower Half)</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Seaman">
+                <annotation>
+                    <documentation>Seaman</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Seaman Apprentice">
+                <annotation>
+                    <documentation>Seaman Apprentice</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Seaman Recruit">
+                <annotation>
+                    <documentation>Seaman Recruit</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Second Lieutenant">
+                <annotation>
+                    <documentation>Second Lieutenant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Senior Airman">
+                <annotation>
+                    <documentation>Senior Airman</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Senior Chief Petty Officer">
+                <annotation>
+                    <documentation>Senior Chief Petty Officer</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Senior Master Sergeant">
+                <annotation>
+                    <documentation>Senior Master Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Sergeant">
+                <annotation>
+                    <documentation>Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Sergeant First Class">
+                <annotation>
+                    <documentation>Sergeant First Class</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Sergeant Major">
+                <annotation>
+                    <documentation>Sergeant Major</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Specialist">
+                <annotation>
+                    <documentation>Specialist</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Staff Sergeant">
+                <annotation>
+                    <documentation>Staff Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Technical Sergeant">
+                <annotation>
+                    <documentation>Technical Sergeant</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Vice Admiral">
+                <annotation>
+                    <documentation>Vice Admiral</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Warrant Officer">
+                <annotation>
+                    <documentation>Warrant Officer</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Warrant Officer One">
+                <annotation>
+                    <documentation>Warrant Officer One</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="MemberUniformedServiceRankCodeType">
+        <annotation>
+            <documentation>A data type for Member Uniformed Service Rank Code.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="jeb_term:MemberUniformedServiceRankCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="jeb_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="MemberUniformedServiceRankCode" type="jeb_term:MemberUniformedServiceRankCodeType">
+        <annotation>
+            <documentation>Element for Member Uniformed Service Rank Code
+            </documentation>
+        </annotation>
+    </element>
+</schema>

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 sp1 (x64) (http://www.altova.com) by David Alvey (private) -->
+<xs:schema xmlns:vha_term="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/vha_Terminology" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:s="http://niem.gov/niem/structures/2.0" xmlns:i2="http://niem.gov/niem/appinfo/2.0" xmlns:i="http://niem.gov/niem/appinfo/2.1" xmlns:v1="http://niem.gov/niem/appinfo/v1" targetNamespace="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/vha_Terminology" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>This schema contains VHA-unique code sets</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://niem.gov/niem/niem-core/2.0" schemaLocation="../niem/niem-core/2.0/niem-core.xsd"/>
+	<xs:import namespace="http://niem.gov/niem/structures/2.0" schemaLocation="../niem/structures/2.0/structures.xsd"/>
+	<xs:import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="../niem/appinfo/2.0/appinfo.xsd"/>
+	<xs:import namespace="http://niem.gov/niem/appinfo/2.1" schemaLocation="../niem/appinfo/2.1/appinfo.xsd"/>
+	<xs:import namespace="http://niem.gov/niem/appinfo/v1" schemaLocation="../niem/appinfo/V1/appinfo.xsd"/>
+	<xs:attribute name="displayName" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>This is a display name attribute to carry the documentation of an enumeration
+			</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:element name="VhaTerminology">
+		<xs:annotation>
+			<xs:documentation>Root Element for the vha_Terminology schema</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+	<!--Clinical Results and VitalSigns Code Sets-->
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+	<xs:simpleType name="VitalSignCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>Extensional value set for Vitalsign Codes. This identifies the vital sign result types used within VHA.</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" valueSet="vha_vitalsign_codes"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="9729-1">
+				<xs:annotation>
+					<xs:documentation>Respiratory Rate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8867-4">
+				<xs:annotation>
+					<xs:documentation>Heart Rate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8460-8">
+				<xs:annotation>
+					<xs:documentation>Systolic blood pressure - standing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8450-0">
+				<xs:annotation>
+					<xs:documentation>Systolic blood pressure - sitting</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8461-6">
+				<xs:annotation>
+					<xs:documentation>Systolic blood pressure - supine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8454-1">
+				<xs:annotation>
+					<xs:documentation>Diastolic blood pressure - standing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8453-3">
+				<xs:annotation>
+					<xs:documentation>Diastolic blood pressure - sitting</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8455-8">
+				<xs:annotation>
+					<xs:documentation>Diastolic blood pressure - supine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8332-9">
+				<xs:annotation>
+					<xs:documentation>Body Temperature -rectum</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8333-7">
+				<xs:annotation>
+					<xs:documentation>Body Temperature - tympanic membrane</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8328-7">
+				<xs:annotation>
+					<xs:documentation>Body Temperature - axillary</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8331-1">
+				<xs:annotation>
+					<xs:documentation>Body Temperature - mouth</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8302-2">
+				<xs:annotation>
+					<xs:documentation>Body Height</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8306-3">
+				<xs:annotation>
+					<xs:documentation>Body Height - lying</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3149-9">
+				<xs:annotation>
+					<xs:documentation>Body weight measured</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="38208-5">
+				<xs:annotation>
+					<xs:documentation>Pain severity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="VitalSignCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for VitalSignCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:VitalSignCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="VitalSignCode" type="vha_term:VitalSignCodeType">
+		<xs:annotation>
+			<xs:documentation>A coded value that represents the category of vital sign result.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="VitalSignMeasureUnitCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>Extensional value set for units of measurements associated with VitalSign Codes.</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="2.16.840.113883.6.8" codeSystemName="UCUM" valueSet="2.16.840.1.113883.3.88.12.80.29"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="/minute">
+				<xs:annotation>
+					<xs:documentation>/minute</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mm (Hg)">
+				<xs:annotation>
+					<xs:documentation>mm (Hg)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Fahrenheit">
+				<xs:annotation>
+					<xs:documentation>Fahrenheit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="inches">
+				<xs:annotation>
+					<xs:documentation>inches</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pounds">
+				<xs:annotation>
+					<xs:documentation>pounds</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="0-10 scale">
+				<xs:annotation>
+					<xs:documentation>0-10 scale</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="VitalSignMeasurementUnitCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for VitalSignMeasurementUnitCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:VitalSignMeasureUnitCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="VitalSignMeasurementUnitCode" type="vha_term:VitalSignMeasurementUnitCodeType">
+		<xs:annotation>
+			<xs:documentation>A coded value set for measurement units used in vital sign observations</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="ClinicalResultQualifierCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>Intensional value set that provides additional context to a clinical result measurement</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token"/>
+	</xs:simpleType>
+	<xs:complexType name="ClinicalResultQualifierCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for ClinicalResultQualifierCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:ClinicalResultQualifierCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="ClinicalResultQualifierCode" type="vha_term:ClinicalResultQualifierCodeType">
+		<xs:annotation>
+			<xs:documentation>A coded value that provides additional context to the clincial result measurement.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="ObservationMethodCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>Intensional value set that provides additional detail about the means or technique used to ascertain the observation.</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token"/>
+	</xs:simpleType>
+	<xs:complexType name="ObservationMethodCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for ObservationMethodCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:ObservationMethodCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="ObservationMethodCode" type="vha_term:ObservationMethodCodeType">
+		<xs:annotation>
+			<xs:documentation>A code that provides additional detail about the means or technique used to ascertain the observation.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="ClinicStopCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>TBD intensional value set for ClinicStopCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token"/>
+	</xs:simpleType>
+	<xs:complexType name="ClinicStopCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for ClinicStopCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:ClinicStopCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="ClinicStopCode" type="vha_term:ClinicStopCodeType">
+		<xs:annotation>
+			<xs:documentation>A code that specifies various nodes within a workflow process that is typically performed by a Medical Service. Used to facilitate collection of workload and financial information.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="PatientStateCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>TBD intensional value set for PatientStateCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token"/>
+	</xs:simpleType>
+	<xs:complexType name="PatientStateCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for PatientStateCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:PatientStateCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="PatientStateCode" type="vha_term:PatientStateCodeType">
+		<xs:annotation>
+			<xs:documentation> A coded value representaton of the Patient State</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="ClinicalResultCodedValueCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>TBD intensional value set forClinicalResultCodedValueCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token"/>
+	</xs:simpleType>
+	<xs:complexType name="ClinicalResultCodedValueCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for ClinicalResultCodedValueCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:ClinicalResultCodedValueCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="ClinicalResultCodedValueCode" type="vha_term:ClinicalResultCodedValueCodeType">
+		<xs:annotation>
+			<xs:documentation> A ClinicalResult observation expressed by a coded value.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+	<!--Patient Journal Code Sets-->
+	<!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+	<xs:simpleType name="ClientStatusCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>TBD intensional value set for ClientStatustCodedValueCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token"/>
+	</xs:simpleType>
+	<xs:complexType name="ClientStatusCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for ClientStatusCodedValueCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:ClientStatusCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="ClientStatusCode" type="vha_term:ClientStatusCodeType">
+		<xs:annotation>
+			<xs:documentation> A ClientStatus expressed by a coded value.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="JournalEntryCodedValueCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>An intensional value set for JournalEntrytCodedValueCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Exercise"/>
+			<xs:enumeration value="Diet"/>
+			<xs:enumeration value="Contact Log"/>
+			<xs:enumeration value="Mood"/>
+			<xs:enumeration value="Daily Event"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="JournalEntryCodedValueCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for JournalEntryCodedValueCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:JournalEntryCodedValueCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="JournalEntryCodedValueCode" type="vha_term:JournalEntryCodedValueCodeType">
+		<xs:annotation>
+			<xs:documentation> A coded representation denoting the kind of journal entry</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="ExerciseActivityCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>TBD intensional value set for ExerciseActivityCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="walking"/>
+			<xs:enumeration value="running"/>
+			<xs:enumeration value="treadmill"/>
+			<xs:enumeration value="biking"/>
+			<xs:enumeration value="weight lifting"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ExerciseActivityCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for ExerciseActivityCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:ExerciseActivityCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="ExerciseActivityCode" type="vha_term:ExerciseActivityCodeType">
+		<xs:annotation>
+			<xs:documentation> A coded representation used to categorize kinds of exercises</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="ExerciseIntensityCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>TBD intensional value set for ExerciseIntensityCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="mild"/>
+			<xs:enumeration value="moderate"/>
+			<xs:enumeration value="strenuous"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ExerciseIntensityCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for ExerciseIntensityCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:ExerciseIntensityCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="ExerciseIntensityCode" type="vha_term:ExerciseIntensityCodeType">
+		<xs:annotation>
+			<xs:documentation> A coded representation denoting the intensity of an exercise workout</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="MealCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>TBD intensional value set for MealCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="breakfast"/>
+			<xs:enumeration value="lunch"/>
+			<xs:enumeration value="dinner"/>
+			<xs:enumeration value="snack"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="MealCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for MealCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:MealCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="MealCode" type="vha_term:MealCodeType">
+		<xs:annotation>
+			<xs:documentation> A coded representation used to categorize types of meals</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="ContactMethodCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>TBD intensional value set forContactMethodCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="phone call"/>
+			<xs:enumeration value="email"/>
+			<xs:enumeration value="postal"/>
+			<xs:enumeration value="in peson"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ContactMethodCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type for ContactMethodCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:ExerciseIntensityCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="ContactMethodyCode" type="vha_term:ExerciseIntensityCodeType">
+		<xs:annotation>
+			<xs:documentation> A coded value representing the method in which a contact encounter occurs</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:simpleType name="MoodCodeSimpleType">
+		<xs:annotation>
+			<xs:documentation>TBD intensional value set for MoodCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+				<v1:CodingValueSet codeSystem="TBD" codeSystemName="TBD" valueSet="TBD"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+			<xs:enumeration value="8"/>
+			<xs:enumeration value="9"/>
+			<xs:enumeration value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="MoodCodeType">
+		<xs:annotation>
+			<xs:documentation>A data type forMoodCode</xs:documentation>
+			<xs:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="vha_term:MealCodeSimpleType">
+				<xs:attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+				<xs:attribute ref="vha_term:displayName" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="MoodCode" type="vha_term:MealCodeType">
+		<xs:annotation>
+			<xs:documentation> A coded value representing the observed nature of one's mood (1-10 scale)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,1334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fpw="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/FormerPrisonerOfWar/2.0" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/FormerPrisonerOfWar/2.0" version="2.0" elementFormDefault="qualified">
+	<xs:complexType name="FormerPrisonerOfWarFormType">
+		<xs:sequence>
+			<xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS">
+			  <xs:annotation> 
+			    <xs:documentation>Does the Veteran now have or has he/she ever been diagnosed with one or more of the following conditions?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_HEART_DISEASE">
+			  <xs:annotation>
+			    <xs:documentation>Atherosclerotic heart disease or hypertensive vascular disease (including hypertensive heart disease) and their complications</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_AVITA">
+			  <xs:annotation>
+			    <xs:documentation>Avitaminosis</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_BERI">
+			  <xs:annotation>
+			    <xs:documentation>Beriberi</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DYSENTERY">
+			  <xs:annotation>
+			    <xs:documentation>Chronic dysentery</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_CIRRHOSIS">
+			  <xs:annotation>
+			    <xs:documentation>Cirrhosis of the liver</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DYSTHYMIC">
+			  <xs:annotation>
+			    <xs:documentation>Dysthymic disorder</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_HELM">
+			  <xs:annotation>
+			    <xs:documentation>Helminthiasis</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_IBS">
+			  <xs:annotation>
+			    <xs:documentation>Irritable bowel syndrome</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_MALNUTR">
+			  <xs:annotation>
+			    <xs:documentation>Malnutrition and/or other nutritional deficiency</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_FROST">
+			  <xs:annotation>
+			    <xs:documentation>Organic residuals of frostbite (if it is determined that the Veteran was interned in climatic conditions consistent with the occurrence of frostbite)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_OSTEO">
+			  <xs:annotation>
+			    <xs:documentation>Osteoporosis</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_PELLA">
+			  <xs:annotation>
+			    <xs:documentation>Pellagra</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_PEPTIC">
+			  <xs:annotation>
+			    <xs:documentation>Peptic ulcer disease</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_NEURO">
+			  <xs:annotation>
+			    <xs:documentation>Peripheral neuropathy (except where directly related to infectious causes)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_POST">
+			  <xs:annotation>
+			    <xs:documentation>Post-traumatic osteoarthritis</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_PSYCHO">
+			  <xs:annotation>
+			    <xs:documentation>Psychosis and/or any of the anxiety states</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_STROKE">
+			  <xs:annotation>
+			    <xs:documentation>Stroke and its complications</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_SKIN_YES">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="2">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Skin Diseases"/>
+			                  <xs:enumeration value="Scars"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_HEMIC_YES">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="2">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Hematologic (including Anemia) and Lymphatic (Including Non-Hodgkin's Lymphoma)"/>
+			                  <xs:enumeration value="Hairy Cell &amp; Other B-Cell Leukemias"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_SPINE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="2">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Back (Thoracolumbar Spine) Conditions"/>
+			                  <xs:enumeration value="Neck (Cervical Spine) Conditions"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_JOINTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="7">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Ankle"/>
+			                  <xs:enumeration value="Elbow and Forearm"/>
+			                  <xs:enumeration value="Hands and Fingers"/>
+			                  <xs:enumeration value="Hip and Thigh"/>
+			                  <xs:enumeration value="Knee and Lower Leg"/>
+			                  <xs:enumeration value="Shoulder and Arm"/>
+			                  <xs:enumeration value="Wrist "/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_FEET">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="2">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Flatfeet"/>
+			                  <xs:enumeration value="Foot (other than Flatfeet)"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_MISC">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="5">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Amputations"/>
+			                  <xs:enumeration value="Arthritis (non-degenerative arthritis, including inflammatory, autoimmune, crystalline and infectious arthritis) and dysbaric osteonecrosis)"/>
+			                  <xs:enumeration value="Bone conditions, miscellaneous, including osteomyelitis"/>
+			                  <xs:enumeration value="Fibromyalgia"/>
+			                  <xs:enumeration value="Muscle Injuries"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_PSY_YES">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="3">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Eating Disorders"/>
+			                  <xs:enumeration value="Mental Disorders (Other Than PTSD)"/>
+			                  <xs:enumeration value="PTSD  (Initial or Review)"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_ADDITIONAL_YES">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="2">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Cold Injury Residuals"/>
+			                  <xs:enumeration value="Gulf War General Medical Examination"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_1">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_1_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_1_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_2">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_2_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_2_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_3">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_3_ICD">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_3_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_DIAGNOSIS_ADDITIONAL">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_POW_FI">
+			  <xs:annotation> 
+			    <xs:documentation>Do any of the Veteran's conditions that are etiologically related to the prisoner of war experience impact his or her ability to work?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_POW_FI_DESCRIBE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_POW_REMARKS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_PHYSICAL_EXAM_OTH">
+			  <xs:annotation>
+			    <xs:documentation>Other, describe:</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="DIAGNOSIS_POW_PHYSICAL_EXAM_OTH_DESC">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_MISC_COND_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>r. Miscellaneous conditions</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_INFECT_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>q. Infectious disease, immune disorder or nutritional deficiency</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_INFECT_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="7">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Chronic Fatigue Syndrome"/>
+			                  <xs:enumeration value="HIV and Related Illnesses"/>
+			                  <xs:enumeration value="Infectious Diseases"/>
+			                  <xs:enumeration value="Nutritional Deficiencies"/>
+			                  <xs:enumeration value="Persian Gulf and Afghanistan Infectious Diseases"/>
+			                  <xs:enumeration value="Systemic Lupus Erythematosus or other Immune Disorders"/>
+			                  <xs:enumeration value="Tuberculosis"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_PSY_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>p. Psychiatric</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_NEURO_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>o. Neurologic</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_NEURO_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="12">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Amyotrophic Lateral Sclerosis (ALS) "/>
+			                  <xs:enumeration value="Cranial Nerves Diseases"/>
+			                  <xs:enumeration value="Diabetic Sensory-Motor Peripheral Neuropathy"/>
+			                  <xs:enumeration value="Disease of the Central Nervous System"/>
+			                  <xs:enumeration value="Fibromyalgia"/>
+			                  <xs:enumeration value="Headaches (including Migraine Headaches) "/>
+			                  <xs:enumeration value="Narcolepsy"/>
+			                  <xs:enumeration value="Multiple Sclerosis"/>
+			                  <xs:enumeration value="Parkinson's disease"/>
+			                  <xs:enumeration value="Peripheral Nerves"/>
+			                  <xs:enumeration value="Seizure Disorder (Epilepsy)"/>
+			                  <xs:enumeration value="Traumatic Brain Injury (Initial or Review)"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_ENDO_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>n. Endocrine</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_ENDO_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="3">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Diabetes Mellitus"/>
+			                  <xs:enumeration value="Endocrine Diseases (other than Thyroid, Parathyroid, or Diabetes Mellitus)"/>
+			                  <xs:enumeration value="Thyroid and Parathyroid"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_MISC_OSTEO_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>Osteoporosis/osteopenia</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_MISC_OSTEO_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_MISC_OSTEO_SCAN_DATE">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_MISC_OSTEO_CKD">
+			  <xs:annotation> 
+			    <xs:documentation>If checked, are there joint manifestations of osteoporosis/osteopenia (Osteoporosis may or may not present as spine or joint disease)?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_MUSCULO_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>m. Musculoskeletal</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_KIDNEY_URI_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>k. Kidney and urinary tract</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_KIDNEY_URI_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="2">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Kidney Conditions"/>
+			                  <xs:enumeration value="Urinary Tract (including Bladder and Urethral) Conditions"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_REPRODUCTIVE_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>l. Reproductive</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_REPRODUCTIVE_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="3">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Gynecological Conditions"/>
+			                  <xs:enumeration value="Male Reproductive Organs"/>
+			                  <xs:enumeration value="Prostate Cancer"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_ABDOMEN_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>j. Digestive and abdominal wall</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_ABDOMEN_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="10">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Abdominal, Inguinal, and Femoral Hernias"/>
+			                  <xs:enumeration value="Esophageal Disorders (GERD and Hiatal Hernia)"/>
+			                  <xs:enumeration value="Gallbladder and Pancreas"/>
+			                  <xs:enumeration value="Infectious Intestinal Conditions "/>
+			                  <xs:enumeration value="Intestinal Conditions (other than Surgical and Infectious)"/>
+			                  <xs:enumeration value="Intestinal Surgery"/>
+			                  <xs:enumeration value="Liver Conditions, including hepatitis and cirrhosis "/>
+			                  <xs:enumeration value="Peritoneal Adhesions"/>
+			                  <xs:enumeration value="Rectum and Anus (Including Hemorrhoids)"/>
+			                  <xs:enumeration value="Stomach and Duodenal Conditions"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_CARDIO_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>i. Cardiovascular</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_CARDIO_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="4">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Artery &amp; Vein Conditions (vascular diseases including varicose veins)"/>
+			                  <xs:enumeration value="Hypertension"/>
+			                  <xs:enumeration value="Heart Disease (including arrhythmias, valvular disease, and cardiac surgery)"/>
+			                  <xs:enumeration value="Ischemic Heart Disease"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_BREAST_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>g. Breast</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_RESP_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>h. Respiratory</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_RESP_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="3">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Respiratory Conditions (other than tuberculosis and sleep apnea)"/>
+			                  <xs:enumeration value="Sleep Apnea"/>
+			                  <xs:enumeration value="Tuberculosis"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_NOSE_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>f. Sinus, nose, throat, dental and oral</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_NOSE_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="4">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Dental and Oral Conditions (including mouth, lips and tongue)"/>
+			                  <xs:enumeration value="Loss of Sense of Smell and/or Taste"/>
+			                  <xs:enumeration value="Sinusitis/Rhinitis and Other Conditions of the Nose, Throat, Larynx and Pharynx"/>
+			                  <xs:enumeration value="Temporomandibular Joint"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_EAR_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>e. Hearing loss, tinnitus and ear</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_EAR_LSTBOX">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice maxOccurs="2">            <xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Hearing Loss and Tinnitus"/>
+			                  <xs:enumeration value="Ear Conditions"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_EYE_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>d. Eye</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_HEMIC_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>c. Hematologic/lymphatic</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_SKIN_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>b. Skin and scars</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_NO_SYMPTOMS_CKBOX">
+			  <xs:annotation>
+			    <xs:documentation>a. No symptoms, abnormal findings or complaints</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="HISTORY_POW_PHY_EXAM_RESULTS">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Values">
+			        <xs:complexType>
+			          <xs:choice>            
+			          	<xs:element name="Selected" nillable="true">
+			              <xs:simpleType>
+			                <xs:restriction base="xs:string">
+			                  <xs:enumeration value="Normal PE"/>
+			                  <xs:enumeration value="Normal PE, except as noted on additional Questionnaires included as part of this report"/>
+			                </xs:restriction>
+			              </xs:simpleType>
+			            </xs:element>
+			          </xs:choice>
+			        </xs:complexType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+			  <xs:annotation>
+			    <xs:documentation>Not requested</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+			  <xs:annotation>
+			    <xs:documentation>VA e-folder (VBMS or Virtual VA)</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+			  <xs:annotation>
+			    <xs:documentation>CPRS</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+			  <xs:annotation>
+			    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+			  <xs:annotation>
+			    <xs:documentation>No records were reviewed</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_PSYCH_POW_PE_Other_RG">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_PSYCH_POW_PE_Other_Description_Mbx">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_PSYCH_POW_PE_Other_Scar_RG">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_PSYCH_POW_PE_Other_Scar_Size_RG">
+			  <xs:annotation> 
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_PSYCH_POW_PE_Other_Scar_Location_Ebx">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_PSYCH_POW_PE_Other_Scar_Length_Ebx">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_PSYCH_POW_PE_Other_Scar_Width_Ebx">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAMGROUP_PSYCH_POW_PE_Other_Comment_Mbx">
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:string" nillable="true"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+			  <xs:annotation> 
+			    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination Request?</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" nillable="true">
+			        <xs:simpleType>
+			          <xs:restriction base="xs:string">
+			            <xs:enumeration value="Yes"/>
+			            <xs:enumeration value="No"/>
+			          </xs:restriction>
+			        </xs:simpleType>
+			      </xs:element>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+
+			<xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+			  <xs:annotation>
+			    <xs:documentation></xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+			    <xs:all>
+			      <xs:element name="Value" type="xs:boolean" default="false"/>
+			      <xs:element name="Metadata" type="fpw:Metadata"/>
+			    </xs:all>
+			  </xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="FormerPrisonerOfWarForm" type="fpw:FormerPrisonerOfWarFormType"/>
+	<xs:complexType name="Metadata">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

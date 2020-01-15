@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SouthWestAsia/1.3" xmlns="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SouthWestAsia/1.3" targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SouthWestAsia/1.3" version="1.3" elementFormDefault="qualified">
+	<xs:complexType name="SouthWestAsiaFormType">
+		<xs:sequence>
+			<xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition">
+				<xs:annotation>
+					<xs:documentation>Does the Veteran now have or has he/she ever been diagnosed with any of the
+                        infectious diseases listed above?
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Brucellosis">
+				<xs:annotation>
+					<xs:documentation>brucellosis</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Brucellosis_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Brucellosis_ICD">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Campylobacter">
+				<xs:annotation>
+					<xs:documentation>Campylobacter jejuni</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Campylobacter_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Campylobacter_ICD">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Coxiella">
+				<xs:annotation>
+					<xs:documentation>Coxiella burnetii (Q-fever)</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Coxiella_ICD">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Coxiella_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Malaria">
+				<xs:annotation>
+					<xs:documentation>malaria</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Malaria_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Malaria_ICD">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Salmonella">
+				<xs:annotation>
+					<xs:documentation>nontyphoid Salmonella</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Salmonella_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Salmonella_ICD">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Shigella">
+				<xs:annotation>
+					<xs:documentation>Shigella</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Shigella_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Shigella_ICD">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Leishmaniasis">
+				<xs:annotation>
+					<xs:documentation>visceral leishmaniasis</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Leishmaniasis_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Leishmaniasis_ICD">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Nile">
+				<xs:annotation>
+					<xs:documentation>West Nile virus</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Nile_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_Nile_ICD">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Condition_TB">
+				<xs:annotation>
+					<xs:documentation>Mycobacterium tuberculosis (TB)</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease1_History">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease1_Status">
+				<xs:annotation>
+					<xs:documentation>b. Status of disease #1:</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Active"/>
+									<xs:enumeration value="Inactive/treated and resolved"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease1_Status_Inactive_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease1_Status_Inactive_Residuals">
+				<xs:annotation>
+					<xs:documentation>d. If inactive/resolved, are there residuals due to the disease?
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease1_Status_Inactive_Residuals_Describe">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease2">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease2_History">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease2_Status">
+				<xs:annotation>
+					<xs:documentation>b. Status of disease #2</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Active"/>
+									<xs:enumeration value="Inactive/treated and resolved"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease2_Status_Inactive_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease2_Status_Inactive_Residuals">
+				<xs:annotation>
+					<xs:documentation>d. If inactive/resolved, are there residuals due to the disease?
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease2_Status_Inactive_Residuals_Describe">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease3">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease3_History">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease3_Status">
+				<xs:annotation>
+					<xs:documentation>b. Status of disease #3</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Active"/>
+									<xs:enumeration value="Inactive/treated and resolved"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease3_Status_Inactive_Date">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease3_Status_Inactive_Residuals">
+				<xs:annotation>
+					<xs:documentation>d. If inactive/resolved, are there residuals due to the disease?
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease3_Status_Inactive_Residuals_Describe">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_Other">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_Testing">
+				<xs:annotation>
+					<xs:documentation>Are there any significant diagnostic test findings and/or results?
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_Testing_Summary">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_Functional_Impact">
+				<xs:annotation>
+					<xs:documentation>Does the Veteran's Gulf War infectious disease(s) impact his or her ability to
+                        work?
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_Functional_Impact_Describe">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_Remarks">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_PE">
+				<xs:annotation>
+					<xs:documentation>b. Does the Veteran have any other pertinent physical findings, complications,
+                        conditions, signs or symptoms?
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_PE_Describe">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_PE_Scars">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAMGROUP_ID_Infectious_Disease_PE_Scars_Size">
+				<xs:annotation>
+					<xs:documentation>If yes, are any of the scars painful and/or unstable, or is the total area of all
+                        related scars greater than 39 square cm (6 square inches)?
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_1">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_2">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_3">
+				<xs:annotation>
+					<xs:documentation>Examination via approved video telehealth</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_4">
+				<xs:annotation>
+					<xs:documentation>In-person examination</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_1">
+				<xs:annotation>
+					<xs:documentation>Was the Veteran's VA claims file reviewed?</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" nillable="true">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Yes"/>
+									<xs:enumeration value="No"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_2">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_3">
+				<xs:annotation>
+					<xs:documentation>Military service treatment records</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_4">
+				<xs:annotation>
+					<xs:documentation>Military service personnel records</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_5">
+				<xs:annotation>
+					<xs:documentation>Military enlistment examination</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_6">
+				<xs:annotation>
+					<xs:documentation>Military separation examination</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_7">
+				<xs:annotation>
+					<xs:documentation>Military post-deployment questionnaire</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_8">
+				<xs:annotation>
+					<xs:documentation>Department of Defense Form 214 Separation Documents</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_9">
+				<xs:annotation>
+					<xs:documentation>Veterans Health Administration medical records (VA treatment records)
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_10">
+				<xs:annotation>
+					<xs:documentation>Civilian medical records</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_11">
+				<xs:annotation>
+					<xs:documentation>Interviews with collateral witnesses (family and others who have known the Veteran
+                        before and after military service)
+                    </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_12">
+				<xs:annotation>
+					<xs:documentation>No records were reviewed</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_13">
+				<xs:annotation>
+					<xs:documentation>Other:</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:boolean" default="false"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EXAM_ACE_5_RevRec_14">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" type="xs:string" nillable="true"/>
+						<xs:element name="Metadata" type="tns:Metadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SouthWestAsiaForm" type="SouthWestAsiaFormType"/>
+	<xs:complexType name="Metadata">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="codeSystem" type="xs:string"/>
+			<xs:element name="version" type="xs:string"/>
+			<xs:element name="source" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

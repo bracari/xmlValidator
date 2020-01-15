@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 rel. 2 sp1 (http://www.altova.com) by ANDREW WRIGHT (SYSTEMS MADE SIMPLE, INC.) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:vba_term="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/vba1.0_Terminology"
+        xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:i="http://niem.gov/niem/appinfo/2.0" xmlns:s="http://niem.gov/niem/structures/2.0"
+        xmlns:v1="http://niem.gov/niem/appinfo/v1"
+        targetNamespace="http://va.gov/vler/schemas/vlerSupersetSchema/0.7/terminology/vba1.0_Terminology"
+        elementFormDefault="unqualified" attributeFormDefault="unqualified" version="1.0">
+    <annotation>
+        <documentation>
+            This is the Code list Schema for VBA
+        </documentation>
+        <appinfo>
+            <i:ConformantIndicator>true</i:ConformantIndicator>
+        </appinfo>
+    </annotation>
+
+    <import namespace="http://niem.gov/niem/niem-core/2.0" schemaLocation="../niem/niem-core/2.0/niem-core.xsd"/>
+    <import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="../niem/appinfo/2.0/appinfo.xsd"/>
+    <import namespace="http://niem.gov/niem/appinfo/v1" schemaLocation="../niem/appinfo/V1/appinfo.xsd"/>
+    <import namespace="http://niem.gov/niem/structures/2.0" schemaLocation="../niem/structures/2.0/structures.xsd"/>
+
+    <attribute name="displayName" type="string">
+        <annotation>
+            <documentation>This is a display name attribute to carry the
+                documentation of an enumeration
+            </documentation>
+        </annotation>
+    </attribute>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!-- Period of War-->
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <simpleType name="PeriodOfWarCodeSimpleType">
+        <annotation>
+            <documentation>This section sets forth the beginning and ending dates of each
+                war period beginning with the Indian wars. Note that the term "period of
+                war" in reference to pension entitlement under 38 U.S.C. 1521, 1541 and 1542
+                means all of the war periods listed in this section except the Indian wars
+                and the Spanish-American War.
+                It is not part of the JEB.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+                <v1:CodingValueSet codeSystem="" codeSystemName="38 USC" valueSet=""/>
+            </appinfo>
+        </annotation>
+        <restriction base="xsd:token">
+            <enumeration value="a">
+                <annotation>
+                    <documentation>Indian wars. January 1, 1817, through December 31, 1898,
+                        inclusive. Service
+                        must have been rendered with the United States military
+                        forces against Indian
+                        tribes or nations.
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="b">
+                <annotation>
+                    <documentation>Spanish-American War. April 21, 1898, through July 4, 1902,
+                        inclusive. If the
+                        veteran served with the United States military forces
+                        engaged in hostilities in
+                        the Moro Province, the ending date is July 15,
+                        1903. The Philippine
+                        Insurrection and the Boxer Rebellion are included.
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="c">
+                <annotation>
+                    <documentation>World War I. April 6, 1917, through November 11, 1918,
+                        inclusive. If the
+                        veteran served with the United States military forces in
+                        Russia, the ending
+                        date is April 1, 1920. Service after November 11, 1918
+                        and before July 2, 1921
+                        is considered World War I service if the veteran
+                        served in the active
+                        military,
+                        naval, or air service after April 5, 1917 and
+                        before November 12, 1918.
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="d">
+                <annotation>
+                    <documentation>World War II. December 7, 1941, through December 31, 1946,
+                        inclusive. If the
+                        veteran was in service on December 31, 1946, continuous
+                        service before July 26,
+                        1947, is considered World War II service.
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="e">
+                <annotation>
+                    <documentation>Korean conflict. June 27, 1950, through January 31, 1955,
+                        inclusive.
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="f">
+                <annotation>
+                    <documentation>Vietnam era.
+                        The period beginning on February 28, 1961, and ending on May 7,
+                        1975,
+                        inclusive, in the case of a veteran who served in
+                        the Republic of Vietnam
+                        during that period. The period beginning on August
+                        5, 1964, and ending on
+                        May 7, 1975, inclusive, in all other cases.
+                        (Authority: 38 U.S.C. 101(29))
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="g">
+                <annotation>
+                    <documentation>Future dates. The period beginning on the date of any future
+                        declaration of
+                        war by the Congress and ending on a date prescribed by
+                        Presidential
+                        proclamation or concurrent resolution of the Congress.
+                        (Authority: 38
+                        U.S.C.
+                        101)
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="h">
+                <annotation>
+                    <documentation>Mexican border period.
+                        May 9, 1916, through April 5, 1917,
+                        in the case of a veteran who during such
+                        period served in Mexico, on the
+                        borders thereof, or in
+                        the waters adjacent
+                        thereto. (Authority: 38 U.S.C.
+                        101(30))
+                    </documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="i">
+                <annotation>
+                    <documentation>Persian Gulf War.
+                        August 2, 1990, through date to be
+                        prescribed by
+                        Presidential proclamation or law.
+                        (Authority: 38 U.S.C.
+                        101(33))
+                    </documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="PeriodOfWarCodeType">
+        <annotation>
+            <documentation>A data type for a Period of War Code.
+            </documentation>
+            <appinfo>
+                <i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+            </appinfo>
+        </annotation>
+        <simpleContent>
+            <extension base="vba_term:PeriodOfWarCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+                <attribute ref="vba_term:displayName" use="optional"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="PeriodOfWarCode" type="vba_term:PeriodOfWarCodeType">
+        <annotation>
+            <documentation>Element for Period of War Code
+            </documentation>
+        </annotation>
+    </element>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!-- Identity Category -->
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <simpleType name="IdentityCategoryCodeSimpleType">
+        <annotation>
+            <documentation>A code system for the types of client identities
+            </documentation>
+        </annotation>
+        <restriction base="xsd:string">
+            <enumeration value="MSN">
+                <annotation>
+                    <documentation>Military Service Number</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Serial">
+                <annotation>
+                    <documentation>Serial Number</documentation>
+                </annotation>
+            </enumeration>
+            <enumeration value="Insurance">
+                <annotation>
+                    <documentation>Insurance File number</documentation>
+                </annotation>
+            </enumeration>
+        </restriction>
+    </simpleType>
+    <complexType name="IdentityCategoryCodeType">
+        <annotation>
+            <documentation>A code type</documentation>
+        </annotation>
+        <simpleContent>
+            <extension base="vba_term:IdentityCategoryCodeSimpleType">
+                <attributeGroup ref="s:SimpleObjectAttributeGroup"/>
+            </extension>
+        </simpleContent>
+    </complexType>
+    <element name="IdentityCategoryCode" type="vba_term:IdentityCategoryCodeType"
+             substitutionGroup="nc:IdentificationCategory">
+        <annotation>
+            <documentation>An identity category code</documentation>
+        </annotation>
+    </element>
+</schema>

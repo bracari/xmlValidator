@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:cld="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Claim/2.0"
+            xmlns:vler="http://va.gov/vler/schemas/vlerSupersetSchema/1.0/vler"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:nc="http://niem.gov/niem/niem-core/2.0"
+            xmlns:s="http://niem.gov/niem/structures/2.0" xmlns:i="http://niem.gov/niem/appinfo/2.0"
+            xmlns:ac="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/AnkleConditions/2.0"
+            xmlns:bts="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/BackConditions/2.0"
+            xmlns:dme="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DiabetesMellitus/2.0"
+            xmlns:dn="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DiabeticSensoryMotorPeripheral/2.0"
+            xmlns:ec="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EsophagealConditions/2.0"
+            xmlns:h="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Hypertension0/2.0"
+            xmlns:hc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HeartCondition/2.0"
+            xmlns:hd="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Headaches/2.0"
+            xmlns:hlat="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HearingLossAndTinnitus/2.0"
+            xmlns:kc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/KidneyConditions/2.0"
+            xmlns:kll="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/KneeLowerLeg/2.0"
+            xmlns:md="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MentalDisorders/2.0"
+            xmlns:ncsd="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/NeckCervicalSpineDisability/2.0"
+            xmlns:pc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ProstateCancer/2.0"
+            xmlns:ptsd="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InitialPostTraumaticStressDisorderPtsd/2.0"
+            xmlns:ptsdr="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ReviewPtsd/2.0"
+            xmlns:rc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/RespiratoryConditions/2.0"
+            xmlns:saa="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ShoulderAndArm/2.0"
+            xmlns:sd="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ScarsDisfigurement/2.0"
+            xmlns:hcbl="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HairyCellBcellLeukemia/2.0"
+            xmlns:pd="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ParkinsonDisease/2.0"
+            xmlns:avc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ArteryAndVeinConditions/2.0"
+            xmlns:hlc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HematologicAndLymphaticConditions/2.0"
+            xmlns:als="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/AmyotrophicLateralSclerosis/2.0"
+            xmlns:cnc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/CranialNerveConditions/2.0"
+            xmlns:cnsn="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/CentralNervousSystemAndNeuromuscularDiseases/2.0"
+            xmlns:sd1="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SeizureDisorders/2.0"
+            xmlns:doc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DentalAndOralConditions/2.0"
+            xmlns:edis="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EndocrineDiseases/2.0"
+            xmlns:tpc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ThyroidAndParathyroidConditions/2.0"
+            xmlns:sknd="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SkinDiseases/2.0"
+            xmlns:galpc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GallbladderAndPancreasConditions/2.0"
+            xmlns:intc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/IntestinalConditions/2.0"
+            xmlns:insurg="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/IntestinalSurgery/2.0"
+            xmlns:narco="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Narcolepsy/2.0"
+            xmlns:fb="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Fibromyalgia/2.0"
+            xmlns:ms="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MultipleSclerosis/2.0"
+            xmlns:ps="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PeritonealAdhesions/2.0"
+            xmlns:sdc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/StomachAndDuodenalConditions/2.0"
+            xmlns:iid="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InfectiousIntestinalDisorders/2.0"
+            xmlns:her="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Hernias/2.0"
+            xmlns:rac="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/RectumAndAnusConditions/2.0"
+            xmlns:hiv="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HivRelatedIllness/2.0"
+            xmlns:ind="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InfectiousDiseases/2.0"
+            xmlns:sle="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SystemicLupusErythematosus/2.0"
+            xmlns:nd="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/NutritionalDeficiencies/2.0"
+            xmlns:tb="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Tuberculosis/2.0"
+            xmlns:mrsc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MaleReproductiveSystemConditions/2.0"
+            xmlns:ut="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/UrinaryTract/2.0"
+            xmlns:bcd="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/BreastConditionsAndDisorders/2.0"
+            xmlns:gc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GynecologicalConditions/2.0"
+            xmlns:sa="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SleepApnea/2.0"
+            xmlns:amp="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Amputations/2.0"
+            xmlns:nda="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/NonDegenerativeArthritis/2.0"
+            xmlns:efc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ElbowAndForearmConditions/2.0"
+            xmlns:cir="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ColdInjuryResiduals/2.0"
+            xmlns:cfs="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ChronicFatigueSyndrome/2.0"
+            xmlns:earc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EarConditions/2.0"
+            xmlns:ed="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EatingDisorders/2.0"
+            xmlns:fm="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/FootMiscellaneous/2.0"
+            xmlns:fpw="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/FormerPrisonerOfWar/2.0"
+            xmlns:gmc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GeneralMedicalCompensation/2.0"
+            xmlns:gmgw="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GeneralMedicalGulfWar/2.0"
+            xmlns:gmp="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GeneralMedicalPension/2.0"
+            xmlns:hfc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HandAndFingerConditions/2.0"
+            xmlns:htc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HipAndThighConditions/2.0"
+            xmlns:iert="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InitialEvaluationOfResidualsOfTraumaticBrainInjury/2.0"
+            xmlns:lsst="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/LossOfSenseOfSmellAndOrTaste/2.0"
+            xmlns:mo="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MedicalOpinion/2.0"
+            xmlns:mi="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MuscleInjuries/2.0"
+            xmlns:ost="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Osteomyelitis/2.0"
+            xmlns:pdshr="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PostDeploymentSeparationHealthReassessment/2.0"
+            xmlns:rertbi="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ReviewEvaluationOfResidualsOfTraumaticBrainInjury/2.0"
+            xmlns:sroc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SinusitisRhinitisOtherConditions/2.0"
+            xmlns:eyec="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EyeConditions/2.0"
+            xmlns:pvc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PeripheralNervesConditions/2.0"
+            xmlns:pga="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PersianGulfAndAfghanistanInfectiousDiseases/2.0"
+            xmlns:tjc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/TemporomandibularJointTmjConditions/2.0"
+            xmlns:wc="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/WristConditions/2.0"
+            xmlns:sis="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SocialIndustrialSurvey/2.0"
+            xmlns:aa="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/AidAndAttendance/2.0"
+            xmlns:blt="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Bones/2.0"
+            targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Claim/2.0"
+            version="2.0">
+    <xsd:annotation>
+        <xsd:appinfo>
+            <i:ConformantIndicator>false</i:ConformantIndicator>
+        </xsd:appinfo>
+        <xsd:documentation>This is the subset of the VA DBQ EIEM containing claim level details</xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://niem.gov/niem/niem-core/2.0"
+                schemaLocation="../subset/niem/niem-core/2.0/niem-core.xsd"/>
+    <xsd:import namespace="http://niem.gov/niem/structures/2.0"
+                schemaLocation="../subset/niem/structures/2.0/structures.xsd"/>
+    <xsd:import namespace="http://niem.gov/niem/proxy/xsd/2.0" schemaLocation="../subset/niem/proxy/xsd/2.0/xsd.xsd"/>
+    <xsd:import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="../subset/niem/appinfo/2.0/appinfo.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Amputations/2.0"
+            schemaLocation="../extension/DBQMUSCAmputations-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/AmyotrophicLateralSclerosis/2.0"
+            schemaLocation="../extension/DBQNEUROALS(LouGehrigsDisease)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/AnkleConditions/2.0"
+            schemaLocation="../extension/DBQMUSCAnkle-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ArteryAndVeinConditions/2.0"
+            schemaLocation="../extension/DBQCARDIOArteriesAndVeins(vascular)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/BackConditions/2.0"
+            schemaLocation="../extension/DBQMUSCBack(thoracolumbarspine)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/BreastConditionsAndDisorders/2.0"
+            schemaLocation="../extension/DBQGYNBreast-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/CentralNervousSystemAndNeuromuscularDiseases/2.0"
+            schemaLocation="../extension/DBQNEUROCentralNervousSystemandNeuromuscularDiseases-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ChronicFatigueSyndrome/2.0"
+            schemaLocation="../extension/DBQRHEUMChronicFatigueSyndrome-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/CentralNervousSystemAndNeuromuscularDiseases/2.0"
+            schemaLocation="../extension/DBQNEUROCentralNervousSystemandNeuromuscularDiseases-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ChronicFatigueSyndrome/2.0"
+            schemaLocation="../extension/DBQRHEUMChronicFatigueSyndrome-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ColdInjuryResiduals/2.0"
+            schemaLocation="../extension/DBQColdInjuryResiduals-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/CranialNerveConditions/2.0"
+            schemaLocation="../extension/DBQNEUROCranialNerveConditions-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DentalAndOralConditions/2.0"
+            schemaLocation="../extension/DBQDENTALDentalAndOral(otherthanTMJ)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DiabetesMellitus/2.0"
+            schemaLocation="../extension/DBQENDODiabetesMellitus-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/DiabeticSensoryMotorPeripheral/2.0"
+            schemaLocation="../extension/DBQNEURODiabeticPeripheralNeuropathy-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EarConditions/2.0"
+            schemaLocation="../extension/DBQAUDIOEar(includingVestibularandInfectious)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EatingDisorders/2.0"
+            schemaLocation="../extension/DBQPSYCHEatingDisorders-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ElbowAndForearmConditions/2.0"
+            schemaLocation="../extension/DBQMUSCElbowAndForearm-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EndocrineDiseases/2.0"
+            schemaLocation="../extension/DBQENDOEndocrine(OtherthanThyroid_ParathyroidorDiabetes)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EsophagealConditions/2.0"
+            schemaLocation="../extension/DBQGIEsophagus(includingGERDAndhiatalhernia)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Fibromyalgia/2.0"
+            schemaLocation="../extension/DBQNEUROFibromyalgia-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/FootMiscellaneous/2.0"
+            schemaLocation="../extension/DBQMUSCFootConditionsIncludingFlatfoot(PesPlanus)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/FormerPrisonerOfWar/2.0"
+            schemaLocation="../extension/DBQFormerPOWProtocol-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GallbladderAndPancreasConditions/2.0"
+            schemaLocation="../extension/DBQGIGallbladderAndPancreas-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GeneralMedicalCompensation/2.0"
+            schemaLocation="../extension/DBQGeneralMedicalCompensation-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GeneralMedicalGulfWar/2.0"
+            schemaLocation="../extension/DBQGeneralMedicalGulfWar-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GeneralMedicalPension/2.0"
+            schemaLocation="../extension/DBQGeneralMedicalPension-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/GynecologicalConditions/2.0"
+            schemaLocation="../extension/DBQGYNGynecological-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HairyCellBcellLeukemia/2.0"
+            schemaLocation="../extension/DBQHEMLeukemia-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HandAndFingerConditions/2.0"
+            schemaLocation="../extension/DBQMUSCHandandFinger-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Headaches/2.0"
+            schemaLocation="../extension/DBQNEUROHeadaches(includingMigraines)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HearingLossAndTinnitus/2.0"
+            schemaLocation="../extension/DBQAUDIOHearingLossandTinnitus-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HeartCondition/2.0"
+            schemaLocation="../extension/DBQCARDIOHeart-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HematologicAndLymphaticConditions/2.0"
+            schemaLocation="../extension/DBQHEMHematologicAndLymphatic-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Hernias/2.0"
+            schemaLocation="../extension/DBQSURGHernias(IncludingAbdominal_Inguinal_andFemoral)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HipAndThighConditions/2.0"
+            schemaLocation="../extension/DBQMUSCHipAndThigh-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/HivRelatedIllness/2.0"
+            schemaLocation="../extension/DBQINFECTHIVRelatedIllness-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Hypertension0/2.0"
+            schemaLocation="../extension/DBQCARDIOHypertension-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InfectiousDiseases/2.0"
+            schemaLocation="../extension/DBQINFECTInfectiousDisease(OtherthanHIV-relatedillness_chronicfatiguesyndrome_andTuberculosis)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InfectiousIntestinalDisorders/2.0"
+            schemaLocation="../extension/DBQGIIntestinal(infectious)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InitialEvaluationOfResidualsOfTraumaticBrainInjury/2.0"
+            schemaLocation="../extension/DBQNEUROInitialEvaluationofTBI-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InitialPostTraumaticStressDisorderPtsd/2.0"
+            schemaLocation="../extension/DBQPSYCHPTSDInitial-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/IntestinalConditions/2.0"
+            schemaLocation="../extension/DBQGIIntestinal(otherthansurgicalorinfectious)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/IntestinalSurgery/2.0"
+            schemaLocation="../extension/DBQGIIntestinal(surgical)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/KidneyConditions/2.0"
+            schemaLocation="../extension/DBQGUKidney(nephrology)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/KneeLowerLeg/2.0"
+            schemaLocation="../extension/DBQMUSCKneeandLowerLeg-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/LossOfSenseOfSmellAndOrTaste/2.0"
+            schemaLocation="../extension/DBQENTLossofSenseofSmellAndorTaste-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MaleReproductiveSystemConditions/2.0"
+            schemaLocation="../extension/DBQGUMaleReproductiveSystem-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MedicalOpinion/2.0"
+            schemaLocation="../extension/DBQMedicalOpinion(ExaminersVersion)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MentalDisorders/2.0"
+            schemaLocation="../extension/DBQPSYCHMentalDisorders-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MultipleSclerosis/2.0"
+            schemaLocation="../extension/DBQNEUROMultipleSclerosis(MS)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/MuscleInjuries/2.0"
+            schemaLocation="../extension/DBQMUSCMuscleInjuries-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Narcolepsy/2.0"
+            schemaLocation="../extension/DBQNEURONarcolepsy-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/NeckCervicalSpineDisability/2.0"
+            schemaLocation="../extension/DBQMUSCNeck(cervicalspine)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/NonDegenerativeArthritis/2.0"
+            schemaLocation="../extension/DBQMUSCArthritis-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/NutritionalDeficiencies/2.0"
+            schemaLocation="../extension/DBQINFECTNutritionalDeficiencies-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Osteomyelitis/2.0"
+            schemaLocation="../extension/DBQMUSCOsteomyelitis-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ParkinsonDisease/2.0"
+            schemaLocation="../extension/DBQNEUROParkinsonsDisease-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PeritonealAdhesions/2.0"
+            schemaLocation="../extension/DBQGIPeritonealAdhesion-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PostDeploymentSeparationHealthReassessment/2.0"
+            schemaLocation="../extension/DBQGeneralMedicalSeparationHealthAssessment-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ProstateCancer/2.0"
+            schemaLocation="../extension/DBQGUProstateCancer-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/RectumAndAnusConditions/2.0"
+            schemaLocation="../extension/DBQGIRectumAndAnus-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/RespiratoryConditions/2.0"
+            schemaLocation="../extension/DBQRESPRespiratoryConditions(OtherthanTuberculosisandsleepapnea)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ReviewEvaluationOfResidualsOfTraumaticBrainInjury/2.0"
+            schemaLocation="../extension/DBQNEUROReviewResidualsofTBI-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ReviewPtsd/2.0"
+            schemaLocation="../extension/DBQPSYCHPTSDReview-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ScarsDisfigurement/2.0"
+            schemaLocation="../extension/DBQDERMScarsDisfigurement-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SeizureDisorders/2.0"
+            schemaLocation="../extension/DBQNEUROSeizureDisorders(Epilepsy)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ShoulderAndArm/2.0"
+            schemaLocation="../extension/DBQMUSCShoulderandorArm-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SinusitisRhinitisOtherConditions/2.0"
+            schemaLocation="../extension/DBQENTSinusitis_RhinitisandOtherConditionsoftheNose_Throat_LarynxandPharynx-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SkinDiseases/2.0"
+            schemaLocation="../extension/DBQDERMSkinDiseases-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SleepApnea/2.0"
+            schemaLocation="../extension/DBQRESPSleepApnea-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/StomachAndDuodenalConditions/2.0"
+            schemaLocation="../extension/DBQGIStomachAndDuodenum-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SystemicLupusErythematosus/2.0"
+            schemaLocation="../extension/DBQINFECTSystemicLupusErythematosus(SLE)andOtherAutoimmuneDiseases(OtherthanHIVandDiabetesMellitusTypeI)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/ThyroidAndParathyroidConditions/2.0"
+            schemaLocation="../extension/DBQENDOThyroidAndParathyroid-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Tuberculosis/2.0"
+            schemaLocation="../extension/DBQRESPTuberculosis-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/UrinaryTract/2.0"
+            schemaLocation="../extension/DBQGUUrinaryTract(includingBladderAndUrethra)Conditions(excludingMaleReproductiveOrgans)-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PeripheralNervesConditions/2.0"
+            schemaLocation="../extension/DBQNEUROPeripheralNerves-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/EyeConditions/2.0"
+            schemaLocation="../extension/DBQOPHTHEye-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/TemporomandibularJointTmjConditions/2.0"
+            schemaLocation="../extension/DBQDENTALTemporomandibularJoint-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/PersianGulfAndAfghanistanInfectiousDiseases/2.0"
+            schemaLocation="../extension/DBQINFECTPersianGulfAfghanistanInfectiousDiseases-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/WristConditions/2.0"
+            schemaLocation="../extension/DBQMUSCWrist-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/SocialIndustrialSurvey/2.0"
+            schemaLocation="../extension/DBQSocial_Industrial_Survey_151-2.0.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Bones/2.0"
+            schemaLocation="../extension/DBQMUSCBones_GAK.xsd"/>
+    <xsd:import
+            namespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/AidAndAttendance/2.0"
+            schemaLocation="../extension/DBQAidAndAttendanceGAK-2.0.xsd"/>
+    <xsd:import namespace="http://va.gov/vler/schemas/vlerSupersetSchema/1.0/vler"
+                schemaLocation="../subset/vler/vler-1.0.xsd">
+        <xsd:annotation>
+            <xsd:appinfo>
+                <i:ConformantIndicator>false</i:ConformantIndicator>
+            </xsd:appinfo>
+            <xsd:documentation>This is the VLER schema.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:import>
+    <!-- This is the document (root) type for the Cliam -->
+    <xsd:complexType name="ClaimType">
+        <xsd:annotation>
+            <xsd:documentation>This is the document (root) type for the Claim</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="s:ComplexObjectType">
+                <xsd:sequence>
+                    <xsd:element ref="cld:DocumentTypeVersion" minOccurs="1"/>
+                    <xsd:element ref="cld:ClaimID" minOccurs="1"/>
+                    <xsd:element ref="cld:CommonData" minOccurs="1"/>
+                    <xsd:element ref="cld:MedicalData" minOccurs="1"/>
+                    <xsd:element ref="cld:Attachments" minOccurs="1"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="CommonDataType">
+        <xsd:annotation>
+            <xsd:documentation>Type to define the common claim level details.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="s:ComplexObjectType">
+                <xsd:sequence>
+                    <xsd:element ref="vler:VeteranOfInterest" minOccurs="0" />
+                    <xsd:element ref="nc:Document" minOccurs="1"/>
+                    <xsd:element ref="vler:ExamDetail" minOccurs="1"/>
+                    <xsd:element ref="vler:Client" minOccurs="1"/>
+                    <xsd:element ref="vler:ServiceProvider" minOccurs="1"/>
+                    <xsd:element ref="vler:Approver" minOccurs="0"/>
+                    <xsd:element ref="nc:Person" minOccurs="1" maxOccurs="5000"/>
+                    <xsd:element ref="nc:Facility" minOccurs="1"/>
+                    <xsd:element ref="vler:ServiceProviderClientAssociation" minOccurs="1"/>
+                    <xsd:element ref="vler:ClaimInformation" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="CommonData" type="cld:CommonDataType">
+        <xsd:annotation>
+            <xsd:documentation>Common claim level details.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:complexType name="MedicalDataType">
+        <xsd:annotation>
+            <xsd:documentation>Type to define the medical detail of the claim.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="s:ComplexObjectType">
+                <xsd:sequence>
+                    <xsd:element ref="ac:AnkleConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="bts:BackConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="dme:DiabetesMellitusForm" minOccurs="0"/>
+                    <xsd:element ref="dn:DiabeticSensoryMotorPeripheralForm" minOccurs="0"/>
+                    <xsd:element ref="ec:EsophagealConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="h:Hypertension0Form" minOccurs="0"/>
+                    <xsd:element ref="hc:HeartConditionForm" minOccurs="0"/>
+                    <xsd:element ref="hd:HeadachesForm" minOccurs="0"/>
+                    <xsd:element ref="hlat:HearingLossAndTinnitusForm" minOccurs="0"/>
+                    <xsd:element ref="kc:KidneyConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="kll:KneeLowerLeg0Form" minOccurs="0"/>
+                    <xsd:element ref="md:MentalDisordersForm" minOccurs="0"/>
+                    <xsd:element ref="ncsd:NeckCervicalSpineDisabilityForm" minOccurs="0"/>
+                    <xsd:element ref="pc:ProstateCancerForm" minOccurs="0"/>
+                    <xsd:element ref="ptsd:InitialPostTraumaticStressDisorderPtsdForm" minOccurs="0"/>
+                    <xsd:element ref="ptsdr:ReviewPtsdForm" minOccurs="0"/>
+                    <xsd:element ref="rc:RespiratoryConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="saa:ShoulderAndArmForm" minOccurs="0"/>
+                    <xsd:element ref="sd:ScarsDisfigurementForm" minOccurs="0"/>
+                    <xsd:element ref="hcbl:HairyCellBcellLeukemiaForm" minOccurs="0"/>
+                    <xsd:element ref="pd:ParkinsonDiseaseForm" minOccurs="0"/>
+                    <xsd:element ref="avc:ArteryAndVeinConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="hlc:HematologicAndLymphaticConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="als:AmyotrophicLateralSclerosisForm" minOccurs="0"/>
+                    <xsd:element ref="cnc:CranialNerveConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="cnsn:CentralNervousSystemAndNeuromuscularDiseasesForm" minOccurs="0"/>
+                    <xsd:element ref="pvc:PeripheralNervesConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="sd1:SeizureDisordersForm" minOccurs="0"/>
+                    <xsd:element ref="doc:DentalAndOralConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="edis:EndocrineDiseasesForm" minOccurs="0"/>
+                    <xsd:element ref="tpc:ThyroidAndParathyroidConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="sknd:SkinDiseasesForm" minOccurs="0"/>
+                    <xsd:element ref="galpc:GallbladderAndPancreasConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="intc:IntestinalConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="insurg:IntestinalSurgeryForm" minOccurs="0"/>
+                    <xsd:element ref="narco:NarcolepsyForm" minOccurs="0"/>
+                    <xsd:element ref="fb:FibromyalgiaForm" minOccurs="0"/>
+                    <xsd:element ref="ms:MultipleSclerosisForm" minOccurs="0"/>
+                    <xsd:element ref="ps:PeritonealAdhesionsForm" minOccurs="0"/>
+                    <xsd:element ref="sdc:StomachAndDuodenalConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="iid:InfectiousIntestinalDisordersForm" minOccurs="0"/>
+                    <xsd:element ref="her:HerniasForm" minOccurs="0"/>
+                    <xsd:element ref="rac:RectumAndAnusConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="pga:PersianGulfAndAfghanistanInfectiousDiseasesForm" minOccurs="0"/>
+                    <xsd:element ref="hiv:HivRelatedIllnessForm" minOccurs="0"/>
+                    <xsd:element ref="ind:InfectiousDiseasesForm" minOccurs="0"/>
+                    <xsd:element ref="sle:SystemicLupusErythematosusForm" minOccurs="0"/>
+                    <xsd:element ref="nd:NutritionalDeficienciesForm" minOccurs="0"/>
+                    <xsd:element ref="tb:TuberculosisForm" minOccurs="0"/>
+                    <xsd:element ref="mrsc:MaleReproductiveSystemConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="ut:UrinaryTractForm" minOccurs="0"/>
+                    <xsd:element ref="bcd:BreastConditionsAndDisordersForm" minOccurs="0"/>
+                    <xsd:element ref="gc:GynecologicalConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="sa:SleepApneaForm" minOccurs="0"/>
+                    <xsd:element ref="amp:AmputationsForm" minOccurs="0"/>
+                    <xsd:element ref="nda:NonDegenerativeArthritisForm" minOccurs="0"/>
+                    <xsd:element ref="efc:ElbowAndForearmConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="cir:ColdInjuryResidualsForm" minOccurs="0"/>
+                    <xsd:element ref="cfs:ChronicFatigueSyndromeForm" minOccurs="0"/>
+                    <xsd:element ref="earc:EarConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="ed:EatingDisordersForm" minOccurs="0"/>
+                    <xsd:element ref="eyec:EyeConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="fm:FootMiscellaneousForm" minOccurs="0"/>
+                    <xsd:element ref="fpw:FormerPrisonerOfWarForm" minOccurs="0"/>
+                    <xsd:element ref="gmc:GeneralMedicalCompensationForm" minOccurs="0"/>
+                    <xsd:element ref="gmgw:GeneralMedicalGulfWarForm" minOccurs="0"/>
+                    <xsd:element ref="gmp:GeneralMedicalPensionForm" minOccurs="0"/>
+                    <xsd:element ref="hfc:HandAndFingerConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="htc:HipAndThighConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="iert:InitialEvaluationOfResidualsOfTraumaticBrainInjuryForm" minOccurs="0"/>
+                    <xsd:element ref="lsst:LossOfSenseOfSmellAndOrTasteForm" minOccurs="0"/>
+                    <xsd:element ref="mo:MedicalOpinionForm" minOccurs="0"/>
+                    <xsd:element ref="mi:MuscleInjuriesForm" minOccurs="0"/>
+                    <xsd:element ref="ost:OsteomyelitisForm" minOccurs="0"/>
+                    <xsd:element ref="pdshr:PostDeploymentSeparationHealthReassessmentForm" minOccurs="0"/>
+                    <xsd:element ref="rertbi:ReviewEvaluationOfResidualsOfTraumaticBrainInjuryForm" minOccurs="0"/>
+                    <xsd:element ref="sroc:SinusitisRhinitisOtherConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="tjc:TemporomandibularJointTmjConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="wc:WristConditionsForm" minOccurs="0"/>
+                    <xsd:element ref="sis:SocialIndustrialSurveyForm" minOccurs="0"/>
+                    <xsd:element ref="aa:AidAndAttendanceForm" minOccurs="0"/>
+                    <xsd:element ref="blt:BonesConditionsForm" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="MedicalData" type="cld:MedicalDataType">
+        <xsd:annotation>
+            <xsd:documentation>Exactly one selected claim.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <xsd:complexType name="AttachmentsType">
+        <xsd:annotation>
+            <xsd:documentation>Type to define a binary attachments associated with the claim.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="s:ComplexObjectType">
+                <xsd:sequence>
+                    <xsd:element ref="nc:Attachment" minOccurs="0" maxOccurs="5000"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+
+    <xsd:element name="Attachments" type="cld:AttachmentsType">
+        <xsd:annotation>
+            <xsd:documentation>Zero or more attachments associated with the selected claim.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="Claim" type="cld:ClaimType">
+        <xsd:annotation>
+            <xsd:documentation>This exchange schema describes the Claim captured
+                and submitted from the DBQ System to be exchanged with VLER
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="DocumentTypeVersion" type="nc:TextType">
+        <xsd:annotation>
+            <xsd:documentation>The version number of the current DBQ Schema</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    <xsd:element name="ClaimID" type="nc:TextType">
+        <xsd:annotation>
+            <xsd:documentation>SSN or overridden Claim value</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+</xsd:schema>

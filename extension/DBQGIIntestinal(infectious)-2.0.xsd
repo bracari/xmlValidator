@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InfectiousIntestinalDisorders/2.0"
+           xmlns:iid="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InfectiousIntestinalDisorders/2.0"
+           xmlns="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InfectiousIntestinalDisorders/2.0"
+           targetNamespace="http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/InfectiousIntestinalDisorders/2.0"
+           version="2.0" elementFormDefault="qualified">
+    <xs:complexType name="InfectiousIntestinalDisordersFormType">
+        <xs:sequence>
+            <xs:element name="EXAMGROUP_CARDIO_IHD_Name">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran now have or has he/she ever been diagnosed with an infectious
+                        intestinal condition?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_BACILLARY">
+                <xs:annotation>
+                    <xs:documentation>Bacillary dysentery</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_BACILLARY_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_BACILLARY_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_FLUKE">
+                <xs:annotation>
+                    <xs:documentation>Intestinal distomiasis (intestinal fluke)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_FLUKE_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_FLUKE_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_PARASITIC">
+                <xs:annotation>
+                    <xs:documentation>Parasitic infection of the intestines</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_PARASITIC_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_PARASITIC_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_AMEBIASIS">
+                <xs:annotation>
+                    <xs:documentation>Amebiasis</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_AMEBIASIS_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_AMEBIASIS_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_OTHER">
+                <xs:annotation>
+                    <xs:documentation>Other infectious intestinal condition</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_OTHER_1">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_OTHER_1_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_OTHER_1_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_OTHER_2">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_OTHER_2_ICD">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_OTHER_2_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="DIAGNOSIS_INTESTINAL_INF_DIAGNOSIS_ADDITIONAL">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_INTESTINAL_INF_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_INTESTINAL_INF_MEDS">
+                <xs:annotation>
+                    <xs:documentation>b. Is continuous medication required for control of the Veteran's intestinal
+                        conditions?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_INTESTINAL_INF_MEDS_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="HISTORY_INTESTINAL_INF_SURGERY">
+                <xs:annotation>
+                    <xs:documentation>c. Has the Veteran had surgical treatment for an intestinal condition?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran have any signs or symptoms attributable to any infectious
+                        intestinal conditions?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_MILD">
+                <xs:annotation>
+                    <xs:documentation>Mild symptoms attributable to distomiasis, intestinal or hepatic
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_MILD_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_MOD">
+                <xs:annotation>
+                    <xs:documentation>Moderate symptoms attributable to distomiasis, intestinal or hepatic
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_MOD_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_SEVERE">
+                <xs:annotation>
+                    <xs:documentation>Severe symptoms attributable to distomiasis, intestinal or hepatic
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_SEVERE_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_GASTRO">
+                <xs:annotation>
+                    <xs:documentation>Mild gastrointestinal disturbances</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_GASTRO_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_LOWER">
+                <xs:annotation>
+                    <xs:documentation>Lower abdominal cramps</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_LOWER_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_GASEOUS">
+                <xs:annotation>
+                    <xs:documentation>Gaseous distention</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_CHRONIC">
+                <xs:annotation>
+                    <xs:documentation>Chronic constipation interrupted by diarrhea</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_CHRONIC_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_ANEMIA">
+                <xs:annotation>
+                    <xs:documentation>Anemia</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_NAUSEA">
+                <xs:annotation>
+                    <xs:documentation>Nausea</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_NAUSEA_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_VOMITING">
+                <xs:annotation>
+                    <xs:documentation>Vomiting</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_VOMITING_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_OTHER">
+                <xs:annotation>
+                    <xs:documentation>Other, describe:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_OTHER_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SYMPTOMS">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran have episodes of bowel disturbance with abdominal distress, or
+                        exacerbations or attacks of the intestinal condition?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SYMPTOMS_BOWEL_FREQ">
+                <xs:annotation>
+                    <xs:documentation>If checked, indicate frequency:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Occasional episodes"/>
+                                    <xs:enumeration value="Frequent episodes"/>
+                                    <xs:enumeration value="More or less constant abdominal distress"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SYMPTOMS_BOWEL">
+                <xs:annotation>
+                    <xs:documentation>Episodes of bowel disturbance with abdominal distress</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SYMPTOMS_ATTACKS">
+                <xs:annotation>
+                    <xs:documentation>Episodes of exacerbations and/or attacks of the intestinal condition
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SYMPTOMS_ATTACKS_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SYMPTOMS_ATTACKS_NUMBERS">
+                <xs:annotation>
+                    <xs:documentation>Indicate number of exacerbations and/or attacks in past 12 months:
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="1"/>
+                                    <xs:enumeration value="2"/>
+                                    <xs:enumeration value="3"/>
+                                    <xs:enumeration value="4"/>
+                                    <xs:enumeration value="5"/>
+                                    <xs:enumeration value="6"/>
+                                    <xs:enumeration value="7 or more"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_WEIGHT">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran have weight loss attributable to an infectious intestinal
+                        condition?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_WEIGHT_BASELINE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_WEIGHT_CURRENT">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_MALNUTRITION">
+                <xs:annotation>
+                    <xs:documentation>Does the Veteran have malnutrition, serious complications or other general health
+                        effects attributable to the intestinal condition?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_MALNUTRITION_HEALTH">
+                <xs:annotation>
+                    <xs:documentation>Health only fair during remissions</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_MALNUTRITION_GENERAL">
+                <xs:annotation>
+                    <xs:documentation>Resulting in general debility</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_MALNUTRITION_SERIOUS">
+                <xs:annotation>
+                    <xs:documentation>Resulting in serious complication such as liver abscess</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_MALNUTRITION_MALNUTRITION">
+                <xs:annotation>
+                    <xs:documentation>Malnutrition</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_MALNUTRITION_MALNUTRITION_MARKED">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_MALNUTRITION_OTHER">
+                <xs:annotation>
+                    <xs:documentation>Other, describe:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_MALNUTRITION_OTHER_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_OPP_SCARS">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_OPP_OTHER_PERT">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_OPP_OTHER_PERT_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS">
+                <xs:annotation>
+                    <xs:documentation>a. Has laboratory testing been performed?</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_CBC">
+                <xs:annotation>
+                    <xs:documentation>CBC (if anemia due to any intestinal condition is suspected or present)
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_CBC_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_CBC_HEMO">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_CBC_HEMA">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_CBC_WHITE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_CBC_PLATELETS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_OTHER">
+                <xs:annotation>
+                    <xs:documentation>Other, specify:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_OTHER_DATE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_OTHER_RESULTS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_IMAGING">
+                <xs:annotation>
+                    <xs:documentation>b. Have imaging studies or diagnostic procedures been performed and are the
+                        results available?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_IMAGING_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_OTHER_SIGN">
+                <xs:annotation>
+                    <xs:documentation>c. Are there any other significant diagnostic test findings and/or results?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_OTHER_SIGN_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_FI">
+                <xs:annotation>
+                    <xs:documentation>Do any of the Veteran's infectious intestinal conditions impact his or her ability
+                        to work?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_FI_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_REMARKS">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_DT_LABS_OTHER_EDIT">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_INTESTINAL_INF_SIGNS_GASEOUS_DESCRIBE">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_CPExaminationRequest_RG">
+                <xs:annotation>
+                    <xs:documentation>Is this DBQ being completed in conjunction with a VA 21-2507, C&amp;P Examination
+                        Request?
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_InPersonExamination_CBx">
+                <xs:annotation>
+                    <xs:documentation>In-person examination</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_RecordsReviewed_CBx">
+                <xs:annotation>
+                    <xs:documentation>Records reviewed</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_CBx">
+                <xs:annotation>
+                    <xs:documentation>Other, please specify:</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Other_MB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="FORM_RECORDSREVIEW_ReferralClinic_Comments__MB">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NotRequested_CB">
+                <xs:annotation>
+                    <xs:documentation>Not requested</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_NoRecords_CB">
+                <xs:annotation>
+                    <xs:documentation>No records were reviewed</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CFile_CB">
+                <xs:annotation>
+                    <xs:documentation>VA claims file (hard copy paper C-file)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_EFolder_CB">
+                <xs:annotation>
+                    <xs:documentation>VA e-folder (VBMS or Virtual VA)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_CPRS_CB">
+                <xs:annotation>
+                    <xs:documentation>CPRS</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_CB">
+                <xs:annotation>
+                    <xs:documentation>Other (please identify other evidence reviewed):</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Other_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="RECORDS_REVIEW_RECORDSREVIEW_EvidenceReview_Comments_Memo">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM__INTESTINAL_INF_OPP_Comments">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM__INTESTINAL_INF_OPP_SCARS_YES_New">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" nillable="true">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Yes"/>
+                                    <xs:enumeration value="No"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM__INTESTINAL_INF_OPP_SCARS_Location">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM__INTESTINAL_INF_OPP_SCARS_Length">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM__INTESTINAL_INF_OPP_SCARS_Width">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:string" nillable="true"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_1">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_2">
+                <xs:annotation>
+                    <xs:documentation></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_3">
+                <xs:annotation>
+                    <xs:documentation>Examination via approved video telehealth</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="EXAM_GENERAL_ACE_Cbx_4">
+                <xs:annotation>
+                    <xs:documentation>In-person examination</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="Value" type="xs:boolean" default="false"/>
+                        <xs:element name="Metadata" type="iid:Metadata"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="InfectiousIntestinalDisordersForm" type="InfectiousIntestinalDisordersFormType"/>
+    <xs:complexType name="Metadata">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="codeSystem" type="xs:string"/>
+            <xs:element name="version" type="xs:string"/>
+            <xs:element name="source" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
