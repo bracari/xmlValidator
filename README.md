@@ -1,4 +1,4 @@
-# xmlValidator
+# DBQ XML Validator and PDF Extractor
 
 
 To run:
