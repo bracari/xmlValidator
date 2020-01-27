@@ -7,15 +7,11 @@ class Parser:
         self.xmldoc = etree.parse(xml_path)
 
     def getNodeValue(self, xml_node: str) -> str:
-        namespace = 'http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Claim/2.0'
         # root is an Element
         root = self.xmldoc.getroot()
 
         for child in root:
             print(child.tag)
-
-        #result = root.findtext(xml_node)
-        #print(result[0].tag)
 
         elm = self.xmldoc.xpath(xml_node, namespaces={'cld:':'http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Claim/2.0',
             'cld':'http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Claim/2.0',
@@ -28,7 +24,7 @@ class Parser:
         #print(elm[0].tag)
         #print(elm[0].text)
 
-        return elm[0].text
-
         # To print the whole document:
         #print(etree.tostring(root, pretty_print=True))
+
+        return elm[0].text
